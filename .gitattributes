@@ -1,0 +1,19 @@
+# Set the default behavior to automatically normalize line endings.
+* text=auto
+
+# Ensure these source files are always normalized to LF on commit.
+*.js text eol=lf
+*.mjs text eol=lf
+*.ts text eol=lf
+*.json text eol=lf
+*.astro text eol=lf
+*.css text eol=lf
+*.md text eol=lf
+*.mdx text eol=lf
+
+# Explicitly declare binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary

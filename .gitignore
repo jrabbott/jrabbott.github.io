@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Astro & Build Outputs
+.astro/
+dist/
+
+# IDEs
+.idea/
+.vscode/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# OS Files
+.DS_Store
+Thumbs.db

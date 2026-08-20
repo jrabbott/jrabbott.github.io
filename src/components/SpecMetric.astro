@@ -1,0 +1,52 @@
+---
+interface Props {
+    label: string;
+    value: number;
+    max?: number;
+}
+
+const { label, value, max = 10 } = Astro.props;
+const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
+---
+
+<div class="metric-container">
+    <div class="metric-header">
+        <span class="metric-label">{label}</span>
+        <span class="metric-value">{value} / {max}</span>
+    </div>
+    <div class="metric-bar-bg">
+        <div class="metric-bar-fill" style={`width: ${percentage}%`}></div>
+    </div>
+</div>
+
+<style>
+    .metric-container {
+        margin-bottom: 1rem;
+        font-family: var(--sl-font-mono, monospace);
+    }
+    .metric-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.875rem;
+        margin-bottom: 0.25rem;
+    }
+    .metric-label {
+        font-weight: 600;
+        color: var(--sl-color-white, #fff);
+    }
+    .metric-value {
+        color: var(--sl-color-accent, #00f0ff);
+    }
+    .metric-bar-bg {
+        width: 100%;
+        height: 8px;
+        background-color: var(--sl-color-gray-5, #1e293b);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .metric-bar-fill {
+        height: 100%;
+        background-color: var(--sl-color-accent, #00f0ff);
+        transition: width 0.3s ease;
+    }
+</style>
