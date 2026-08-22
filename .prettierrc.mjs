@@ -16,7 +16,7 @@ export default {
             },
         },
         {
-            files: ['**/*.astro', '**\\*.astro', '*.astro'],
+            files: ['**/*.astro', '*.astro'],
             options: {
                 parser: 'astro',
             },

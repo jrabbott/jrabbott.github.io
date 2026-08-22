@@ -11,6 +11,9 @@
   "author": "Jon Abbott",
   "license": "MIT",
   "description": "Static website contains the personal documentation for me.",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "dependencies": {
     "@astrojs/starlight": "^0.41.7",
     "astro": "^7.2.4"
@@ -19,6 +22,8 @@
     "@commitlint/cli": "^21.2.2",
     "@commitlint/config-conventional": "^21.2.2",
     "husky": "^9.1.7",
-    "lint-staged": "^17.3.0"
+    "lint-staged": "^17.3.0",
+    "prettier": "^3.6.0",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

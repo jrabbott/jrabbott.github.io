@@ -4,7 +4,8 @@ This website contains personal documentation. It describes capabilities, work st
 
 ## Prerequisites
 
-- Node.js version 18 or higher
+- Node.js 22.12 or higher (even-numbered releases only)
+- A Node version manager (optional): use `.nvmrc` with nvm or fnm
 
 ## Quick start
 
@@ -32,7 +33,7 @@ This repository uses automated tools to format code, validate commits, and preve
 
 1. Code formatting
     - We use **Prettier** to format code files.
-    - The `.prettierrc` and `.editorconfig` files apply formatting automatically.
+    - The `.prettierrc.mjs` and `.editorconfig` files apply formatting automatically.
     - Before a commit, `lint-staged` formats your modified files.
 
 2. Conventional commits
