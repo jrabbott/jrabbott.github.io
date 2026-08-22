@@ -21,11 +21,13 @@ This website contains personal documentation. It describes capabilities, work st
 
 ## Commands
 
-| Command           | Action                              |
-| ----------------- | ----------------------------------- |
-| `npm run dev`     | Start the local development server. |
-| `npm run build`   | Build the static files.             |
-| `npm run preview` | Preview the local build.            |
+| Command                | Action                              |
+| ---------------------- | ----------------------------------- |
+| `npm run dev`          | Start the local development server. |
+| `npm run build`        | Build the static files.             |
+| `npm run preview`      | Preview the local build.            |
+| `npm run format`       | Format all files with Prettier.     |
+| `npm run format:check` | Check formatting without writing.   |
 
 ## Code quality and git hooks
 
