@@ -6,6 +6,7 @@ This repository contains the static hub landing page for jrabbott.github.io.
 
 - [Blog](https://jrabbott.github.io/blog)
 - [Spec](https://jrabbott.github.io/spec)
+- [Projects](https://jrabbott.github.io/projects)
 
 ## Deployment
 
