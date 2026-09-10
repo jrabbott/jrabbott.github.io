@@ -7,4 +7,11 @@ export default defineConfig({
   base: '/',
   trailingSlash: 'always',
   integrations: [mdx(), sitemap()],
+  redirects: {
+    '/specs/': '/spec/specs/',
+    '/management/': '/spec/management/',
+    '/comms/': '/spec/comms/',
+    '/drivers/': '/spec/drivers/',
+    '/blog/posts/ai-accessibility-tool/': '/blog/posts/ai-accessibilty-tool/',
+  },
 });
