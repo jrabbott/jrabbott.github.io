@@ -1,18 +1,20 @@
 ---
-import { SPEC_NAV } from '../data/specNav';
+import { getCollection } from 'astro:content';
+import { buildSpecNav } from '../data/specNav';
 
 interface Props {
   currentId: string;
 }
 
 const { currentId } = Astro.props;
+const nav = buildSpecNav(await getCollection('spec'));
 ---
 
 <nav class="spec-sidebar" aria-label="Spec">
   <p class="spec-sidebar__heading">Spec</p>
   <ul class="spec-sidebar__list">
     {
-      SPEC_NAV.map((item) => (
+      nav.map((item) => (
         <li>
           <a
             href={item.href}
@@ -31,7 +33,7 @@ const { currentId } = Astro.props;
   <summary>Spec navigation</summary>
   <ul class="spec-sidebar__list">
     {
-      SPEC_NAV.map((item) => (
+      nav.map((item) => (
         <li>
           <a
             href={item.href}

@@ -14,13 +14,13 @@
   "license": "MIT",
   "description": "Personal site — home, blog, spec, projects.",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22.19.0"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.12",
+    "@astrojs/mdx": "^8.0.0",
     "@astrojs/rss": "^4.0.14",
     "@astrojs/sitemap": "^3.6.0",
-    "astro": "^5.16.6"
+    "astro": "^7.3.1"
   },
   "devDependencies": {
     "prettier": "^3.6.0",
