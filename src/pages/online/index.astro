@@ -1,0 +1,60 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+const links = [
+  { href: 'https://www.linkedin.com/in/jonrabbott', label: 'LinkedIn' },
+  { href: 'https://learn.microsoft.com/en-us/users/jrabbott/', label: 'Microsoft Learn' },
+  { href: 'https://app.pluralsight.com/profile/jrabbott1983', label: 'Pluralsight' },
+  { href: 'https://cursor.com/@jrabbott', label: 'Cursor' },
+];
+---
+
+<PageLayout
+  title="Find Me Online · Jon Abbott"
+  description="Links to profiles across LinkedIn, Microsoft Learn, Pluralsight, and Cursor."
+>
+  <section class="prose">
+    <h1>Find me online</h1>
+    <p class="muted">Where to find me across the web.</p>
+    <ul class="online-list">
+      {
+        links.map((link) => (
+          <li>
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</PageLayout>
+
+<style>
+  .online-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-6);
+    max-width: 28rem;
+  }
+
+  .online-list li {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .online-list li:last-child {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .online-list a {
+    display: block;
+    padding: var(--space-4) 0;
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .online-list a:hover {
+    color: var(--color-accent);
+  }
+</style>

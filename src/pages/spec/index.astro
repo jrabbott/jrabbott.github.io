@@ -1,0 +1,14 @@
+---
+import SpecLayout from '../../layouts/SpecLayout.astro';
+import { getEntry, render } from 'astro:content';
+
+const doc = await getEntry('spec', 'index');
+if (!doc) throw new Error('Missing spec overview');
+const { Content } = await render(doc);
+---
+
+<SpecLayout title={doc.data.title} description={doc.data.description} currentId={doc.data.navId}>
+  <h1>{doc.data.title}</h1>
+  <p class="muted">{doc.data.description}</p>
+  <Content />
+</SpecLayout>

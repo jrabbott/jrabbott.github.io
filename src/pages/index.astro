@@ -1,0 +1,102 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+
+const sections = [
+  { href: '/blog/', label: 'Blog', blurb: 'Ideas, experiments, observations.' },
+  { href: '/spec/', label: 'Spec', blurb: 'Capabilities, work style, operating notes.' },
+  { href: '/projects/', label: 'Projects', blurb: 'Public-sector delivery from idea to service.' },
+  { href: '/online/', label: 'Online', blurb: 'Profiles and places to find me.' },
+];
+---
+
+<PageLayout
+  title="Jon Abbott — Engineering Leader, Powered by Dyslexia"
+  description="Engineering leader, powered by dyslexia. Projects, thoughts, and documentation."
+>
+  <section class="home-hero">
+    <h1>Jon Abbott</h1>
+    <p class="home-hero__tagline">Engineering leader, powered by dyslexia.</p>
+    <p class="home-hero__support muted">
+      I build high-performing teams, scalable systems, and practical solutions that turn complexity
+      into impact.
+    </p>
+    <p class="home-hero__ctas">
+      <a href="/blog/">Read the blog</a>
+      <a href="/spec/">View my spec</a>
+    </p>
+  </section>
+
+  <nav class="home-sections" aria-label="Site sections">
+    {
+      sections.map((section) => (
+        <a class="home-sections__item" href={section.href}>
+          <span class="home-sections__label">{section.label}</span>
+          <span class="home-sections__blurb muted">{section.blurb}</span>
+        </a>
+      ))
+    }
+  </nav>
+</PageLayout>
+
+<style>
+  .home-hero {
+    max-width: 40rem;
+    padding-block: clamp(2rem, 8vh, 5rem) var(--space-7);
+  }
+
+  .home-hero h1 {
+    margin-bottom: var(--space-3);
+  }
+
+  .home-hero__tagline {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: var(--space-4);
+  }
+
+  .home-hero__support {
+    max-width: 34rem;
+  }
+
+  .home-hero__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4) var(--space-5);
+    margin-top: var(--space-5);
+  }
+
+  .home-hero__ctas a {
+    font-weight: 600;
+  }
+
+  .home-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: var(--space-5);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .home-sections__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .home-sections__label {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .home-sections__item:hover .home-sections__label {
+    color: var(--color-accent);
+  }
+</style>

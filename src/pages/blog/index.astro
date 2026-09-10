@@ -1,0 +1,88 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+}
+---
+
+<PageLayout
+  title="Blog · Jon Abbott"
+  description="Ideas, experiments, and everyday observations."
+>
+  <section class="blog-index">
+    <h1>Blog</h1>
+    <p class="muted">Ideas, experiments, observations.</p>
+
+    <ul class="post-list">
+      {
+        posts.map((post) => (
+          <li class="post-list__item">
+            <a class="post-list__title" href={`/blog/posts/${post.id}/`}>
+              {post.data.title}
+            </a>
+            <p class="post-list__meta muted">
+              <time datetime={post.data.pubDate.toISOString()}>
+                {formatDate(post.data.pubDate)}
+              </time>
+              {post.data.tags.length > 0 && <> · {post.data.tags.slice(0, 3).join(' · ')}</>}
+            </p>
+            <p class="post-list__desc muted">{post.data.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</PageLayout>
+
+<style>
+  .blog-index {
+    max-width: var(--content-width);
+  }
+
+  .post-list {
+    list-style: none;
+    margin: var(--space-6) 0 0;
+    padding: 0;
+  }
+
+  .post-list__item {
+    padding-block: var(--space-5);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .post-list__item:last-child {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .post-list__title {
+    display: inline-block;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+  }
+
+  .post-list__title:hover {
+    color: var(--color-accent);
+  }
+
+  .post-list__meta {
+    margin-bottom: var(--space-2);
+    font-size: 0.95rem;
+  }
+
+  .post-list__desc {
+    margin: 0;
+  }
+</style>

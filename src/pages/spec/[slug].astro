@@ -1,0 +1,21 @@
+---
+import SpecLayout from '../../layouts/SpecLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const docs = await getCollection('spec', ({ id }) => id !== 'index');
+  return docs.map((doc) => ({
+    params: { slug: doc.id },
+    props: { doc },
+  }));
+}
+
+const { doc } = Astro.props;
+const { Content } = await render(doc);
+---
+
+<SpecLayout title={doc.data.title} description={doc.data.description} currentId={doc.data.navId}>
+  <h1>{doc.data.title}</h1>
+  <p class="muted">{doc.data.description}</p>
+  <Content />
+</SpecLayout>

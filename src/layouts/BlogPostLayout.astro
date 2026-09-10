@@ -1,0 +1,63 @@
+---
+import PageLayout from './PageLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  pubDate: Date;
+  tags?: string[];
+}
+
+const { title, description, pubDate, tags = [] } = Astro.props;
+const dateLabel = pubDate.toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+});
+---
+
+<PageLayout title={`${title} · Jon Abbott`} description={description} ogType="article">
+  <article class="prose blog-post">
+    <p class="blog-post__back"><a href="/blog/">← Blog</a></p>
+    <h1>{title}</h1>
+    <p class="muted blog-post__meta">
+      <time datetime={pubDate.toISOString()}>{dateLabel}</time>
+      {
+        tags.length > 0 && (
+          <>
+            {' · '}
+            {tags.join(' · ')}
+          </>
+        )
+      }
+    </p>
+    <hr />
+    <div class="blog-post__body">
+      <slot />
+    </div>
+  </article>
+</PageLayout>
+
+<style>
+  .blog-post h1 {
+    text-transform: none;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .blog-post__back {
+    margin-bottom: var(--space-4);
+  }
+
+  .blog-post__back a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .blog-post__back a:hover {
+    color: var(--color-accent);
+  }
+
+  .blog-post__meta {
+    margin-top: calc(-1 * var(--space-2));
+  }
+</style>

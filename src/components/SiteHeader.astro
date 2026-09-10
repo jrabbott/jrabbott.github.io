@@ -1,0 +1,94 @@
+---
+const pathname = Astro.url.pathname;
+
+const links = [
+  { href: '/blog/', label: 'Blog' },
+  { href: '/spec/', label: 'Spec' },
+  { href: '/projects/', label: 'Projects' },
+  { href: '/online/', label: 'Online' },
+];
+
+function isActive(href: string) {
+  if (href === '/') return pathname === '/';
+  return pathname === href || pathname.startsWith(href);
+}
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/">Jon Abbott</a>
+    <nav class="site-header__nav" aria-label="Primary">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class:list={['site-header__link', { 'is-active': isActive(link.href) }]}
+            aria-current={isActive(link.href) ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(10px);
+    background: color-mix(in srgb, var(--color-ground) 88%, transparent);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .site-header__inner {
+    width: min(100% - 2rem, var(--page-width));
+    margin-inline: auto;
+    min-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+
+  .site-header__brand {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .site-header__brand:hover {
+    color: var(--color-accent);
+  }
+
+  .site-header__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: var(--space-2) var(--space-4);
+  }
+
+  .site-header__link {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding-bottom: 0.15rem;
+    border-bottom: 2px solid transparent;
+  }
+
+  .site-header__link:hover,
+  .site-header__link.is-active {
+    color: var(--color-text);
+  }
+
+  .site-header__link.is-active {
+    border-bottom-color: var(--color-accent);
+  }
+</style>

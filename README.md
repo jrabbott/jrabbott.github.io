@@ -1,13 +1,27 @@
-# jrabbott.github.io
+# Jon Abbott
 
-This repository contains the static hub landing page for jrabbott.github.io.
+Personal site: home, blog, spec, projects, and online links.
 
-`index.html` is a self-contained page that links out to the related sites:
+**Live:** https://jrabbott.github.io
 
-- [Blog](https://jrabbott.github.io/blog)
-- [Spec](https://jrabbott.github.io/spec)
-- [Projects](https://jrabbott.github.io/projects)
+## Stack
 
-## Deployment
+- [Astro](https://astro.build) (static)
+- Markdown / MDX content collections
+- GitHub Pages via Actions
 
-Pushing to `main` triggers the workflow in `.github/workflows/deploy.yml`, which publishes `index.html` to GitHub Pages. There is no build step—edit `index.html` directly and push to deploy.
+## Develop
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+npm run preview
+```
+
+Requires Node 22+.

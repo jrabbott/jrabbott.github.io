@@ -1,0 +1,30 @@
+:root {
+  --color-ground: #1e242c;
+  --color-ground-elevated: #2a3038;
+  --color-ground-muted: #343b45;
+  --color-text: #f2f0ea;
+  --color-text-muted: #9aa3ad;
+  --color-accent: #d4a017;
+  --color-accent-hover: #e6b428;
+  --color-border: rgba(242, 240, 234, 0.12);
+  --color-focus: #d4a017;
+
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-body: 'Barlow', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Consolas', monospace;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  --content-width: 42rem;
+  --page-width: 72rem;
+  --radius: 2px;
+
+  --header-height: 4rem;
+}
