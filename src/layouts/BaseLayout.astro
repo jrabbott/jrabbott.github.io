@@ -46,7 +46,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
       <slot name="header" />
-      <main id="main-content" class="site-main">
+      <main id="main-content" class="site-main" tabindex="-1">
         <slot />
       </main>
       <slot name="footer" />

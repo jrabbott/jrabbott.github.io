@@ -9,6 +9,7 @@
 html {
   color-scheme: dark;
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -111,6 +112,14 @@ code {
   padding-block: var(--space-6);
 }
 
+#main-content {
+  scroll-margin-top: var(--header-height);
+}
+
+#main-content:focus {
+  outline: none;
+}
+
 .prose {
   max-width: var(--content-width);
 }
@@ -154,6 +163,7 @@ code {
   transform: translateY(-120%);
 }
 
-.skip-link:focus {
+.skip-link:focus,
+.skip-link:focus-visible {
   transform: translateY(0);
 }
