@@ -1,10 +1,11 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import { projects } from '../../data/projects';
+import { documentTitle } from '../../lib/documentTitle';
 ---
 
 <PageLayout
-  title="Projects · Jon Abbott"
+  title={documentTitle('Projects')}
   description="Public-sector services and infrastructure initiatives led from idea to delivery."
 >
   <section class="projects">

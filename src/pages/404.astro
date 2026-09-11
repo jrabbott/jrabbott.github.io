@@ -1,8 +1,9 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import { documentTitle } from '../lib/documentTitle';
 ---
 
-<PageLayout title="Page not found · Jon Abbott" description="This page does not exist.">
+<PageLayout title={documentTitle('Page Not Found')} description="This page does not exist.">
   <section class="prose">
     <h1>Page not found</h1>
     <p class="muted">That URL is not on this site.</p>

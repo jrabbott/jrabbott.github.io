@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import { projectHref } from '../../data/projects';
+import { documentTitle } from '../../lib/documentTitle';
 
 const milestones = [
   {
@@ -76,7 +77,7 @@ const milestones = [
 ---
 
 <PageLayout
-  title="Career History · Jon Abbott"
+  title={documentTitle('Career')}
   description="Career summary, role milestones, and how I approach the work after 15+ years of delivery."
 >
   <section class="career">
