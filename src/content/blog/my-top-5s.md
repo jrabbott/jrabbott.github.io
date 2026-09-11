@@ -14,10 +14,6 @@ So I thought I’d try something different.
 
 Rather than writing a long “about me”, here are **five top fives**. A few things I like, a few things I’ve done, and a few things that might give you a better idea of who I am outside of work.
 
-And yes.
-There will be themes.
-You’ll spot them before I do.
-
 ## 1. Places to eat
 
 I’ve got a shortlist when it comes to food.
@@ -34,10 +30,6 @@ These are five places I’d happily go back to. And, like everything else on thi
 **Prashad:** A brilliant vegetarian Indian restaurant, and probably the one on this list that surprises people most if they know my usual food choices.
 
 **Honourable mention:** **Dans le Noir?**, less about the food itself and more about the experience. Eating in complete darkness definitely makes you experience a meal in a completely different way.
-
-I’d rather have somewhere memorable than somewhere simply expensive or fashionable.
-That one’s not really a theme.
-It’s just good sense.
 
 ## 2. Theatre shows
 
@@ -70,12 +62,9 @@ I’m not sure I’d call myself a *watch collector*. That sounds far too organi
 
 **Bremont x Bamford S500:** A very different beast again, and one of my favourites from the collection.
 
-See?
-Personality keeps sneaking in.
-
 ## 4. LEGO builds
 
-If you want to know how I spend my time when I’m not working, apparently I build LEGO versions of cars I’m unlikely to ever own in real life.
+When I’m not working, I build LEGO versions of cars I’m unlikely to ever own in real life.
 
 **Ferrari Daytona SP3:** One of my favourites to build. And, unsurprisingly, one of the cars I’d love to have in the real world.
 
@@ -103,9 +92,6 @@ And finally, if you ever want to know where my sporting loyalties lie, here are 
 **McLaren:** Formula 1 is probably the sport I’ve become most interested in over the years, and McLaren are my team. British heritage, history, and the inevitable emotional rollercoaster. An easy choice.
 
 **Bradford Bulls:** A bit of a curveball to finish. Rugby league has always been part of my sporting interests, and the Bulls are the team I have the strongest connection with.
-
-Loyalty. Optimism. A questionable tolerance for disappointment.
-We’ll come back to that.
 
 ## So, that’s me…
 
