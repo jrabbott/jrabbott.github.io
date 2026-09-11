@@ -33,7 +33,7 @@ These are five places I’d happily go back to. And, like everything else on thi
 
 **Prashad:** A brilliant vegetarian Indian restaurant, and probably the one on this list that surprises people most if they know my usual food choices.
 
-**Honourable mention:** **Dans le Noir?** Less about the food itself and more about the experience. Eating in complete darkness definitely makes you experience a meal in a completely different way.
+**Honourable mention:** **Dans le Noir?**, less about the food itself and more about the experience. Eating in complete darkness definitely makes you experience a meal in a completely different way.
 
 I’d rather have somewhere memorable than somewhere simply expensive or fashionable.
 That one’s not really a theme.
@@ -112,9 +112,13 @@ We’ll come back to that.
 Or at least **25 small pieces of me**.
 
 Five places to eat.
+
 Five theatre shows.
+
 Five watches.
+
 Five LEGO builds.
+
 Five sports teams.
 
 I’m not particularly good at talking about myself, so this seemed like a more interesting way of doing it.
