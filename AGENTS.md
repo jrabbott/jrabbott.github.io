@@ -2,20 +2,48 @@
 
 ## Pull request titles
 
-Merges to `main` are squash-only. The **PR title becomes the commit subject** on `main`.
+The repository uses squash merge for the `main` branch.
+The pull request title is the commit subject on `main`.
 
-PR titles must follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification):
+### Procedure
+
+1. Write each pull request title in the Conventional Commits format.
+2. Use this structure:
 
 ```text
 type(optional-scope)!: description
 ```
 
-Allowed types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`.
+3. Use only these types:
 
-Examples:
+- `feat`
+- `fix`
+- `docs`
+- `style`
+- `refactor`
+- `perf`
+- `test`
+- `build`
+- `ci`
+- `chore`
+- `revert`
+
+4. Make the description short and clear.
+5. Do not write a title as a plain sentence.
+
+### Examples
+
+Correct titles:
 
 - `feat: add RSS feed`
 - `fix(ci): pin checkout action`
 - `chore: bump prettier`
 
-Do not use free-form sentence titles (e.g. “Add RSS feed” or “Update workflows”).
+Incorrect titles:
+
+- `Add RSS feed`
+- `Update workflows`
+
+### Reference
+
+[Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#specification)
