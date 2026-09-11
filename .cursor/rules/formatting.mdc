@@ -1,0 +1,12 @@
+---
+description: Run Prettier before finishing work so CI format:check does not fail
+alwaysApply: true
+---
+
+# Formatting
+
+Before considering work complete, and before the final commit/push for a change:
+
+1. Run `npm run format:check`.
+2. If it fails, run `npm run format` and include the reformatted files in the commit before pushing.
+3. Do not treat `npm run build` alone as enough — CI runs `format:check` first.
