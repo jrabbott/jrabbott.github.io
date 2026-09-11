@@ -17,8 +17,6 @@ What a journey it’s been.
 
 The projects have been awesome, and I’ve had the absolute pleasure of working with some crazy talented people along the way — and I’ve no doubt that will continue.
 
-Six years on DfE though… I probably need my head checked.
-
 I’m also still not entirely sure how **nap time** became a thing… but if you know, you know.
 
 More than anything, I’ll miss the people.
