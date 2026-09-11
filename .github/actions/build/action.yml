@@ -1,4 +1,4 @@
-name: Verify
+name: Build
 description: Install dependencies, check formatting, and build the site
 inputs:
   node-version:
