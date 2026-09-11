@@ -45,12 +45,7 @@ const blogPostingJsonLd = {
 };
 ---
 
-<PageLayout
-  title={documentTitle(title)}
-  description={description}
-  ogType="article"
-  image={image}
->
+<PageLayout title={documentTitle(title)} description={description} ogType="article" image={image}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(blogPostingJsonLd)} />
   <article class="prose blog-post">
     <p class="blog-post__back"><a href="/blog/">← Blog</a></p>
