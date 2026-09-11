@@ -1,5 +1,5 @@
 ---
-title: 'Leaving Hippo'
+title: 'Farewell'
 author: 'Jon Abbott'
 description: 'After years at Hippo Digital, from a company of about 60 to somewhere around 900, I’m saying thank you — to the people, the projects, and one hell of a ride.'
 pubDate: 2026-09-28T09:00:00Z
