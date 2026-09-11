@@ -17,7 +17,7 @@ What a journey it’s been.
 
 The projects have been awesome, and I’ve had the absolute pleasure of working with some crazy talented people along the way — and I’ve no doubt that will continue.
 
-I’m also still not entirely sure how **nap time** became a thing… but if you know, you know.
+I’m still not entirely sure how **nap time** became a thing… but if you know, you know.
 
 More than anything, I’ll miss the people.
 It really is such an awesome family.
