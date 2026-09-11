@@ -2,6 +2,9 @@ name: CI
 
 on:
   pull_request:
+    # Keep pr-title in this workflow (one CI surface). Title/body edits
+    # re-run build; that cost is accepted. Do not split into a separate
+    # workflow, and do not skip build on edited (breaks required checks).
     types:
       - opened
       - edited

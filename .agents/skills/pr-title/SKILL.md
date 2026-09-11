@@ -45,7 +45,9 @@ Incorrect:
 
 ## Gotchas
 
-- A title edit re-runs CI, including the build job.
+- Title and body edits re-run the full CI workflow (`pr-title` and `build`). That is intentional.
+- Do not move title checks to a separate workflow.
+- Do not skip `build` on `edited`.
 - Put a breaking change marker as `!` after the type or scope (`feat!: …`, `fix(api)!: …`).
 - Dependabot titles that use `build(deps):` or `build(deps-dev):` are valid.
 
