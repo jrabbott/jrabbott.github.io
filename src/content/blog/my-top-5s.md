@@ -21,7 +21,7 @@ These are five places I’d happily go back to. And, like everything else on thi
 
 **Fuji Hiro:** One of those places that doesn’t need to shout about what it does. Great food. Relaxed atmosphere. Somewhere I’m always happy to eat.
 
-**Forde:** A favourite where the food is the main event. One for a slightly more special meal.
+**Forde:** A favourite where the food is the main event. Quiet, focused, and always worth going back for.
 
 **HooYah:** Definitely one for when you want a damn good burger. Completely different vibe, and one I really enjoy.
 
