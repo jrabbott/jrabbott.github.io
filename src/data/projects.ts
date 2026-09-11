@@ -6,10 +6,10 @@ export const projects = [
     serviceName: 'Reception Baseline Assessment (RBA) · Standards and Testing Agency',
     role: 'Senior Developer, later Technical Lead',
     paragraphs: [
-      'I helped shape and deliver the digital platform behind the Reception Baseline Assessment for the Standards and Testing Agency. I started as Senior Developer and later moved to Technical Lead, working through the item validation trial (IVT) and technical pre-test (TPT) phases — I was not on the project for live national delivery. The RBA is an age-appropriate assessment of early mathematics and early literacy, communication and language, administered in the first weeks of reception and used as the starting point for measuring progress through primary school.',
-      'The Digital Assessment Service supports schools end to end: registering pupils, preparing devices, pairing practitioner and pupil sessions, administering the assessment, and producing narrative statements. Reliability, accessibility, and operational clarity mattered as much as feature delivery — schools need a service that works under real classroom conditions, not just in a demo environment.',
-      'Scale was part of the engineering problem from early on. IVT event data covered about 1,502 pupils and around 9.2GB. TPT saw around 300 schools take part — roughly ten pupils per school (~3,000 pupils) over a two-week September window — generating about 30GB of event data for item and question performance analysis. Those phases sat ahead of live national assessment (around 800,000 pupils in September 2023); in a typical year IVT, TPT and Live run in parallel and the platform generates around 5.2TB of data for RBA alone.',
-      'The engagement combined platform engineering with delivery leadership across multidisciplinary teams. We focused on secure, supportable Azure-hosted services, clear operational paths for schools and support staff, and engineering practices that kept a statutory national assessment evolvable as policy and technology moved on.',
+      'I helped build the digital platform behind the Reception Baseline Assessment for the Standards and Testing Agency. I started as Senior Developer and later became Technical Lead. I worked through IVT and TPT — I wasn’t on the project for live national delivery. The RBA is an early maths and literacy assessment given in the first weeks of reception, and it’s the starting point for measuring progress through primary school.',
+      'The service covers the full school journey: registering pupils, preparing devices, pairing practitioner and pupil sessions, running the assessment, and producing narrative statements. Reliability and accessibility mattered as much as features. Schools need something that works in a real classroom, not just in a demo.',
+      'Scale showed up early. IVT covered about 1,502 pupils and around 9.2GB of event data. TPT involved around 300 schools — roughly ten pupils each (~3,000 pupils) over a two-week September window — and generated about 30GB for item analysis. Those phases sat ahead of live national assessment (around 800,000 pupils in September 2023). In a typical year IVT, TPT and Live run together, and the platform generates around 5.2TB of RBA data.',
+      'We focused on secure Azure services, clear paths for schools and support staff, and engineering practices that could keep a national assessment moving as policy and tech changed.',
     ],
   },
   {
@@ -19,10 +19,10 @@ export const projects = [
     serviceName: 'Financial Benchmarking and Insights Tool (FBIT)',
     role: 'Principal engineer, technical lead and technical architect',
     paragraphs: [
-      'I led the ground-up build of this service, setting the technical direction across its data, platform and presentation layers. The role combined architecture and hands-on engineering with the coordination needed to turn a broad public-sector data product into a coherent, supportable service.',
-      'The tool gives schools a single place to manage and understand their financial data. Benchmarking lets them compare resource use with similar schools, while insights help them interrogate that data and identify opportunities for better planning. The result is practical evidence for decisions that can improve financial stewardship and, ultimately, pupil outcomes.',
-      'Its architecture separates ingestion, processing, APIs and presentation: raw CSV and Excel data is processed by a Python data pipeline into Azure SQL, .NET Azure Functions expose REST APIs, and an ASP.NET Core portal uses Vue and shared React/TypeScript visualisation components. Infrastructure, migrations, delivery pipelines and operational analytics complete the platform around the product.',
-      'This structure supports repeatable data processing, reusable visualisations and clear ownership between components. It also gives school leaders, governors and trustees better information for oversight and decision-making without requiring them to assemble the analysis themselves.',
+      'I led the ground-up build of this service. I set the technical direction across data, platform, and presentation — architecture, hands-on engineering, and the coordination needed to turn a broad data product into something schools could actually use.',
+      'It gives schools one place to manage and understand their financial data. Benchmarking lets them compare with similar schools. Insights help them dig into the numbers and spot better ways to plan. Practical evidence, not another spreadsheet pile.',
+      'The architecture splits ingestion, processing, APIs, and presentation. A Python pipeline loads CSV and Excel into Azure SQL. .NET Azure Functions expose REST APIs. An ASP.NET Core portal uses Vue and shared React/TypeScript charts. Infrastructure, migrations, pipelines, and ops analytics sit around that.',
+      'That split keeps processing repeatable, visualisations reusable, and ownership clear. School leaders, governors, and trustees get better information without having to assemble the analysis themselves.',
     ],
   },
   {
@@ -31,9 +31,9 @@ export const projects = [
     href: 'https://github.com/DFE-Digital/accessing-childcare-entitlement-checker',
     role: 'Principal engineer, technical lead and technical architect',
     paragraphs: [
-      'I led the ground-up build of this service, shaping the architecture and guiding delivery from early design through to a production-ready digital service. I worked across technical direction, engineering practice and delivery leadership to create a reliable foundation that teams could extend safely.',
-      'The service helps parents and carers in England check their eligibility and entitlement for childcare support, including 15 and 30 hours of funded childcare and Tax-Free Childcare. It turns complex policy and eligibility rules into a clear, accessible journey for people trying to understand the support available to them.',
-      'Alongside the user-facing service, the project includes automated integration and cross-browser testing, security scanning, technical documentation, architecture decisions and operational runbooks. This made the service easier to operate and evolve while giving delivery teams a shared understanding of its design and risks.',
+      'I led the ground-up build of this service — architecture and delivery from early design through to something production-ready. The aim was a solid foundation teams could extend without painting themselves into a corner.',
+      'It helps parents and carers in England check eligibility for childcare support, including 15 and 30 hours of funded childcare and Tax-Free Childcare. Complex policy, turned into a journey people can actually follow.',
+      'We also put in automated integration and cross-browser testing, security scanning, technical docs, architecture decisions, and runbooks. That made the service easier to operate and evolve, and gave the team a shared view of the design and the risks.',
     ],
   },
   {
@@ -42,10 +42,10 @@ export const projects = [
     href: 'https://github.com/DFE-Digital/dfe-checkov-policies',
     role: 'Technical lead for the infrastructure policy initiative',
     paragraphs: [
-      'I led the initiative to shift infrastructure policies left, making compliance checks part of delivery rather than a late-stage review. I helped establish a reusable approach for codifying expectations, integrating them into CI and giving teams actionable feedback while they were still changing their infrastructure.',
-      'The repository provides custom Checkov policies, examples and CI integrations for scanning Azure infrastructure-as-code across DfE landing zones, including CIP and ELZ subscriptions. It turns cloud security and platform requirements into automated checks that can be applied consistently across teams and services.',
-      'As a central compliance scanner, the project creates a shared home for policy rules, documentation and contribution practices. Its roadmap extends that consistency to more landing-zone rules, Bicep and other important artefacts such as ARM templates, Dockerfiles and workflow definitions.',
-      'By catching policy gaps earlier, the initiative reduces rework and helps teams build secure, compliant infrastructure as part of their normal engineering workflow. It also makes infrastructure standards visible, testable and easier to improve over time.',
+      'I led the work to shift infrastructure policy left. Compliance checks became part of delivery, not a late review. We codified expectations, wired them into CI, and gave teams feedback while they were still changing their infrastructure.',
+      'The repo has custom Checkov policies, examples, and CI integrations for scanning Azure infrastructure-as-code across DfE landing zones, including CIP and ELZ. Cloud security and platform rules, turned into automated checks teams can run consistently.',
+      'It gives policy rules, docs, and contribution practices a shared home. The roadmap extends that to more landing-zone rules, Bicep, and other artefacts like ARM templates, Dockerfiles, and workflow definitions.',
+      'Catching gaps earlier cuts rework. It also makes standards visible and testable — and easier to improve over time.',
     ],
   },
 ] as const;
