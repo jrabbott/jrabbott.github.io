@@ -88,7 +88,7 @@ function isActive(href: string) {
     .site-header__inner {
       align-items: flex-start;
       padding-block: var(--space-3);
-      min-height: unset;
+      /* Keep min-height tied to --header-height (raised on small screens in tokens). */
     }
 
     .site-header__nav {

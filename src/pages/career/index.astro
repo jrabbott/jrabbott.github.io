@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
+import { projectHref } from '../../data/projects';
 
 const milestones = [
   {
@@ -17,7 +18,7 @@ const milestones = [
         name: 'Digital Assessment Service (RBA)',
         client: 'DfE · Standards and Testing Agency',
         dates: '2020 – 2023',
-        href: '/projects/#digital-assessment-service',
+        href: projectHref('digital-assessment-service'),
         summary:
           'Started as Senior Developer, later Technical Lead on IVT and TPT (not live). IVT ~1,502 pupils / ~9.2GB event data; TPT ~300 schools (~3,000 pupils, two-week September window) / ~30GB. Live national delivery (~800,000 in Sept 2023) and ~5.2TB/year with IVT, TPT and Live in parallel are the programme scale those phases prepared for.',
       },
@@ -25,7 +26,7 @@ const milestones = [
         name: 'Financial Benchmarking and Insights Tool',
         client: 'DfE',
         dates: '2023 – 2026',
-        href: '/projects/#education-benchmarking-and-insights',
+        href: projectHref('education-benchmarking-and-insights'),
         summary:
           'Ground-up build of a data platform and portal that helps schools manage financial data, benchmark against peers, and find opportunities for better planning.',
       },
@@ -33,7 +34,7 @@ const milestones = [
         name: 'Accessing Childcare Entitlement Checker',
         client: 'DfE',
         dates: '2026',
-        href: '/projects/#accessing-childcare-entitlement-checker',
+        href: projectHref('accessing-childcare-entitlement-checker'),
         summary:
           'Led the architecture and delivery of a service that helps parents and carers check eligibility for funded childcare and Tax-Free Childcare.',
       },

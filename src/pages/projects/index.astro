@@ -1,57 +1,6 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
-
-const projects = [
-  {
-    id: 'digital-assessment-service',
-    title: 'Digital Assessment Service',
-    href: 'https://www.gov.uk/government/collections/reception-baseline-assessment',
-    serviceName: 'Reception Baseline Assessment (RBA) · Standards and Testing Agency',
-    role: 'Senior Developer, later Technical Lead',
-    paragraphs: [
-      'I helped shape and deliver the digital platform behind the Reception Baseline Assessment for the Standards and Testing Agency. I started as Senior Developer and later moved to Technical Lead, working through the item validation trial (IVT) and technical pre-test (TPT) phases — I was not on the project for live national delivery. The RBA is an age-appropriate assessment of early mathematics and early literacy, communication and language, administered in the first weeks of reception and used as the starting point for measuring progress through primary school.',
-      'The Digital Assessment Service supports schools end to end: registering pupils, preparing devices, pairing practitioner and pupil sessions, administering the assessment, and producing narrative statements. Reliability, accessibility, and operational clarity mattered as much as feature delivery — schools need a service that works under real classroom conditions, not just in a demo environment.',
-      'Scale was part of the engineering problem from early on. IVT event data covered about 1,502 pupils and around 9.2GB. TPT saw around 300 schools take part — roughly ten pupils per school (~3,000 pupils) over a two-week September window — generating about 30GB of event data for item and question performance analysis. Those phases sat ahead of live national assessment (around 800,000 pupils in September 2023); in a typical year IVT, TPT and Live run in parallel and the platform generates around 5.2TB of data for RBA alone.',
-      'The engagement combined platform engineering with delivery leadership across multidisciplinary teams. We focused on secure, supportable Azure-hosted services, clear operational paths for schools and support staff, and engineering practices that kept a statutory national assessment evolvable as policy and technology moved on.',
-    ],
-  },
-  {
-    id: 'education-benchmarking-and-insights',
-    title: 'Education Benchmarking and Insights',
-    href: 'https://github.com/DFE-Digital/education-benchmarking-and-insights',
-    serviceName: 'Financial Benchmarking and Insights Tool (FBIT)',
-    role: 'Principal engineer, technical lead and technical architect',
-    paragraphs: [
-      'I led the ground-up build of this service, setting the technical direction across its data, platform and presentation layers. The role combined architecture and hands-on engineering with the coordination needed to turn a broad public-sector data product into a coherent, supportable service.',
-      'The tool gives schools a single place to manage and understand their financial data. Benchmarking lets them compare resource use with similar schools, while insights help them interrogate that data and identify opportunities for better planning. The result is practical evidence for decisions that can improve financial stewardship and, ultimately, pupil outcomes.',
-      'Its architecture separates ingestion, processing, APIs and presentation: raw CSV and Excel data is processed by a Python data pipeline into Azure SQL, .NET Azure Functions expose REST APIs, and an ASP.NET Core portal uses Vue and shared React/TypeScript visualisation components. Infrastructure, migrations, delivery pipelines and operational analytics complete the platform around the product.',
-      'This structure supports repeatable data processing, reusable visualisations and clear ownership between components. It also gives school leaders, governors and trustees better information for oversight and decision-making without requiring them to assemble the analysis themselves.',
-    ],
-  },
-  {
-    id: 'accessing-childcare-entitlement-checker',
-    title: 'Accessing Childcare Entitlement Checker',
-    href: 'https://github.com/DFE-Digital/accessing-childcare-entitlement-checker',
-    role: 'Principal engineer, technical lead and technical architect',
-    paragraphs: [
-      'I led the ground-up build of this service, shaping the architecture and guiding delivery from early design through to a production-ready digital service. I worked across technical direction, engineering practice and delivery leadership to create a reliable foundation that teams could extend safely.',
-      'The service helps parents and carers in England check their eligibility and entitlement for childcare support, including 15 and 30 hours of funded childcare and Tax-Free Childcare. It turns complex policy and eligibility rules into a clear, accessible journey for people trying to understand the support available to them.',
-      'Alongside the user-facing service, the project includes automated integration and cross-browser testing, security scanning, technical documentation, architecture decisions and operational runbooks. This made the service easier to operate and evolve while giving delivery teams a shared understanding of its design and risks.',
-    ],
-  },
-  {
-    id: 'dfe-checkov-policies',
-    title: 'DfE Checkov Policies',
-    href: 'https://github.com/DFE-Digital/dfe-checkov-policies',
-    role: 'Technical lead for the infrastructure policy initiative',
-    paragraphs: [
-      'I led the initiative to shift infrastructure policies left, making compliance checks part of delivery rather than a late-stage review. I helped establish a reusable approach for codifying expectations, integrating them into CI and giving teams actionable feedback while they were still changing their infrastructure.',
-      'The repository provides custom Checkov policies, examples and CI integrations for scanning Azure infrastructure-as-code across DfE landing zones, including CIP and ELZ subscriptions. It turns cloud security and platform requirements into automated checks that can be applied consistently across teams and services.',
-      'As a central compliance scanner, the project creates a shared home for policy rules, documentation and contribution practices. Its roadmap extends that consistency to more landing-zone rules, Bicep and other important artefacts such as ARM templates, Dockerfiles and workflow definitions.',
-      'By catching policy gaps earlier, the initiative reduces rework and helps teams build secure, compliant infrastructure as part of their normal engineering workflow. It also makes infrastructure standards visible, testable and easier to improve over time.',
-    ],
-  },
-];
+import { projects } from '../../data/projects';
 ---
 
 <PageLayout
@@ -70,7 +19,9 @@ const projects = [
               {project.title}
             </a>
           </h2>
-          {project.serviceName && <p class="project__service muted">{project.serviceName}</p>}
+          {'serviceName' in project && project.serviceName && (
+            <p class="project__service muted">{project.serviceName}</p>
+          )}
           <p class="project__role">{project.role}</p>
           {project.paragraphs.map((paragraph) => (
             <p>{paragraph}</p>
@@ -93,7 +44,8 @@ const projects = [
   .project {
     padding-block: var(--space-6);
     border-top: 1px solid var(--color-border);
-    scroll-margin-top: calc(var(--header-height) + var(--space-4));
+    /* Breathing room only — header offset lives on html scroll-padding-top. */
+    scroll-margin-top: var(--space-4);
   }
 
   .project:last-child {

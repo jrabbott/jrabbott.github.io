@@ -28,3 +28,10 @@
 
   --header-height: 4rem;
 }
+
+@media (max-width: 40rem) {
+  :root {
+    /* Wrapped five-link nav (~89px); keep scroll-padding in sync. */
+    --header-height: 5.75rem;
+  }
+}
