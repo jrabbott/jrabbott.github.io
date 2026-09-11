@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
+import { documentTitle } from '../../lib/documentTitle';
 
 const links = [
   { href: 'https://www.linkedin.com/in/jonrabbott', label: 'LinkedIn' },
@@ -10,7 +11,7 @@ const links = [
 ---
 
 <PageLayout
-  title="Find Me Online · Jon Abbott"
+  title={documentTitle('Online')}
   description="Links to profiles across LinkedIn, Microsoft Learn, Pluralsight, and Cursor."
 >
   <section class="prose">
