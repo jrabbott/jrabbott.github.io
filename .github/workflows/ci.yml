@@ -17,3 +17,33 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: ./.github/actions/build
+
+  # Merge only after a green build. Do not use `gh pr merge --auto` here: the
+  # main ruleset has no required status checks, so --auto would merge immediately.
+  dependabot-auto-merge:
+    if: github.actor == 'dependabot[bot]'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98 # v3.1.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Allowlist: solo patch/minor, or a Dependabot group (groups are patch/minor
+      # only in dependabot.yml). Skip majors and all github-actions updates.
+      - name: Squash-merge npm patch/minor Dependabot PRs
+        if: >-
+          steps.metadata.outputs.package-ecosystem != 'github_actions' &&
+          (steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
+           steps.metadata.outputs.update-type == 'version-update:semver-minor' ||
+           (steps.metadata.outputs.update-type == '' &&
+            steps.metadata.outputs.dependency-group != ''))
+        run: gh pr merge --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
