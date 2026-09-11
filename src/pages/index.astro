@@ -8,12 +8,24 @@ const sections = [
   { href: '/projects/', label: 'Projects', blurb: 'Public-sector delivery from idea to service.' },
   { href: '/online/', label: 'Online', blurb: 'Profiles and places to find me.' },
 ];
+
+const siteOrigin = Astro.site?.href ?? 'https://jrabbott.github.io/';
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': new URL('#person', siteOrigin).href,
+  name: 'Jon Abbott',
+  url: siteOrigin,
+  jobTitle: 'Engineering Leader',
+  description: 'Engineering leader, powered by dyslexia.',
+};
 ---
 
 <PageLayout
   title="Jon Abbott — Engineering Leader, Powered by Dyslexia"
   description="Engineering leader, powered by dyslexia. Projects, thoughts, and documentation."
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />
   <section class="home-hero">
     <h1>Jon Abbott</h1>
     <p class="home-hero__tagline">Engineering leader, powered by dyslexia.</p>

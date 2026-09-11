@@ -8,12 +8,14 @@ interface Props {
   title: string;
   description?: string;
   ogType?: string;
+  image?: string;
 }
 
-const { title, description, ogType } = Astro.props;
+const { title, description, ogType, image } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} ogType={ogType}>
+<BaseLayout title={title} description={description} ogType={ogType} image={image}>
+  <slot name="head" slot="head" />
   <SiteHeader slot="header" />
   <slot />
   <SiteFooter slot="footer" />

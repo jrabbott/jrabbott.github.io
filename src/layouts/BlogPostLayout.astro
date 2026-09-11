@@ -5,18 +5,52 @@ interface Props {
   title: string;
   description?: string;
   pubDate: Date;
+  author?: string;
   tags?: string[];
+  image?: string;
 }
 
-const { title, description, pubDate, tags = [] } = Astro.props;
+const { title, description, pubDate, author = 'Jon Abbott', tags = [], image } = Astro.props;
+
 const dateLabel = pubDate.toLocaleDateString('en-GB', {
   day: 'numeric',
   month: 'short',
   year: 'numeric',
 });
+
+const siteOrigin = Astro.site?.href ?? 'https://jrabbott.github.io/';
+const personId = new URL('#person', siteOrigin).href;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(image ?? '/og-default.png', Astro.site);
+
+const blogPostingJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description ?? undefined,
+  datePublished: pubDate.toISOString(),
+  author: {
+    '@id': personId,
+    '@type': 'Person',
+    name: author,
+    url: siteOrigin,
+  },
+  image: ogImage.href,
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonical.href,
+  },
+  url: canonical.href,
+};
 ---
 
-<PageLayout title={`${title} · Jon Abbott`} description={description} ogType="article">
+<PageLayout
+  title={`${title} · Jon Abbott`}
+  description={description}
+  ogType="article"
+  image={image}
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(blogPostingJsonLd)} />
   <article class="prose blog-post">
     <p class="blog-post__back"><a href="/blog/">← Blog</a></p>
     <h1>{title}</h1>
