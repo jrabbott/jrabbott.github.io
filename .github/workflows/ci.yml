@@ -1,6 +1,12 @@
 name: CI
+
 on:
   pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - reopened
 
 concurrency:
   group: ci-${{ github.event.pull_request.number }}
@@ -8,11 +14,33 @@ concurrency:
 
 permissions:
   contents: read
+  pull-requests: read
 
 jobs:
+  pr-title:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50 # v6.1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            build
+            ci
+            chore
+            revert
+
   build:
+    if: github.event.action != 'edited'
     runs-on: ubuntu-latest
     permissions:
       contents: read
     steps:
-      - uses: $/.github/actions/build
+      - uses: ./.github/actions/build
