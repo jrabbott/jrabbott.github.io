@@ -89,7 +89,7 @@ And finally, if you ever want to know where my sporting loyalties lie, here are 
 
 **Boston Bruins:** My slightly less obvious choice. I’ve always had a soft spot for the Bruins and, perhaps inevitably, ended up getting into ice hockey along the way.
 
-**McLaren:** Formula 1 is probably the sport I’ve become most interested in over the years, and McLaren are my team. British heritage, history, and the inevitable emotional rollercoaster. An easy choice.
+**McLaren:** Motorsport has been around for a long time for me. Dad competing in Land Rover trials. Karting at school. Formula 1 followed, and McLaren are my team. British heritage, history, and the inevitable emotional rollercoaster.
 
 **Bradford Bulls:** A bit of a curveball to finish. Rugby league has always been part of my sporting interests, and the Bulls are the team I have the strongest connection with.
 
