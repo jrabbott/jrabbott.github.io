@@ -1,7 +1,7 @@
 ---
 title: 'My Top 5s'
 author: 'Jon Abbott'
-description: 'Five top fives — sports teams, LEGO builds, watches, places to eat, and theatre shows — as a less awkward (and more fun) way of saying a bit about who I am outside of work.'
+description: 'Five top fives: sports teams, LEGO builds, watches, places to eat, and theatre shows. A less awkward (and more fun) way of saying a bit about who I am outside of work.'
 pubDate: 2026-09-11T06:12:00Z
 tags:
   - personal
@@ -12,7 +12,7 @@ tags:
 I’m not naturally someone who talks a lot about myself in a work setting.
 So I thought I’d try something different.
 
-Rather than writing a long “about me”, here are **five top fives** — a few things I like, a few things I’ve done, and a few things that might give you a better idea of who I am outside of work.
+Rather than writing a long “about me”, here are **five top fives**. A few things I like, a few things I’ve done, and a few things that might give you a better idea of who I am outside of work.
 
 And yes.
 There will be themes.
@@ -59,13 +59,13 @@ A slightly different choice from the others, but probably one of the most satisf
 **Bugatti Chiron**
 Big, complicated, and impressive. Pretty much everything you’d expect from a LEGO Bugatti.
 
-**Honourable mention:** the **Koenigsegg Sadair’s Spear** — which *could* change the list, but I haven’t actually started building it yet, so I’m not counting it.
+**Honourable mention:** the **Koenigsegg Sadair’s Spear**, which *could* change the list, but I haven’t actually started building it yet, so I’m not counting it.
 For now.
 
 ## 3. Watches
 
 I’ve also got a bit of a thing for watches.
-I’m not sure I’d call myself a *watch collector* — that sounds far too organised — but I do enjoy watches that have a bit of a story, or something different about them.
+I’m not sure I’d call myself a *watch collector*. That sounds far too organised. But I do enjoy watches that have a bit of a story, or something different about them.
 
 **TAG Heuer Carrera 510.523**
 A classic. Probably the one that feels most like a traditional watch choice.
@@ -88,7 +88,7 @@ Personality keeps sneaking in.
 ## 4. Places to eat
 
 I’ve also got a shortlist when it comes to food.
-These are five places I’d happily go back to — and, like everything else on this list, there’s a bit of variety.
+These are five places I’d happily go back to. And, like everything else on this list, there’s a bit of variety.
 
 **Fuji Hiro**
 One of those places that doesn’t need to shout about what it does. Great food. Relaxed atmosphere. Somewhere I’m always happy to eat.
@@ -105,7 +105,7 @@ A Leeds favourite, and a great example of why sometimes you just need really goo
 **Prashad**
 A brilliant vegetarian Indian restaurant, and probably the one on this list that surprises people most if they know my usual food choices.
 
-**Honourable mention:** **Dans le Noir?** — less about the food itself and more about the experience. Eating in complete darkness definitely makes you experience a meal in a completely different way.
+**Honourable mention:** **Dans le Noir?** Less about the food itself and more about the experience. Eating in complete darkness definitely makes you experience a meal in a completely different way.
 
 I’d rather have somewhere memorable than somewhere simply expensive or fashionable.
 That one’s not really a theme.
@@ -114,7 +114,7 @@ It’s just good sense.
 ## 5. Theatre shows
 
 And finally, the theatre.
-Probably the category that gives away the most about my taste — a mixture of musicals, comedy, nostalgia, and things that are just a little bit different.
+Probably the category that gives away the most about my taste. A mixture of musicals, comedy, nostalgia, and things that are just a little bit different.
 
 **Avenue Q**
 Funny, rude, clever, and definitely not your traditional musical. One of those shows that stays with you for all the wrong reasons.
