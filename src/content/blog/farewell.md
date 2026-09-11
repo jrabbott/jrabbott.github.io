@@ -1,7 +1,7 @@
 ---
 title: 'Farewell'
 author: 'Jon Abbott'
-description: 'After years at Hippo Digital, from a company of about 60 to somewhere around 900, I’m saying thank you — to the people, the projects, and one hell of a ride.'
+description: 'After years at Hippo Digital, from a company of about 60 to somewhere around 900, I’m saying thank you to the people, the projects, and one hell of a ride.'
 pubDate: 2026-09-28T09:00:00Z
 tags:
   - personal
@@ -19,11 +19,11 @@ Completely different place in reality.
 What a journey it’s been.
 
 The projects have been awesome.
-Hard days, good days, and plenty of the messy ones in between — the ones that actually teach you something.
+Hard days, good days, and plenty of the messy ones in between. The ones that actually teach you something.
 I’ve been lucky enough to work on things that mattered, with people who cared about getting them right.
 
 But more than anything, I’ll miss the people.
-I’ve had the absolute pleasure of working with some crazy talented humans along the way — engineers, delivery folk, designers, product people, the lot — and I’ve no doubt that will continue.
+I’ve had the absolute pleasure of working with some crazy talented humans along the way: engineers, delivery folk, designers, product people, the lot. And I’ve no doubt that will continue.
 The bit I’ll carry with me isn’t a stack or a release.
 It’s the conversations, the banter, and the way people show up for each other when it counts.
 
@@ -38,7 +38,7 @@ You made it what it was.
 
 It’s been one hell of a ride, and I’m genuinely grateful to have been part of it.
 
-**Thank you all — it’s been a pleasure.**
+**Thank you all. It’s been a pleasure.**
 
 I leave on the **2nd of October**.
 Onwards.
