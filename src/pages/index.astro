@@ -1,6 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import { homeDocumentTitle } from '../lib/documentTitle';
+import { documentTitle } from '../lib/documentTitle';
 
 const sections = [
   { href: '/blog/', label: 'Blog', blurb: 'Ideas, experiments, observations.' },
@@ -23,7 +23,7 @@ const personJsonLd = {
 ---
 
 <PageLayout
-  title={homeDocumentTitle('Engineering leader, powered by dyslexia')}
+  title={documentTitle('Engineering leader, powered by dyslexia')}
   description="Engineering leader, powered by dyslexia. Projects, thoughts, and documentation."
 >
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />
