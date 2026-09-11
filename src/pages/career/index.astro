@@ -1,0 +1,265 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+const milestones = [
+  {
+    title: 'Principal Consultant / Engineer, Hippo Digital',
+    dates: 'Aug 2020 – Present',
+    location: 'Leeds',
+    tech: 'C#, .NET Core, ASP.NET Core, Azure, SQL Server, Cosmos DB, React, Terraform/Bicep',
+    paragraphs: [
+      'I lead technical direction and engineering delivery across multidisciplinary squads building large-scale, user-centred digital services for public-sector clients. The work sits at the intersection of architecture, hands-on engineering, and delivery leadership: setting direction, shaping platforms, and keeping teams able to move quickly without sacrificing quality.',
+      'Across DfE engagements I have defined architectural direction for complex digital platforms, designed shared engineering capabilities and reusable patterns adopted across multiple teams, and delivered secure, scalable Azure environments with infrastructure as code. I have embedded modern engineering practice — CI/CD, observability, automated testing — and introduced AI-assisted tooling to improve developer productivity.',
+      'The role also means partnering closely with Product and Delivery to shape roadmaps, challenge assumptions, and keep technical feasibility tied to user value. Mentoring engineers across levels is a constant part of the work: raising standards, strengthening capability, and building teams that can sustain delivery after any one person moves on.',
+    ],
+    engagements: [
+      {
+        name: 'Digital Assessment Service (RBA)',
+        client: 'DfE · Standards and Testing Agency',
+        dates: '2020 – 2023',
+        href: '/projects/#digital-assessment-service',
+        summary:
+          'Platform engineering for the Reception Baseline Assessment digital service — supporting schools to administer an age-appropriate early mathematics and literacy assessment to reception pupils.',
+      },
+      {
+        name: 'Financial Benchmarking and Insights Tool',
+        client: 'DfE',
+        dates: '2023 – 2026',
+        href: '/projects/#education-benchmarking-and-insights',
+        summary:
+          'Ground-up build of a data platform and portal that helps schools manage financial data, benchmark against peers, and find opportunities for better planning.',
+      },
+      {
+        name: 'Accessing Childcare Entitlement Checker',
+        client: 'DfE',
+        dates: '2026',
+        href: '/projects/#accessing-childcare-entitlement-checker',
+        summary:
+          'Led the architecture and delivery of a service that helps parents and carers check eligibility for funded childcare and Tax-Free Childcare.',
+      },
+    ],
+  },
+  {
+    title: 'Development Lead, Collision Management Systems',
+    dates: 'Mar 2020 – Jul 2020',
+    tech: '.NET Core, Azure, REST APIs, SQL Server, NUnit',
+    paragraphs: [
+      'I led development of a cloud-native data platform, guiding technical decisions and engineering practice while acting as domain SME with stakeholders. The focus was strengthening quality through better unit, integration, and API testing, and facilitating Agile delivery so the team could improve predictability and release confidence. Hands-on leadership — pairing, unblocking complex issues — sat alongside the people and process work.',
+    ],
+  },
+  {
+    title: 'Application Developer, JPP Consulting',
+    dates: 'Oct 2018 – Mar 2020',
+    tech: 'C#, .NET Core, EF Core, Web API, AutoCAD/Revit APIs, NUnit',
+    paragraphs: [
+      'I designed and delivered internal business applications and workflow automation, including integrations with AutoCAD and Revit APIs that improved operational efficiency. Projects often ran end-to-end: understanding the process, building the integration or Office automation, and working with senior stakeholders to land the change.',
+    ],
+  },
+  {
+    title: 'Product Development Engineer / Technical Lead, CSols',
+    dates: 'Oct 2013 – Oct 2018',
+    tech: 'C#, VB.NET, SQL Server, Oracle, Web API, TeamCity, NUnit',
+    paragraphs: [
+      'I led a software engineering team delivering laboratory information management systems in regulated environments. Over five years I introduced CI/CD pipelines, automated testing frameworks, and continuous delivery practices, and established engineering standards that improved quality, consistency, and delivery cadence.',
+      'The role also covered pre-sales — demos, RFP responses, technical presentations — and mentoring across the engineering team. It was where I learned how to balance product pressure, regulated quality requirements, and the day-to-day craft of shipping software.',
+    ],
+  },
+  {
+    title: 'Earlier career',
+    dates: '2003 – 2013',
+    paragraphs: [
+      'Business Analyst, Product Specialist, and Analyst/Programmer roles across Medacs Healthcare, Capita, and Heidelberg Cement. Those years built foundations in requirements analysis, testing, and software delivery — and a lasting preference for clarity about what success looks like before the build begins.',
+    ],
+  },
+];
+---
+
+<PageLayout
+  title="Career History · Jon Abbott"
+  description="Career summary, role milestones, and the engineering philosophy behind 15+ years of delivery."
+>
+  <section class="career">
+    <h1>Career History</h1>
+    <p class="muted">Roles, milestones, and how I approach the work.</p>
+
+    <section class="career-block" aria-labelledby="career-summary">
+      <h2 id="career-summary">Career Summary</h2>
+      <p>
+        Principal Consultant, Engineering Leader, and Technical Architect with 15+ years’
+        experience delivering modern, scalable, cloud-native platforms across public sector, SaaS,
+        and regulated environments. I specialise in .NET, Azure, distributed systems, platform
+        engineering, and modern DevOps practices, with a track record of leading high-performing
+        teams and shaping technical strategy.
+      </p>
+      <p>
+        The work combines hands-on engineering with architectural leadership: enabling teams to
+        deliver secure, resilient, observable systems at scale. I am known for improving engineering
+        culture, strengthening delivery predictability, and embedding automation, quality, and
+        platform-first thinking across organisations. Outside client work I stay active in the
+        regional engineering community through YAUG and the Northern DevOps &amp; Platform
+        Conference, bringing the same knowledge-sharing mindset into the teams I lead.
+      </p>
+    </section>
+
+    <section class="career-block" aria-labelledby="career-milestones">
+      <h2 id="career-milestones">Key Career Milestones</h2>
+
+      {
+        milestones.map((milestone) => (
+          <article class="milestone">
+            <h3>{milestone.title}</h3>
+            <p class="milestone__meta muted">
+              {milestone.dates}
+              {milestone.location ? ` · ${milestone.location}` : ''}
+            </p>
+            {milestone.tech && <p class="milestone__tech">{milestone.tech}</p>}
+            {milestone.paragraphs.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+            {milestone.engagements && (
+              <div class="engagements">
+                <h4>Selected engagements</h4>
+                <ul class="engagements__list">
+                  {milestone.engagements.map((engagement) => (
+                    <li class="engagement">
+                      <p class="engagement__title">
+                        <a href={engagement.href}>{engagement.name}</a>
+                      </p>
+                      <p class="engagement__meta muted">
+                        {engagement.client} · {engagement.dates}
+                      </p>
+                      <p>{engagement.summary}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </article>
+        ))
+      }
+    </section>
+
+    <section class="career-block" aria-labelledby="career-philosophy">
+      <h2 id="career-philosophy">Professional Philosophy</h2>
+      <p>
+        I care about systems that hold up in production and teams that can keep improving them. Clear
+        goals, disciplined engineering, and honest feedback beat theatre. I push for clarity on what
+        success looks like early, then hold that standard through architecture, delivery, and
+        operations.
+      </p>
+      <p>
+        Leadership, for me, is creating the conditions where strong engineers do their best work:
+        shared patterns, good platforms, automated quality gates, and coaching that raises the bar
+        without removing ownership. In consultancy especially, your people and practices are the
+        product — so capability building is not optional.
+      </p>
+      <p>
+        I am practical about technology choices. Cloud-native platforms, infrastructure as code,
+        observability, and shift-left quality are tools for predictable delivery, not fashion. The
+        same applies to AI-assisted engineering: useful when it accelerates real work and dangerous
+        when it papers over weak foundations.
+      </p>
+    </section>
+
+    <section class="career-block career-block--last" aria-labelledby="career-forward">
+      <h2 id="career-forward">Looking Forward</h2>
+      <p>
+        I want to keep leading the design and delivery of public-sector platforms that make complex
+        policy usable for real people — and to keep investing in the engineering cultures around
+        those services. Platform thinking, modern quality practice, and thoughtful use of AI will
+        stay central to how I help teams move faster without losing coherence.
+      </p>
+    </section>
+  </section>
+</PageLayout>
+
+<style>
+  .career {
+    max-width: 44rem;
+  }
+
+  .career h1 {
+    margin-bottom: var(--space-3);
+  }
+
+  .career-block {
+    padding-block: var(--space-6);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .career-block--last {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .career-block h2 {
+    text-transform: none;
+    font-size: 1.5rem;
+    margin-bottom: var(--space-4);
+  }
+
+  .milestone {
+    padding-block: var(--space-5);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .milestone:first-of-type {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .milestone h3 {
+    text-transform: none;
+    font-size: 1.2rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .milestone__meta {
+    margin-bottom: var(--space-2);
+  }
+
+  .milestone__tech {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-4);
+  }
+
+  .engagements {
+    margin-top: var(--space-5);
+  }
+
+  .engagements h4 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.95rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .engagements__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .engagement__title {
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+  }
+
+  .engagement__title a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .engagement__title a:hover {
+    color: var(--color-accent);
+  }
+
+  .engagement__meta {
+    margin-bottom: var(--space-2);
+  }
+</style>

@@ -3,16 +3,19 @@ import PageLayout from '../../layouts/PageLayout.astro';
 
 const projects = [
   {
-    title: 'Accessing Childcare Entitlement Checker',
-    href: 'https://github.com/DFE-Digital/accessing-childcare-entitlement-checker',
-    role: 'Principal engineer, technical lead and technical architect',
+    id: 'digital-assessment-service',
+    title: 'Digital Assessment Service',
+    href: 'https://www.gov.uk/government/collections/reception-baseline-assessment',
+    serviceName: 'Reception Baseline Assessment (RBA) · Standards and Testing Agency',
+    role: 'Principal engineer and technical lead',
     paragraphs: [
-      'I led the ground-up build of this service, shaping the architecture and guiding delivery from early design through to a production-ready digital service. I worked across technical direction, engineering practice and delivery leadership to create a reliable foundation that teams could extend safely.',
-      'The service helps parents and carers in England check their eligibility and entitlement for childcare support, including 15 and 30 hours of funded childcare and Tax-Free Childcare. It turns complex policy and eligibility rules into a clear, accessible journey for people trying to understand the support available to them.',
-      'Alongside the user-facing service, the project includes automated integration and cross-browser testing, security scanning, technical documentation, architecture decisions and operational runbooks. This made the service easier to operate and evolve while giving delivery teams a shared understanding of its design and risks.',
+      'I helped shape and deliver the digital platform behind the Reception Baseline Assessment for the Standards and Testing Agency. The RBA is an age-appropriate assessment of early mathematics and early literacy, communication and language, administered in the first weeks of reception and used as the starting point for measuring progress through primary school.',
+      'The Digital Assessment Service supports schools end to end: registering pupils, preparing devices, pairing practitioner and pupil sessions, administering the assessment, and producing narrative statements. Reliability, accessibility, and operational clarity mattered as much as feature delivery — schools need a service that works under real classroom conditions, not just in a demo environment.',
+      'The engagement combined platform engineering with delivery leadership across multidisciplinary teams. We focused on secure, supportable Azure-hosted services, clear operational paths for schools and support staff, and engineering practices that kept a statutory national assessment evolvable as policy and technology moved on.',
     ],
   },
   {
+    id: 'education-benchmarking-and-insights',
     title: 'Education Benchmarking and Insights',
     href: 'https://github.com/DFE-Digital/education-benchmarking-and-insights',
     serviceName: 'Financial Benchmarking and Insights Tool (FBIT)',
@@ -25,6 +28,18 @@ const projects = [
     ],
   },
   {
+    id: 'accessing-childcare-entitlement-checker',
+    title: 'Accessing Childcare Entitlement Checker',
+    href: 'https://github.com/DFE-Digital/accessing-childcare-entitlement-checker',
+    role: 'Principal engineer, technical lead and technical architect',
+    paragraphs: [
+      'I led the ground-up build of this service, shaping the architecture and guiding delivery from early design through to a production-ready digital service. I worked across technical direction, engineering practice and delivery leadership to create a reliable foundation that teams could extend safely.',
+      'The service helps parents and carers in England check their eligibility and entitlement for childcare support, including 15 and 30 hours of funded childcare and Tax-Free Childcare. It turns complex policy and eligibility rules into a clear, accessible journey for people trying to understand the support available to them.',
+      'Alongside the user-facing service, the project includes automated integration and cross-browser testing, security scanning, technical documentation, architecture decisions and operational runbooks. This made the service easier to operate and evolve while giving delivery teams a shared understanding of its design and risks.',
+    ],
+  },
+  {
+    id: 'dfe-checkov-policies',
     title: 'DfE Checkov Policies',
     href: 'https://github.com/DFE-Digital/dfe-checkov-policies',
     role: 'Technical lead for the infrastructure policy initiative',
@@ -48,7 +63,7 @@ const projects = [
 
     {
       projects.map((project) => (
-        <article class="project">
+        <article class="project" id={project.id}>
           <h2>
             <a href={project.href} target="_blank" rel="noopener noreferrer">
               {project.title}
@@ -77,6 +92,7 @@ const projects = [
   .project {
     padding-block: var(--space-6);
     border-top: 1px solid var(--color-border);
+    scroll-margin-top: calc(var(--header-height) + var(--space-4));
   }
 
   .project:last-child {
