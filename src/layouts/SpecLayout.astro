@@ -1,6 +1,7 @@
 ---
 import PageLayout from './PageLayout.astro';
 import SpecSidebar from '../components/SpecSidebar.astro';
+import { documentTitle } from '../lib/documentTitle';
 
 interface Props {
   title: string;
@@ -11,7 +12,7 @@ interface Props {
 const { title, description, currentId } = Astro.props;
 ---
 
-<PageLayout title={`${title} · Jon Abbott`} description={description}>
+<PageLayout title={documentTitle(title)} description={description}>
   <div class="spec-layout">
     <aside class="spec-layout__aside">
       <SpecSidebar currentId={currentId} />
