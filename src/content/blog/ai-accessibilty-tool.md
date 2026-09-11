@@ -40,18 +40,18 @@ Early on, I would just say “improve this”. The results were polished. Impres
 
 Now, I paste my raw text in and ask:
 
-* Fix spelling and grammar.
-* Keep my tone.
-* Do not make it sound corporate.
-* Do not add fancy words.
+- Fix spelling and grammar.
+- Keep my tone.
+- Do not make it sound corporate.
+- Do not add fancy words.
 
 ### 2. Helping me structure my thoughts
 
 Sometimes, my ideas are clear in my head, but messy on the page. So I write everything out as bullet points, no order, no flow, just raw thinking. And then I ask:
 
-* Group these into themes.
-* Suggest a simple structure.
-* Do not rewrite the content yet.
+- Group these into themes.
+- Suggest a simple structure.
+- Do not rewrite the content yet.
 
 This is powerful, as structure is often the hardest part, not the thinking. Once I see the shape, I can fill-in the blanks with my own words. Or refine what I already wrote.
 
@@ -63,8 +63,8 @@ _“That approach will not work. We tried it last year.”_
 
 In my head, this is efficient, and helpful. However, I know how this can be read. So I will ask AI:
 
-* How could this be interpreted?
-* Suggest a version that is still direct but less abrupt.
+- How could this be interpreted?
+- Suggest a version that is still direct but less abrupt.
 
 Sometimes the answer is small. Something as simple as, one line of context:
 
@@ -80,9 +80,9 @@ That was enough. I had to reset. It reminded me, that consistency builds trust. 
 
 Now I use a simple test:
 
-* Would I say this out loud?
-* Does this sound like how I speak in a meeting?
-* If someone read this back to me, would I recognise myself?
+- Would I say this out loud?
+- Does this sound like how I speak in a meeting?
+- If someone read this back to me, would I recognise myself?
 
 If the answer is no, it doesn’t go out. I need AI to support my voice, not replace it.
 

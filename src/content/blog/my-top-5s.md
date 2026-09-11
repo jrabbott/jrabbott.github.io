@@ -50,7 +50,7 @@ What’s not to like?
 ## 3. Watches
 
 I’ve also got a bit of a thing for watches.
-I’m not sure I’d call myself a *watch collector*. That sounds far too organised. But I do enjoy watches that have a bit of a story, or something different about them.
+I’m not sure I’d call myself a _watch collector_. That sounds far too organised. But I do enjoy watches that have a bit of a story, or something different about them.
 
 **TAG Heuer Carrera 510.523:** My grandad’s watch. I was fascinated by it as a child. The one that started it all.
 
@@ -76,14 +76,14 @@ When I’m not working, I build LEGO versions of cars I’m unlikely to ever own
 
 **Bugatti Chiron:** Big, complicated, and impressive. Pretty much everything you’d expect from a LEGO Bugatti.
 
-**Honourable mention:** the **Koenigsegg Sadair’s Spear**, which *could* change the list, but I haven’t actually started building it yet, so I’m not counting it.
+**Honourable mention:** the **Koenigsegg Sadair’s Spear**, which _could_ change the list, but I haven’t actually started building it yet, so I’m not counting it.
 For now.
 
 ## 5. Sports teams
 
 And finally, if you ever want to know where my sporting loyalties lie, here are the five teams most likely to ruin my weekend.
 
-**Leeds United:** The obvious one. Supporting Leeds comes with highs, lows, and a lot of *“surely it can’t get any worse than this?”* moments. Which is also what makes it so rewarding when things go well.
+**Leeds United:** The obvious one. Supporting Leeds comes with highs, lows, and a lot of _“surely it can’t get any worse than this?”_ moments. Which is also what makes it so rewarding when things go well.
 
 **London Irish:** A team I’ve followed for years. There’s something about supporting a club that feels a little different from the mainstream. London Irish certainly fits that description.
 
