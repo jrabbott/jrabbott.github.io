@@ -1,7 +1,7 @@
 ---
 title: 'Farewell'
 author: 'Jon Abbott'
-description: 'After years at Hippo Digital, from a company of about 60 to somewhere around 900, I’m saying thank you to the people, the projects, and one hell of a ride.'
+description: 'After years at Hippo, from a company of about 60 to somewhere around 900, I’m saying thank you to the people, the projects, and one hell of a ride.'
 pubDate: 2026-09-28T09:00:00Z
 tags:
   - personal
@@ -9,7 +9,7 @@ tags:
   - hippo
 ---
 
-What can I say… this week marks my last week at **Hippo Digital**, and it’s a pretty surreal feeling.
+What can I say… this week marks my last week at **Hippo**, and it’s a pretty surreal feeling.
 I’ve known this day was coming, but it still doesn’t quite feel real until you’re in it.
 
 When I started, we were around **60 people**.
