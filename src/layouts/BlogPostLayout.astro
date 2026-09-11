@@ -18,6 +18,8 @@ const dateLabel = pubDate.toLocaleDateString('en-GB', {
   year: 'numeric',
 });
 
+const siteOrigin = Astro.site?.href ?? 'https://jrabbott.github.io/';
+const personId = new URL('#person', siteOrigin).href;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image ?? '/og-default.png', Astro.site);
 
@@ -28,9 +30,10 @@ const blogPostingJsonLd = {
   description: description ?? undefined,
   datePublished: pubDate.toISOString(),
   author: {
+    '@id': personId,
     '@type': 'Person',
     name: author,
-    url: Astro.site?.href ?? 'https://jrabbott.github.io/',
+    url: siteOrigin,
   },
   image: ogImage.href,
   mainEntityOfPage: {
