@@ -1,5 +1,5 @@
 ---
-name: conventional-commits-pr-titles
+name: pr-title
 description: >-
   Write pull request titles in Conventional Commits format for this repository.
   Use when creating, opening, editing, renaming, or reviewing a pull request
@@ -8,7 +8,7 @@ metadata:
   version: "1.0"
 ---
 
-# Conventional Commits pull request titles
+# Pull request titles
 
 ## Background
 
