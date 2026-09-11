@@ -21,9 +21,9 @@ These are five places I’d happily go back to. And, like everything else on thi
 
 **Fuji Hiro:** One of those places that doesn’t need to shout about what it does. Great food. Relaxed atmosphere. Somewhere I’m always happy to eat.
 
-**Forde:** A favourite for a slightly more special meal. The sort of place where the food is the main event.
+**Forde:** A favourite where the food is the main event.
 
-**HooYah:** A completely different vibe, but one I really enjoy. Good food, good atmosphere, and definitely one for when you want something a little less formal.
+**HooYah:** Definitely one for when you want a damn good burger.
 
 **Ox Club:** A Leeds favourite, and a great example of why sometimes you just need really good ingredients cooked well.
 
