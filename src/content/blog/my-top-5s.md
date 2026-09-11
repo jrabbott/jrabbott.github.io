@@ -52,7 +52,7 @@ What’s not to like?
 I’ve also got a bit of a thing for watches.
 I’m not sure I’d call myself a *watch collector*. That sounds far too organised. But I do enjoy watches that have a bit of a story, or something different about them.
 
-**TAG Heuer Carrera 510.523:** A classic. Probably the one that feels most like a traditional watch choice.
+**TAG Heuer Carrera 510.523:** My grandad’s watch. I was fascinated by it as a child. The one that started it all.
 
 **Mr Jones Watches – &#!@?:** Definitely the odd one out. And that’s precisely why I like it. Mr Jones do some brilliantly unconventional designs.
 
