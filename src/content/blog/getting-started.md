@@ -38,7 +38,7 @@ Code has always felt more forgiving than words.
 You either get the result you expect, or you don’t.
 Writing doesn’t work like that.
 
-So starting a blog feels like both an outlet *and* a challenge.
+So starting a blog feels like both an outlet _and_ a challenge.
 
 This is a place for me to think out loud.
 To test ideas.
