@@ -5,7 +5,7 @@ description: >-
   Use when creating, opening, editing, renaming, or reviewing a pull request
   title, or when preparing a squash merge into main.
 metadata:
-  version: "1.0"
+  version: '1.0'
 ---
 
 # Pull request titles
