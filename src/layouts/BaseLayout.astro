@@ -58,5 +58,17 @@ const ogImage = new URL(image, Astro.site);
       </main>
       <slot name="footer" />
     </div>
+    {
+      import.meta.env.PROD && (
+        <script
+          is:inline
+          data-goatcounter="https://jrabbott.goatcounter.com/count"
+          async
+          src="https://gc.zgo.at/count.v5.js"
+          crossorigin="anonymous"
+          integrity="sha384-atnOLvQb9t+jTSipvd75X2yginT4PjVbqDdlJAmxMm+wYElFmeR6EmLP5bYeoRVQ"
+        />
+      )
+    }
   </body>
 </html>
