@@ -1,7 +1,7 @@
 ---
 title: 'My Top 5s'
 author: 'Jon Abbott'
-description: 'Five top fives: sports teams, LEGO builds, watches, places to eat, and theatre shows. A less awkward (and more fun) way of saying a bit about who I am outside of work.'
+description: 'Five top fives: places to eat, theatre shows, watches, LEGO builds, and sports teams. A less awkward (and more fun) way of saying a bit about who I am outside of work.'
 pubDate: 2026-09-11T06:12:00Z
 tags:
   - personal
@@ -18,39 +18,42 @@ And yes.
 There will be themes.
 You’ll spot them before I do.
 
-## 1. Sports teams
+## 1. Places to eat
 
-If you ever want to know where my sporting loyalties lie, here are the five teams most likely to ruin my weekend.
+I’ve got a shortlist when it comes to food.
+These are five places I’d happily go back to. And, like everything else on this list, there’s a bit of variety.
 
-**Leeds United:** The obvious one. Supporting Leeds comes with highs, lows, and a lot of *“surely it can’t get any worse than this?”* moments. Which is also what makes it so rewarding when things go well.
+**Fuji Hiro:** One of those places that doesn’t need to shout about what it does. Great food. Relaxed atmosphere. Somewhere I’m always happy to eat.
 
-**London Irish:** A team I’ve followed for years. There’s something about supporting a club that feels a little different from the mainstream. London Irish certainly fits that description.
+**Forde:** A favourite for a slightly more special meal. The sort of place where the food is the main event.
 
-**Boston Bruins:** My slightly less obvious choice. I’ve always had a soft spot for the Bruins and, perhaps inevitably, ended up getting into ice hockey along the way.
+**HooYah:** A completely different vibe, but one I really enjoy. Good food, good atmosphere, and definitely one for when you want something a little less formal.
 
-**McLaren:** Formula 1 is probably the sport I’ve become most interested in over the years, and McLaren are my team. British heritage, history, and the inevitable emotional rollercoaster. An easy choice.
+**Ox Club:** A Leeds favourite, and a great example of why sometimes you just need really good ingredients cooked well.
 
-**Bradford Bulls:** A bit of a curveball to finish. Rugby league has always been part of my sporting interests, and the Bulls are the team I have the strongest connection with.
+**Prashad:** A brilliant vegetarian Indian restaurant, and probably the one on this list that surprises people most if they know my usual food choices.
 
-Loyalty. Optimism. A questionable tolerance for disappointment.
-We’ll come back to that.
+**Honourable mention:** **Dans le Noir?** Less about the food itself and more about the experience. Eating in complete darkness definitely makes you experience a meal in a completely different way.
 
-## 2. LEGO builds
+I’d rather have somewhere memorable than somewhere simply expensive or fashionable.
+That one’s not really a theme.
+It’s just good sense.
 
-If you want to know how I spend my time when I’m not working, apparently I build LEGO versions of cars I’m unlikely to ever own in real life.
+## 2. Theatre shows
 
-**Ferrari Daytona SP3:** One of my favourites to build. And, unsurprisingly, one of the cars I’d love to have in the real world.
+Next up, the theatre.
+Probably the category that gives away the most about my taste. A mixture of musicals, comedy, nostalgia, and things that are just a little bit different.
 
-**Lamborghini Sián FKP 37:** A great-looking car and an equally impressive LEGO build. Lots of detail. Definitely one that takes a while.
+**Avenue Q:** Funny, rude, clever, and definitely not your traditional musical. One of those shows that stays with you for all the wrong reasons.
 
-**McLaren P1:** Another supercar. Another LEGO build. Another car I’m unlikely to own outside of plastic bricks.
+**Blood Brothers:** A classic. Great storytelling, brilliant music, and one of those shows that hits a little harder than you expect.
 
-**Porsche 911 GT3 RS:** A slightly different choice from the others, but probably one of the most satisfying builds in the collection.
+**Sunny Afternoon:** A brilliant celebration of The Kinks, with great music and plenty of energy. One for the playlist as much as the theatre.
 
-**Bugatti Chiron:** Big, complicated, and impressive. Pretty much everything you’d expect from a LEGO Bugatti.
+**Murder She Didn’t Write:** Completely different again. An improvised murder mystery where the audience gets involved in deciding what happens. You never quite know what you’re going to get.
 
-**Honourable mention:** the **Koenigsegg Sadair’s Spear**, which *could* change the list, but I haven’t actually started building it yet, so I’m not counting it.
-For now.
+**Blue Man Group:** Hard to describe, but very easy to enjoy. Music, comedy, theatre, paint, and general chaos.
+What’s not to like?
 
 ## 3. Watches
 
@@ -70,52 +73,49 @@ I’m not sure I’d call myself a *watch collector*. That sounds far too organi
 See?
 Personality keeps sneaking in.
 
-## 4. Places to eat
+## 4. LEGO builds
 
-I’ve also got a shortlist when it comes to food.
-These are five places I’d happily go back to. And, like everything else on this list, there’s a bit of variety.
+If you want to know how I spend my time when I’m not working, apparently I build LEGO versions of cars I’m unlikely to ever own in real life.
 
-**Fuji Hiro:** One of those places that doesn’t need to shout about what it does. Great food. Relaxed atmosphere. Somewhere I’m always happy to eat.
+**Ferrari Daytona SP3:** One of my favourites to build. And, unsurprisingly, one of the cars I’d love to have in the real world.
 
-**Forde:** A favourite for a slightly more special meal. The sort of place where the food is the main event.
+**Lamborghini Sián FKP 37:** A great-looking car and an equally impressive LEGO build. Lots of detail. Definitely one that takes a while.
 
-**HooYah:** A completely different vibe, but one I really enjoy. Good food, good atmosphere, and definitely one for when you want something a little less formal.
+**McLaren P1:** Another supercar. Another LEGO build. Another car I’m unlikely to own outside of plastic bricks.
 
-**Ox Club:** A Leeds favourite, and a great example of why sometimes you just need really good ingredients cooked well.
+**Porsche 911 GT3 RS:** A slightly different choice from the others, but probably one of the most satisfying builds in the collection.
 
-**Prashad:** A brilliant vegetarian Indian restaurant, and probably the one on this list that surprises people most if they know my usual food choices.
+**Bugatti Chiron:** Big, complicated, and impressive. Pretty much everything you’d expect from a LEGO Bugatti.
 
-**Honourable mention:** **Dans le Noir?** Less about the food itself and more about the experience. Eating in complete darkness definitely makes you experience a meal in a completely different way.
+**Honourable mention:** the **Koenigsegg Sadair’s Spear**, which *could* change the list, but I haven’t actually started building it yet, so I’m not counting it.
+For now.
 
-I’d rather have somewhere memorable than somewhere simply expensive or fashionable.
-That one’s not really a theme.
-It’s just good sense.
+## 5. Sports teams
 
-## 5. Theatre shows
+And finally, if you ever want to know where my sporting loyalties lie, here are the five teams most likely to ruin my weekend.
 
-And finally, the theatre.
-Probably the category that gives away the most about my taste. A mixture of musicals, comedy, nostalgia, and things that are just a little bit different.
+**Leeds United:** The obvious one. Supporting Leeds comes with highs, lows, and a lot of *“surely it can’t get any worse than this?”* moments. Which is also what makes it so rewarding when things go well.
 
-**Avenue Q:** Funny, rude, clever, and definitely not your traditional musical. One of those shows that stays with you for all the wrong reasons.
+**London Irish:** A team I’ve followed for years. There’s something about supporting a club that feels a little different from the mainstream. London Irish certainly fits that description.
 
-**Blood Brothers:** A classic. Great storytelling, brilliant music, and one of those shows that hits a little harder than you expect.
+**Boston Bruins:** My slightly less obvious choice. I’ve always had a soft spot for the Bruins and, perhaps inevitably, ended up getting into ice hockey along the way.
 
-**Sunny Afternoon:** A brilliant celebration of The Kinks, with great music and plenty of energy. One for the playlist as much as the theatre.
+**McLaren:** Formula 1 is probably the sport I’ve become most interested in over the years, and McLaren are my team. British heritage, history, and the inevitable emotional rollercoaster. An easy choice.
 
-**Murder She Didn’t Write:** Completely different again. An improvised murder mystery where the audience gets involved in deciding what happens. You never quite know what you’re going to get.
+**Bradford Bulls:** A bit of a curveball to finish. Rugby league has always been part of my sporting interests, and the Bulls are the team I have the strongest connection with.
 
-**Blue Man Group:** Hard to describe, but very easy to enjoy. Music, comedy, theatre, paint, and general chaos.
-What’s not to like?
+Loyalty. Optimism. A questionable tolerance for disappointment.
+We’ll come back to that.
 
 ## So, that’s me…
 
 Or at least **25 small pieces of me**.
 
-Five sports teams.
-Five LEGO builds.
-Five watches.
 Five places to eat.
 Five theatre shows.
+Five watches.
+Five LEGO builds.
+Five sports teams.
 
 I’m not particularly good at talking about myself, so this seemed like a more interesting way of doing it.
 
