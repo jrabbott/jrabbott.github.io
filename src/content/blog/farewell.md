@@ -39,6 +39,3 @@ You made it what it was.
 It’s been one hell of a ride, and I’m genuinely grateful to have been part of it.
 
 **Thank you all. It’s been a pleasure.**
-
-I leave on the **2nd of October**.
-Onwards.
