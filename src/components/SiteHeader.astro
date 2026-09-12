@@ -103,8 +103,14 @@ function isActive(href: string) {
     border-bottom-color: var(--color-accent);
   }
 
-  /* Keep primary nav visible on large screens even when details is closed. */
+  /* Keep primary nav visible on large screens even when details is closed.
+     Modern engines hide closed details via ::details-content content-visibility,
+     not display:none on the child — display:flex alone is not enough. */
   @media (min-width: 40.01rem) {
+    .site-header__menu::details-content {
+      content-visibility: visible;
+    }
+
     .site-header__nav {
       display: flex;
     }
