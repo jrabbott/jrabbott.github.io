@@ -31,6 +31,22 @@ function isActive(href: string) {
         ))
       }
     </nav>
+    <details class="site-header__menu">
+      <summary class="site-header__menu-toggle">Menu</summary>
+      <nav class="site-header__menu-nav" aria-label="Primary">
+        {
+          links.map((link) => (
+            <a
+              href={link.href}
+              class:list={['site-header__link', { 'is-active': isActive(link.href) }]}
+              aria-current={isActive(link.href) ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </nav>
+    </details>
   </div>
 </header>
 
@@ -75,6 +91,10 @@ function isActive(href: string) {
     gap: var(--space-2) var(--space-4);
   }
 
+  .site-header__menu {
+    display: none;
+  }
+
   .site-header__link {
     color: var(--color-text-muted);
     text-decoration: none;
@@ -84,23 +104,6 @@ function isActive(href: string) {
     border-bottom: 2px solid transparent;
   }
 
-  @media (max-width: 40rem) {
-    .site-header__inner {
-      align-items: flex-start;
-      padding-block: var(--space-3);
-      /* Keep min-height tied to --header-height (raised on small screens in tokens). */
-    }
-
-    .site-header__nav {
-      gap: var(--space-2) var(--space-3);
-      max-width: 16rem;
-    }
-
-    .site-header__link {
-      font-size: 0.875rem;
-    }
-  }
-
   .site-header__link:hover,
   .site-header__link.is-active {
     color: var(--color-text);
@@ -108,5 +111,78 @@ function isActive(href: string) {
 
   .site-header__link.is-active {
     border-bottom-color: var(--color-accent);
+  }
+
+  @media (max-width: 40rem) {
+    .site-header__nav {
+      display: none;
+    }
+
+    .site-header__menu {
+      display: block;
+      margin-inline-start: auto;
+    }
+
+    .site-header__menu-toggle {
+      cursor: pointer;
+      list-style: none;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      padding: var(--space-2) var(--space-3);
+    }
+
+    .site-header__menu-toggle::-webkit-details-marker {
+      display: none;
+    }
+
+    .site-header__menu-toggle::after {
+      content: '';
+      display: inline-block;
+      width: 0.4rem;
+      height: 0.4rem;
+      margin-inline-start: var(--space-2);
+      border-inline-end: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: translateY(-0.1rem) rotate(45deg);
+    }
+
+    .site-header__menu[open] .site-header__menu-toggle {
+      color: var(--color-text);
+    }
+
+    .site-header__menu[open] .site-header__menu-toggle::after {
+      transform: translateY(0.15rem) rotate(-135deg);
+    }
+
+    .site-header__menu-nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+      padding: var(--space-2) 1rem var(--space-3);
+      background: color-mix(in srgb, var(--color-ground) 94%, transparent);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .site-header__menu-nav .site-header__link {
+      display: block;
+      font-size: 1rem;
+      padding: var(--space-3) var(--space-2);
+      border-bottom: none;
+      border-inline-start: 2px solid transparent;
+    }
+
+    .site-header__menu-nav .site-header__link.is-active {
+      border-inline-start-color: var(--color-accent);
+      background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+    }
   }
 </style>
