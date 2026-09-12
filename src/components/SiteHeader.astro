@@ -18,22 +18,9 @@ function isActive(href: string) {
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__brand" href="/">Jon Abbott</a>
-    <nav class="site-header__nav" aria-label="Primary">
-      {
-        links.map((link) => (
-          <a
-            href={link.href}
-            class:list={['site-header__link', { 'is-active': isActive(link.href) }]}
-            aria-current={isActive(link.href) ? 'page' : undefined}
-          >
-            {link.label}
-          </a>
-        ))
-      }
-    </nav>
     <details class="site-header__menu">
       <summary class="site-header__menu-toggle">Menu</summary>
-      <nav class="site-header__menu-nav" aria-label="Primary">
+      <nav class="site-header__nav" aria-label="Primary">
         {
           links.map((link) => (
             <a
@@ -84,15 +71,18 @@ function isActive(href: string) {
     color: var(--color-accent);
   }
 
+  .site-header__menu {
+    margin-inline-start: auto;
+  }
+
+  .site-header__menu-toggle {
+    display: none;
+  }
+
   .site-header__nav {
-    display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: var(--space-2) var(--space-4);
-  }
-
-  .site-header__menu {
-    display: none;
   }
 
   .site-header__link {
@@ -113,17 +103,53 @@ function isActive(href: string) {
     border-bottom-color: var(--color-accent);
   }
 
-  @media (max-width: 40rem) {
+  /* Keep primary nav visible on large screens even when details is closed. */
+  @media (min-width: 40.01rem) {
     .site-header__nav {
-      display: none;
+      display: flex;
+    }
+  }
+
+  @media (max-width: 40rem) {
+    .site-header__inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      column-gap: var(--space-4);
     }
 
+    .site-header__brand {
+      grid-column: 1;
+      grid-row: 1;
+      z-index: 1;
+    }
+
+    /*
+      Details spans the header grid so the open nav can sit in-flow on a full-width
+      second row. Empty summary-row space is pointer-events: none so the brand stays
+      clickable underneath.
+    */
     .site-header__menu {
-      display: block;
-      margin-inline-start: auto;
+      grid-column: 1 / -1;
+      grid-row: 1 / span 2;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto;
+      align-items: center;
+      margin-inline-start: 0;
+      pointer-events: none;
+    }
+
+    .site-header__menu-toggle,
+    .site-header__nav {
+      pointer-events: auto;
     }
 
     .site-header__menu-toggle {
+      grid-column: 2;
+      grid-row: 1;
+      display: flex;
+      align-items: center;
       cursor: pointer;
       list-style: none;
       font-family: var(--font-display);
@@ -133,6 +159,10 @@ function isActive(href: string) {
       text-transform: uppercase;
       color: var(--color-text-muted);
       padding: var(--space-2) var(--space-3);
+    }
+
+    .site-header__menu-toggle::marker {
+      content: none;
     }
 
     .site-header__menu-toggle::-webkit-details-marker {
@@ -158,21 +188,22 @@ function isActive(href: string) {
       transform: translateY(0.15rem) rotate(-135deg);
     }
 
-    .site-header__menu-nav {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      z-index: 21;
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-1);
-      padding: var(--space-2) 1rem var(--space-3);
-      background: var(--color-ground);
-      border-bottom: 1px solid var(--color-border);
+    .site-header__menu:not([open]) .site-header__nav {
+      display: none;
     }
 
-    .site-header__menu-nav .site-header__link {
+    .site-header__menu[open] .site-header__nav {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: var(--space-1);
+      padding-block: var(--space-2) var(--space-3);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .site-header__nav .site-header__link {
       display: block;
       font-size: 1rem;
       padding: var(--space-3) var(--space-2);
@@ -180,7 +211,7 @@ function isActive(href: string) {
       border-inline-start: 2px solid transparent;
     }
 
-    .site-header__menu-nav .site-header__link.is-active {
+    .site-header__nav .site-header__link.is-active {
       border-inline-start-color: var(--color-accent);
       background: color-mix(in srgb, var(--color-accent) 8%, transparent);
     }
