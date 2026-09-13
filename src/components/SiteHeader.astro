@@ -122,31 +122,40 @@ function isActive(href: string) {
       grid-template-columns: 1fr auto;
       /* Keep row 1 at header height when the in-flow nav opens, or brand/MENU jump up. */
       grid-template-rows: var(--header-height) auto;
-      align-items: center;
+      /* Stretch — centering the spanning details in leftover space shifts MENU on open. */
+      align-items: stretch;
+      /* Base `gap` would add a 16px row-gap and inflate the closed bar past --header-height. */
       column-gap: var(--space-4);
+      row-gap: 0;
     }
 
     .site-header__brand {
       grid-column: 1;
       grid-row: 1;
+      align-self: center;
       /* Hit target must stay text-sized; stretching covers the Menu toggle. */
       justify-self: start;
     }
 
     /*
-      Details spans the header grid so the open nav can sit in-flow on a full-width
-      second row. Empty summary-row space is pointer-events: none so the brand stays
-      clickable underneath.
+      Details covers the header row (and spans row 2 when open) so the nav can sit
+      in-flow full-width. Empty summary-row space is pointer-events: none so the
+      brand stays clickable underneath.
     */
     .site-header__menu {
       grid-column: 1 / -1;
-      grid-row: 1 / span 2;
+      grid-row: 1;
       display: grid;
       grid-template-columns: 1fr auto;
       grid-template-rows: var(--header-height) auto;
       align-items: center;
+      min-height: 0;
       margin-inline-start: 0;
       pointer-events: none;
+    }
+
+    .site-header__menu[open] {
+      grid-row: 1 / span 2;
     }
 
     .site-header__menu-toggle,
