@@ -120,6 +120,8 @@ function isActive(href: string) {
     .site-header__inner {
       display: grid;
       grid-template-columns: 1fr auto;
+      /* Keep row 1 at header height when the in-flow nav opens, or brand/MENU jump up. */
+      grid-template-rows: var(--header-height) auto;
       align-items: center;
       column-gap: var(--space-4);
     }
@@ -141,7 +143,7 @@ function isActive(href: string) {
       grid-row: 1 / span 2;
       display: grid;
       grid-template-columns: 1fr auto;
-      grid-template-rows: auto auto;
+      grid-template-rows: var(--header-height) auto;
       align-items: center;
       margin-inline-start: 0;
       pointer-events: none;
