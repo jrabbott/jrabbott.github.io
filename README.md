@@ -12,6 +12,7 @@ Engineering leader, powered by dyslexia.
 - **Spec** — capabilities, work style, operating notes
 - **Career** — roles, milestones, and how Jon works
 - **Projects** — public-sector delivery from idea to service
+- **Reading** — books Jon has read and would recommend
 - **Online** — profiles and places to find Jon
 
 ## Stack
