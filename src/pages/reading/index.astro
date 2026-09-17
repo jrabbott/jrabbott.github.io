@@ -12,15 +12,13 @@ import { documentTitle } from '../../lib/documentTitle';
     <h1>Reading</h1>
     <p class="muted">Books I’ve read and would recommend.</p>
 
-    {
-      reading.map((book) => (
-        <article class="book" id={book.id}>
-          <h2>{book.title}</h2>
-          <p class="book__authors muted">{book.authors}</p>
-          <p>{book.summary}</p>
-        </article>
-      ))
-    }
+    {reading.map((book) => (
+      <article class="book" id={book.id}>
+        <h2>{book.title}</h2>
+        <p class="book__authors muted">{book.authors}</p>
+        <p>{book.summary}</p>
+      </article>
+    ))}
   </section>
 </PageLayout>
 
