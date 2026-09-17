@@ -18,15 +18,13 @@ const links = [
     <h1>Find me online</h1>
     <p class="muted">Where to find me across the web.</p>
     <ul class="online-list">
-      {
-        links.map((link) => (
-          <li>
-            <a href={link.href} target="_blank" rel="noopener noreferrer">
-              {link.label}
-            </a>
-          </li>
-        ))
-      }
+      {links.map((link) => (
+        <li>
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
+            {link.label}
+          </a>
+        </li>
+      ))}
     </ul>
   </section>
 </PageLayout>

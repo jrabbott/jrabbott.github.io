@@ -12,24 +12,22 @@ import { documentTitle } from '../../lib/documentTitle';
     <h1>Projects</h1>
     <p class="muted">Services and infrastructure I helped lead as a consultant.</p>
 
-    {
-      projects.map((project) => (
-        <article class="project" id={project.id}>
-          <h2>
-            <a href={project.href} target="_blank" rel="noopener noreferrer">
-              {project.title}
-            </a>
-          </h2>
-          {'serviceName' in project && project.serviceName && (
-            <p class="project__service muted">{project.serviceName}</p>
-          )}
-          <p class="project__role">{project.role}</p>
-          {project.paragraphs.map((paragraph) => (
-            <p>{paragraph}</p>
-          ))}
-        </article>
-      ))
-    }
+    {projects.map((project) => (
+      <article class="project" id={project.id}>
+        <h2>
+          <a href={project.href} target="_blank" rel="noopener noreferrer">
+            {project.title}
+          </a>
+        </h2>
+        {'serviceName' in project && project.serviceName && (
+          <p class="project__service muted">{project.serviceName}</p>
+        )}
+        <p class="project__role">{project.role}</p>
+        {project.paragraphs.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
+      </article>
+    ))}
   </section>
 </PageLayout>
 

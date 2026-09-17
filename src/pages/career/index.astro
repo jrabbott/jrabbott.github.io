@@ -102,39 +102,37 @@ const milestones = [
     <section class="career-block" aria-labelledby="career-milestones">
       <h2 id="career-milestones">Key Career Milestones</h2>
 
-      {
-        milestones.map((milestone) => (
-          <article class="milestone">
-            <h3>{milestone.title}</h3>
-            <p class="milestone__meta muted">
-              {milestone.dates}
-              {milestone.location ? ` · ${milestone.location}` : ''}
-            </p>
-            {milestone.tech && <p class="milestone__tech">{milestone.tech}</p>}
-            {milestone.paragraphs.map((paragraph) => (
-              <p>{paragraph}</p>
-            ))}
-            {milestone.engagements && (
-              <div class="engagements">
-                <h4>Selected engagements</h4>
-                <ul class="engagements__list">
-                  {milestone.engagements.map((engagement) => (
-                    <li class="engagement">
-                      <p class="engagement__title">
-                        <a href={engagement.href}>{engagement.name}</a>
-                      </p>
-                      <p class="engagement__meta muted">
-                        {engagement.client} · {engagement.dates}
-                      </p>
-                      <p>{engagement.summary}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </article>
-        ))
-      }
+      {milestones.map((milestone) => (
+        <article class="milestone">
+          <h3>{milestone.title}</h3>
+          <p class="milestone__meta muted">
+            {milestone.dates}
+            {milestone.location ? ` · ${milestone.location}` : ''}
+          </p>
+          {milestone.tech && <p class="milestone__tech">{milestone.tech}</p>}
+          {milestone.paragraphs.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+          {milestone.engagements && (
+            <div class="engagements">
+              <h4>Selected engagements</h4>
+              <ul class="engagements__list">
+                {milestone.engagements.map((engagement) => (
+                  <li class="engagement">
+                    <p class="engagement__title">
+                      <a href={engagement.href}>{engagement.name}</a>
+                    </p>
+                    <p class="engagement__meta muted">
+                      {engagement.client} · {engagement.dates}
+                    </p>
+                    <p>{engagement.summary}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </article>
+      ))}
     </section>
 
     <section class="career-block" aria-labelledby="career-philosophy">

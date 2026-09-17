@@ -25,22 +25,18 @@ function formatDate(date: Date) {
     <p class="muted">Ideas, experiments, observations.</p>
 
     <ul class="post-list">
-      {
-        posts.map((post) => (
-          <li class="post-list__item">
-            <a class="post-list__title" href={`/blog/posts/${post.id}/`}>
-              {post.data.title}
-            </a>
-            <p class="post-list__meta muted">
-              <time datetime={post.data.pubDate.toISOString()}>
-                {formatDate(post.data.pubDate)}
-              </time>
-              {post.data.tags.length > 0 && <> · {post.data.tags.slice(0, 3).join(' · ')}</>}
-            </p>
-            <p class="post-list__desc muted">{post.data.description}</p>
-          </li>
-        ))
-      }
+      {posts.map((post) => (
+        <li class="post-list__item">
+          <a class="post-list__title" href={`/blog/posts/${post.id}/`}>
+            {post.data.title}
+          </a>
+          <p class="post-list__meta muted">
+            <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+            {post.data.tags.length > 0 && <> · {post.data.tags.slice(0, 3).join(' · ')}</>}
+          </p>
+          <p class="post-list__desc muted">{post.data.description}</p>
+        </li>
+      ))}
     </ul>
   </section>
 </PageLayout>

@@ -13,38 +13,34 @@ const nav = buildSpecNav(await getCollection('spec'));
 <nav class="spec-sidebar" aria-label="Spec">
   <p class="spec-sidebar__heading">Spec</p>
   <ul class="spec-sidebar__list">
-    {
-      nav.map((item) => (
-        <li>
-          <a
-            href={item.href}
-            class:list={['spec-sidebar__link', { 'is-active': item.id === currentId }]}
-            aria-current={item.id === currentId ? 'page' : undefined}
-          >
-            {item.label}
-          </a>
-        </li>
-      ))
-    }
+    {nav.map((item) => (
+      <li>
+        <a
+          href={item.href}
+          class:list={['spec-sidebar__link', { 'is-active': item.id === currentId }]}
+          aria-current={item.id === currentId ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      </li>
+    ))}
   </ul>
 </nav>
 
 <details class="spec-sidebar-mobile">
   <summary>Spec navigation</summary>
   <ul class="spec-sidebar__list">
-    {
-      nav.map((item) => (
-        <li>
-          <a
-            href={item.href}
-            class:list={['spec-sidebar__link', { 'is-active': item.id === currentId }]}
-            aria-current={item.id === currentId ? 'page' : undefined}
-          >
-            {item.label}
-          </a>
-        </li>
-      ))
-    }
+    {nav.map((item) => (
+      <li>
+        <a
+          href={item.href}
+          class:list={['spec-sidebar__link', { 'is-active': item.id === currentId }]}
+          aria-current={item.id === currentId ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      </li>
+    ))}
   </ul>
 </details>
 
