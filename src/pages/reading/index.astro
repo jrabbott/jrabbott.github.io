@@ -1,0 +1,55 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { reading } from '../../data/reading';
+import { documentTitle } from '../../lib/documentTitle';
+---
+
+<PageLayout
+  title={documentTitle('Reading')}
+  description="Books I’ve read and would recommend — summaries, titles, and authors."
+>
+  <section class="reading">
+    <h1>Reading</h1>
+    <p class="muted">Books I’ve read and would recommend.</p>
+
+    {
+      reading.map((book) => (
+        <article class="book" id={book.id}>
+          <h2>{book.title}</h2>
+          <p class="book__authors muted">{book.authors}</p>
+          <p>{book.summary}</p>
+        </article>
+      ))
+    }
+  </section>
+</PageLayout>
+
+<style>
+  .reading {
+    max-width: 44rem;
+  }
+
+  .reading h1 {
+    margin-bottom: var(--space-3);
+  }
+
+  .book {
+    padding-block: var(--space-6);
+    border-top: 1px solid var(--color-border);
+    scroll-margin-top: var(--space-4);
+  }
+
+  .book:last-child {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .book h2 {
+    text-transform: none;
+    font-size: 1.5rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .book__authors {
+    margin-bottom: var(--space-4);
+  }
+</style>
