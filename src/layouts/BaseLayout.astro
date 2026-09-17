@@ -50,7 +50,9 @@ const ogImage = new URL(image, Astro.site);
     <slot name="head" />
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
     <div class="site-shell">
       <slot name="header" />
       <main id="main-content" class="site-main" tabindex="-1">
@@ -58,17 +60,13 @@ const ogImage = new URL(image, Astro.site);
       </main>
       <slot name="footer" />
     </div>
-    {
-      import.meta.env.PROD && (
-        <script
-          is:inline
-          data-goatcounter="https://jrabbott.goatcounter.com/count"
-          async
-          src="https://gc.zgo.at/count.v5.js"
-          crossorigin="anonymous"
-          integrity="sha384-atnOLvQb9t+jTSipvd75X2yginT4PjVbqDdlJAmxMm+wYElFmeR6EmLP5bYeoRVQ"
-        />
-      )
-    }
+    {import.meta.env.PROD && <script
+      is:inline
+      data-goatcounter="https://jrabbott.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.v5.js"
+      crossorigin="anonymous"
+      integrity="sha384-atnOLvQb9t+jTSipvd75X2yginT4PjVbqDdlJAmxMm+wYElFmeR6EmLP5bYeoRVQ"
+    ></script>}
   </body>
 </html>

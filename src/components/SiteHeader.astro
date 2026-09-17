@@ -18,21 +18,21 @@ function isActive(href: string) {
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a class="site-header__brand" href="/">Jon Abbott</a>
+    <a class="site-header__brand" href="/">
+      Jon Abbott
+    </a>
     <details class="site-header__menu">
       <summary class="site-header__menu-toggle">Menu</summary>
       <nav class="site-header__nav" aria-label="Primary">
-        {
-          links.map((link) => (
-            <a
-              href={link.href}
-              class:list={['site-header__link', { 'is-active': isActive(link.href) }]}
-              aria-current={isActive(link.href) ? 'page' : undefined}
-            >
-              {link.label}
-            </a>
-          ))
-        }
+        {links.map((link) => (
+          <a
+            href={link.href}
+            class:list={['site-header__link', { 'is-active': isActive(link.href) }]}
+            aria-current={isActive(link.href) ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        ))}
       </nav>
     </details>
   </div>

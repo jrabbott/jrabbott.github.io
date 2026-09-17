@@ -46,20 +46,24 @@ const blogPostingJsonLd = {
 ---
 
 <PageLayout title={documentTitle(title)} description={description} ogType="article" image={image}>
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(blogPostingJsonLd)} />
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(blogPostingJsonLd)}
+  ></script>
   <article class="prose blog-post">
-    <p class="blog-post__back"><a href="/blog/">← Blog</a></p>
+    <p class="blog-post__back">
+      <a href="/blog/">← Blog</a>
+    </p>
     <h1>{title}</h1>
     <p class="muted blog-post__meta">
       <time datetime={pubDate.toISOString()}>{dateLabel}</time>
-      {
-        tags.length > 0 && (
-          <>
-            {' · '}
-            {tags.join(' · ')}
-          </>
-        )
-      }
+      {tags.length > 0 && (
+        <>
+          {' · '}
+          {tags.join(' · ')}
+        </>
+      )}
     </p>
     <hr />
     <div class="blog-post__body">
