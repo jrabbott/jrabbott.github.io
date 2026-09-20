@@ -1,0 +1,74 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { talks } from '../../data/talks';
+import { documentTitle } from '../../lib/documentTitle';
+import { formatDate } from '../../lib/formatDate';
+---
+
+<PageLayout
+  title={documentTitle('Talks')}
+  description="Talks and community sessions, with links to slides."
+>
+  <section class="talks" data-pagefind-body>
+    <h1>Talks</h1>
+    <p class="muted">Sessions I’ve given, with slides you can open.</p>
+
+    {talks.map((talk) => (
+      <article class="talk" id={talk.id}>
+        <h2>{talk.title}</h2>
+        <p class="talk__meta muted">
+          {talk.event}
+          {talk.date && (
+            <>
+              {' · '}
+              <time datetime={talk.date.toISOString()}>{formatDate(talk.date)}</time>
+            </>
+          )}
+          {' · '}
+          {talk.speakers}
+        </p>
+        <p>{talk.summary}</p>
+        <p class="talk__link">
+          <a href={talk.href} target="_blank" rel="noopener noreferrer">
+            View slides
+            <span class="sr-only"> (opens in new tab)</span>
+          </a>
+        </p>
+      </article>
+    ))}
+  </section>
+</PageLayout>
+
+<style>
+  .talks {
+    max-width: 44rem;
+  }
+
+  .talks h1 {
+    margin-bottom: var(--space-3);
+  }
+
+  .talk {
+    padding-block: var(--space-6);
+    border-top: 1px solid var(--color-border);
+    scroll-margin-top: var(--space-4);
+  }
+
+  .talk h2 {
+    text-transform: none;
+    font-size: 1.5rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .talk__meta {
+    margin-bottom: var(--space-4);
+  }
+
+  .talk__link {
+    margin-top: var(--space-4);
+  }
+
+  .talk__link a {
+    font-weight: 600;
+  }
+</style>

@@ -8,14 +8,14 @@ const isDev = import.meta.env.DEV;
 
 <PageLayout
   title={documentTitle('Search')}
-  description="Search the blog, spec, career, projects, and reading."
+  description="Search the blog, spec, career, projects, talks, and reading."
 >
   {!isDev && <link slot="head" href="/pagefind/pagefind-ui.css" rel="stylesheet" />}
 
   <section class="search-page">
     <div class="search-page__intro" data-pagefind-body>
       <h1>Search</h1>
-      <p class="muted">Search the blog, spec, career, projects, and reading.</p>
+      <p class="muted">Search the blog, spec, career, projects, talks, and reading.</p>
     </div>
 
     {isDev ? (
