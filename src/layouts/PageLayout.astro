@@ -2,19 +2,25 @@
 import BaseLayout from './BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
-import '../styles/global.css';
 
 interface Props {
   title: string;
   description?: string;
   ogType?: string;
   image?: string;
+  imageAlt?: string;
 }
 
-const { title, description, ogType, image } = Astro.props;
+const { title, description, ogType, image, imageAlt } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} ogType={ogType} image={image}>
+<BaseLayout
+  title={title}
+  description={description}
+  ogType={ogType}
+  image={image}
+  imageAlt={imageAlt}
+>
   <slot name="head" slot="head" />
   <SiteHeader slot="header" />
   <slot />

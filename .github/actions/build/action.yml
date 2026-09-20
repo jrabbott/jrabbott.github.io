@@ -1,5 +1,5 @@
 name: Build
-description: Install dependencies, check formatting, and build the site
+description: Install dependencies, check formatting, lint, typecheck, test, and build
 inputs:
   node-version:
     description: Node.js version
@@ -16,6 +16,14 @@ runs:
     - run: npm ci
       shell: bash
     - run: npm run format:check
+      shell: bash
+    - run: npm run lint
+      shell: bash
+    - run: npm run lint:md
+      shell: bash
+    - run: npm run check
+      shell: bash
+    - run: npm run test
       shell: bash
     - run: npm run build
       shell: bash

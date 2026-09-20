@@ -1,23 +1,16 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import { documentTitle } from '../lib/documentTitle';
+import { siteNav } from '../data/siteNav';
+import { siteOrigin } from '../lib/siteOrigin';
 
-const sections = [
-  { href: '/blog/', label: 'Blog', blurb: 'Ideas, experiments, observations.' },
-  { href: '/spec/', label: 'Spec', blurb: 'Capabilities, work style, operating notes.' },
-  { href: '/career/', label: 'Career', blurb: 'Roles, milestones, and how I work.' },
-  { href: '/projects/', label: 'Projects', blurb: 'Public-sector delivery from idea to service.' },
-  { href: '/reading/', label: 'Reading', blurb: 'Books I’ve read and would recommend.' },
-  { href: '/online/', label: 'Online', blurb: 'Profiles and places to find me.' },
-];
-
-const siteOrigin = Astro.site?.href ?? 'https://jrabbott.github.io/';
+const origin = siteOrigin(Astro.site);
 const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  '@id': new URL('#person', siteOrigin).href,
+  '@id': new URL('#person', origin).href,
   name: 'Jon Abbott',
-  url: siteOrigin,
+  url: origin,
   jobTitle: 'Engineering Leader',
   description: 'Engineering leader, powered by dyslexia.',
 };
@@ -42,7 +35,7 @@ const personJsonLd = {
   </section>
 
   <nav class="home-sections" aria-label="Site sections">
-    {sections.map((section) => (
+    {siteNav.map((section) => (
       <a class="home-sections__item" href={section.href}>
         <span class="home-sections__label">{section.label}</span>
         <span class="home-sections__blurb muted">{section.blurb}</span>

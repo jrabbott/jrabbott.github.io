@@ -17,6 +17,7 @@ import { documentTitle } from '../../lib/documentTitle';
         <h2>
           <a href={project.href} target="_blank" rel="noopener noreferrer">
             {project.title}
+            <span class="sr-only"> (opens in new tab)</span>
           </a>
         </h2>
         {'serviceName' in project && project.serviceName && (

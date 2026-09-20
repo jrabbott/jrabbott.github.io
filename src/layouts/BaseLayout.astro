@@ -1,9 +1,12 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title: string;
   description?: string;
   ogType?: string;
   image?: string;
+  imageAlt?: string;
 }
 
 const {
@@ -11,10 +14,23 @@ const {
   description = 'Engineering leader, powered by dyslexia. Projects, thoughts, and documentation.',
   ogType = 'website',
   image = '/og-default.png',
+  imageAlt = title,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image, Astro.site);
+
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "frame-ancestors 'none'",
+  "img-src 'self' data:",
+  "font-src 'self'",
+  "style-src 'self' 'unsafe-inline'",
+  "script-src 'self' 'unsafe-inline' https://gc.zgo.at",
+  "connect-src 'self' https://jrabbott.goatcounter.com",
+].join('; ');
 ---
 
 <!doctype html>
@@ -22,6 +38,7 @@ const ogImage = new URL(image, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content={contentSecurityPolicy} />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -36,17 +53,15 @@ const ogImage = new URL(image, Astro.site);
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="Jon Abbott" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={imageAlt} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
     <slot name="head" />
   </head>
   <body>

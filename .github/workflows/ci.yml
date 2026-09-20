@@ -45,4 +45,4 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: $/.github/actions/build
+      - uses: ./.github/actions/build

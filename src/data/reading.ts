@@ -91,5 +91,3 @@ export const reading = [
       'McGarvey writes about the gap between people who make decisions and people who live with the consequences: poverty, policy, policing, and proximity. It’s uncomfortable in the right way. I recommend it because it challenges tidy assumptions about fairness and forces you to notice how distance shapes judgement.',
   },
 ] as const;
-
-export type ReadingId = (typeof reading)[number]['id'];

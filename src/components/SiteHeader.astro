@@ -1,14 +1,7 @@
 ---
-const pathname = Astro.url.pathname;
+import { siteNav } from '../data/siteNav';
 
-const links = [
-  { href: '/blog/', label: 'Blog' },
-  { href: '/spec/', label: 'Spec' },
-  { href: '/career/', label: 'Career' },
-  { href: '/projects/', label: 'Projects' },
-  { href: '/reading/', label: 'Reading' },
-  { href: '/online/', label: 'Online' },
-];
+const pathname = Astro.url.pathname;
 
 function isActive(href: string) {
   if (href === '/') return pathname === '/';
@@ -24,7 +17,7 @@ function isActive(href: string) {
     <details class="site-header__menu">
       <summary class="site-header__menu-toggle">Menu</summary>
       <nav class="site-header__nav" aria-label="Primary">
-        {links.map((link) => (
+        {siteNav.map((link) => (
           <a
             href={link.href}
             class:list={['site-header__link', { 'is-active': isActive(link.href) }]}
