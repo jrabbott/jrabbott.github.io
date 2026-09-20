@@ -129,7 +129,7 @@ export const reading = [
     authors: 'Erich Fromm',
     topics: ['Mindset', 'Systems'] as const satisfies readonly ReadingTopic[],
     summary:
-      'Fromm’s classic on why freedom can feel unbearable: isolation and insecurity push people toward conformity, submission, or authoritarianism. It is old, dense in places, and still sharp about the psychology behind “just tell me what to do.” Worth reading if you care how culture, democracy, and personal agency hang together under pressure.',
+      'Fromm’s classic on why freedom can feel unbearable: isolation and insecurity push people towards conformity, submission, or authoritarianism. It is old, dense in places, and still sharp about the psychology behind “just tell me what to do.” Worth reading if you care how culture, democracy, and personal agency hang together under pressure.',
   },
   {
     id: 'measure-what-matters',
