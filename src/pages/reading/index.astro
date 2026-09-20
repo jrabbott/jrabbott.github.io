@@ -1,9 +1,8 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
-import { groupReadingByTopic, reading, topicAnchor } from '../../data/reading';
+import { groupReadingByTopic, topicAnchor } from '../../data/reading';
 import { documentTitle } from '../../lib/documentTitle';
 
-const startHere = reading.filter((book) => 'startHere' in book && book.startHere);
 const grouped = groupReadingByTopic();
 ---
 
@@ -14,19 +13,6 @@ const grouped = groupReadingByTopic();
   <section class="reading" data-pagefind-body>
     <h1>Reading</h1>
     <p class="muted">Books I’ve read and would recommend.</p>
-
-    {startHere.length > 0 && (
-      <nav class="reading-start" aria-labelledby="reading-start-heading">
-        <h2 id="reading-start-heading">Start here</h2>
-        <ul class="reading-start__list">
-          {startHere.map((book) => (
-            <li>
-              <a href={`#${book.id}`}>{book.title}</a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    )}
 
     <nav class="reading-topics" aria-label="Reading topics">
       {grouped.map(({ topic }, index) => (
@@ -67,32 +53,10 @@ const grouped = groupReadingByTopic();
     margin-bottom: var(--space-3);
   }
 
-  .reading-start {
+  .reading-topics {
     margin-top: var(--space-6);
     padding-top: var(--space-5);
     border-top: 1px solid var(--color-border);
-  }
-
-  .reading-start h2 {
-    font-size: 1.25rem;
-    margin-bottom: var(--space-3);
-  }
-
-  .reading-start__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2) var(--space-5);
-  }
-
-  .reading-start__list li {
-    margin-top: 0;
-  }
-
-  .reading-topics {
-    margin-top: var(--space-5);
     margin-bottom: var(--space-2);
   }
 

@@ -16,7 +16,6 @@ export const reading = [
     title: 'Accelerate',
     authors: 'Nicole Forsgren, Jez Humble, and Gene Kim',
     topics: ['Delivery', 'Leadership'] as const satisfies readonly ReadingTopic[],
-    startHere: true,
     summary:
       'The research behind high-performing technology organisations, without the usual hand-waving. It gives you measures that actually matter (delivery speed, stability, recovery) and the capabilities that drive them. I recommend it because it turns “DevOps culture” into something you can argue for with evidence, not vibes.',
   },
@@ -33,7 +32,6 @@ export const reading = [
     title: 'Legacy',
     authors: 'James Kerr',
     topics: ['Leadership'] as const satisfies readonly ReadingTopic[],
-    startHere: true,
     summary:
       'Leadership lessons drawn from the All Blacks: humility, culture, standards, and the small habits that compound into something elite. It’s not a sports book dressed up as management; it’s a clear argument that culture is the work, not a side project. I come back to it when thinking about what high-performing teams actually do day to day.',
   },
@@ -50,7 +48,6 @@ export const reading = [
     title: 'Escaping the Build Trap',
     authors: 'Melissa Perri',
     topics: ['Product'] as const satisfies readonly ReadingTopic[],
-    startHere: true,
     summary:
       'A clear warning about organisations that ship features and call it progress. Perri explains how product management should connect strategy, discovery, and outcomes so teams solve problems instead of filling roadmaps. Essential if you’ve ever watched a team stay busy while the customer value stays flat.',
   },
@@ -118,7 +115,6 @@ export type ReadingBook = {
   authors: string;
   topics: readonly ReadingTopic[];
   summary: string;
-  startHere?: boolean;
 };
 
 export type ReadingTopicGroup = {
