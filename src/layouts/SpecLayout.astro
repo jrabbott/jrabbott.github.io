@@ -17,7 +17,7 @@ const { title, description, currentId } = Astro.props;
     <aside class="spec-layout__aside">
       <SpecSidebar currentId={currentId} />
     </aside>
-    <div class="spec-layout__content prose">
+    <div class="spec-layout__content prose" data-pagefind-body>
       <slot />
     </div>
   </div>

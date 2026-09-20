@@ -9,9 +9,10 @@ interface Props {
   ogType?: string;
   image?: string;
   imageAlt?: string;
+  pagefindIgnore?: boolean;
 }
 
-const { title, description, ogType, image, imageAlt } = Astro.props;
+const { title, description, ogType, image, imageAlt, pagefindIgnore } = Astro.props;
 ---
 
 <BaseLayout
@@ -20,6 +21,7 @@ const { title, description, ogType, image, imageAlt } = Astro.props;
   ogType={ogType}
   image={image}
   imageAlt={imageAlt}
+  pagefindIgnore={pagefindIgnore}
 >
   <slot name="head" slot="head" />
   <SiteHeader slot="header" />

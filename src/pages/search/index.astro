@@ -1,0 +1,45 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { documentTitle } from '../../lib/documentTitle';
+import '../../styles/pagefind.css';
+
+const isDev = import.meta.env.DEV;
+---
+
+<PageLayout
+  title={documentTitle('Search')}
+  description="Search the blog, spec, career, projects, and reading."
+>
+  {!isDev && <link slot="head" href="/pagefind/pagefind-ui.css" rel="stylesheet" />}
+
+  <section class="search-page">
+    <div class="search-page__intro" data-pagefind-body>
+      <h1>Search</h1>
+      <p class="muted">Search the blog, spec, career, projects, and reading.</p>
+    </div>
+
+    {isDev ? (
+      <p class="muted search-page__dev-note">
+        Search needs a built index. Run <code>npm run build</code> then <code>npm run preview</code>{' '}
+        to try it locally.
+      </p>
+    ) : (
+      <div id="search" class="search-page__widget" data-pagefind-ignore></div>
+    )}
+  </section>
+
+  {!isDev && (
+    <>
+      <script is:inline src="/pagefind/pagefind-ui.js"></script>
+      <script is:inline>
+        window.addEventListener('DOMContentLoaded', () => {
+          new PagefindUI({
+            element: '#search',
+            showImages: false,
+            showSubResults: true,
+          });
+        });
+      </script>
+    </>
+  )}
+</PageLayout>

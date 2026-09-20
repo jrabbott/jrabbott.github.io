@@ -7,6 +7,8 @@ interface Props {
   ogType?: string;
   image?: string;
   imageAlt?: string;
+  /** Skip this page entirely in the Pagefind search index. */
+  pagefindIgnore?: boolean;
 }
 
 const {
@@ -15,6 +17,7 @@ const {
   ogType = 'website',
   image = '/og-default.png',
   imageAlt = title,
+  pagefindIgnore = false,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -34,7 +37,7 @@ const contentSecurityPolicy = [
 ---
 
 <!doctype html>
-<html lang="en-GB">
+<html lang="en-GB" data-pagefind-ignore={pagefindIgnore ? 'all' : undefined}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
