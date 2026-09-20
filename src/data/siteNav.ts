@@ -5,4 +5,5 @@ export const siteNav = [
   { href: '/projects/', label: 'Projects', blurb: 'Public-sector delivery from idea to service.' },
   { href: '/reading/', label: 'Reading', blurb: 'Books I’ve read and would recommend.' },
   { href: '/online/', label: 'Online', blurb: 'Profiles and places to find me.' },
+  { href: '/search/', label: 'Search', blurb: 'Find posts, specs, and pages.' },
 ] as const;

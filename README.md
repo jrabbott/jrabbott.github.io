@@ -14,11 +14,13 @@ Engineering leader, powered by dyslexia.
 - **Projects** — public-sector delivery from idea to service
 - **Reading** — books Jon has read and would recommend
 - **Online** — profiles and places to find Jon
+- **Search** — find posts, specs, and pages
 
 ## Stack
 
 - [Astro](https://astro.build) (static)
 - Markdown / MDX content collections
+- [Pagefind](https://pagefind.app) for on-site search
 - GitHub Pages via Actions
 - Node 22.19+
 

@@ -22,7 +22,7 @@ const personJsonLd = {
   description="Engineering leader, powered by dyslexia. Projects, thoughts, and documentation."
 >
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(personJsonLd)}></script>
-  <section class="home-hero">
+  <section class="home-hero" data-pagefind-body>
     <h1>Jon Abbott</h1>
     <p class="home-hero__tagline">Engineering leader, powered by dyslexia.</p>
     <p class="home-hero__support muted">
@@ -38,7 +38,7 @@ const personJsonLd = {
     </p>
   </section>
 
-  <nav class="home-sections" aria-label="Site sections">
+  <nav class="home-sections" aria-label="Site sections" data-pagefind-body>
     {siteNav.map((section) => (
       <a class="home-sections__item" href={section.href}>
         <span class="home-sections__label">{section.label}</span>

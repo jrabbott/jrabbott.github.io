@@ -11,7 +11,7 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <PageLayout title={documentTitle('Blog')} description={BLOG_DESCRIPTION}>
-  <section class="blog-index">
+  <section class="blog-index" data-pagefind-body>
     <h1>Blog</h1>
     <p class="muted">{BLOG_INTRO}</p>
     <p class="blog-index__subscribe">
