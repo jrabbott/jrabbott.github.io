@@ -42,10 +42,15 @@ navId: example
 ```mdx
 import Callout from '../../components/Callout.astro';
 import SpecMetric from '../../components/SpecMetric.astro';
+
+<Callout title="Executive summary">
+  Short highlighted summary.
+</Callout>
 ```
 
-5. Prefer `Callout` for highlighted summaries and `SpecMetric` for
-   labelled meters (`label`, `value`, optional `max`).
+5. Prefer `Callout` for highlighted summaries (required `title` prop) and
+   `SpecMetric` for labelled meters (`label`, `value`, optional `max`).
+   Do not write `<Callout>` without `title` — `astro check` fails.
 6. Do not rename or relocate the overview page casually:
    `index.mdx` uses `navId: index` and maps to `/spec/`.
    Other pages map to `/spec/<id>/`.

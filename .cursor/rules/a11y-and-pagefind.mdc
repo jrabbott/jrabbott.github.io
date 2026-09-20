@@ -13,7 +13,8 @@ When editing Astro layouts, pages, or components:
 3. Keep chrome and non-content UI out of search with `data-pagefind-ignore`
    (header, footer, search widget, and `pagefindIgnore` pages such as 404).
 4. Preserve `aria-current="page"` on active nav links.
-5. For `target="_blank"` links, keep visible text plus
+5. For external links, use `target="_blank"` with
+   `rel="noopener noreferrer"`, visible text, and
    `<span class="sr-only"> (opens in new tab)</span>`.
 6. Keep focus styling tied to `--color-focus` / existing focus rules.
 7. Do not strip these attributes or classes when refactoring markup.

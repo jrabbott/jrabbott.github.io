@@ -12,17 +12,22 @@ metadata:
 
 ## Background
 
-Reading, talks, projects, and links are TypeScript modules under `src/data/`,
-not Astro content collections.
+Reading, talks, and projects are TypeScript arrays under `src/data/`.
 Pages import those arrays and render them.
+
+Links are different: `src/data/links.ts` exports named href constants
+(not an iterable catalogue). Surfaces that show profiles own their own
+lists or hard-coded hrefs.
 
 Do not add Markdown/MDX collections for these catalogues.
 Blog and Spec stay in `src/content/{blog,spec}/`.
 
 ## Procedure
 
-1. Pick the target module and append an entry that matches existing shapes.
-2. Keep `id` values kebab-case and unique within that module.
+1. Pick the target below and follow that section (do not treat every
+   target as “append to an array”).
+2. For reading, talks, and projects: keep `id` values kebab-case and
+   unique within that module.
 3. Do not edit `src/data/siteNav.ts` unless the task intentionally adds or
    changes a site section.
 4. If invariants or helpers change, update the matching Vitest file.
@@ -51,10 +56,20 @@ Blog and Spec stay in `src/content/{blog,spec}/`.
   `careerSummary`
 - Career listings filter on `careerEmployer` via `careerEngagements()`
 
-### Links — `src/data/links.ts`
+### Links — `src/data/links.ts` and `/online/`
 
-- Export named href constants (for example `linkedinHref`)
-- Import those constants from pages; do not scatter raw profile URLs
+- `links.ts` has named exports only (for example `linkedinHref`).
+  There are no entry objects or `id` fields.
+- To show a new profile on `/online/`:
+  1. Add a named export in `src/data/links.ts`
+  2. Import it in `src/pages/online/index.astro`
+  3. Add `{ href: …, label: '…' }` to that page’s local `links` array
+- Other surfaces (home LinkedIn CTA, footer GitHub hrefs) are separate.
+  Update them only when the task asks.
+- Known drift: `/online/` still hard-codes Microsoft Learn, Pluralsight,
+  and Cursor URLs; `SiteFooter.astro` hard-codes GitHub profile/source
+  hrefs. Prefer named exports for new shared URLs; do not assume every
+  existing href is already centralised.
 
 ## Examples
 
@@ -63,16 +78,20 @@ Correct:
 - New book object in `reading` with `topics: ['Leadership'] as const satisfies…`
 - New talk in `talks` with a public `href`
 - Project with career fields so `/career/` picks it up
+- `githubHref` in `links.ts` **and**
+  `{ href: githubHref, label: 'GitHub' }` in the `/online/` list
 
 Incorrect:
 
 - Creating `src/content/reading/*.md` for a book
 - Adding a projects nav item when only adding one project
 - Using a topic string outside `readingTopics`
+- Adding only `export const githubHref = '…'` in `links.ts` and stopping
 
 ## Gotchas
 
 - Keep `as const` / `satisfies` patterns so topic typing stays sound.
-- External links on pages use `target="_blank"` plus
-  `sr-only` “(opens in new tab)” — preserve that when touching templates.
+- External links on pages use `target="_blank"`,
+  `rel="noopener noreferrer"`, and `sr-only` “(opens in new tab)” —
+  preserve that pattern when touching templates.
 - Prefer extending existing exports over parallel duplicate data.
