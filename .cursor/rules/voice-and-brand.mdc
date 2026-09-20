@@ -1,0 +1,19 @@
+---
+description: Keep site copy in Jon's first-person British English brand voice
+alwaysApply: true
+---
+
+# Voice and brand
+
+When writing or editing user-facing copy (pages, content collections, and
+`src/data` summaries):
+
+1. Keep the personal brand signal: Engineering leader, powered by dyslexia.
+2. Write in first person as Jon unless the surface is clearly third person
+   (for example schema.org / JSON-LD name fields).
+3. Use British English spelling and phrasing (`organise`, `recognised`,
+   `behaviour`). Site language is `en-GB`.
+4. Prefer short paragraphs and direct sentences. Match existing blog and
+   catalogue tone.
+5. Avoid corporate filler, generic marketing slogans, and inventing a
+   different personal brand or tagline.
