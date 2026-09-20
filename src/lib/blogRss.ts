@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
-import { BLOG_DESCRIPTION, BLOG_FEED_TITLE, blogPostPath } from './blogMeta';
+import { BLOG_FEED_DESCRIPTION, BLOG_FEED_TITLE, blogPostPath } from './blogMeta';
 import { siteOrigin } from './siteOrigin';
 
 export async function buildBlogRss(context: Parameters<APIRoute>[0]) {
@@ -11,7 +11,7 @@ export async function buildBlogRss(context: Parameters<APIRoute>[0]) {
 
   return rss({
     title: BLOG_FEED_TITLE,
-    description: BLOG_DESCRIPTION,
+    description: BLOG_FEED_DESCRIPTION,
     site: siteOrigin(context.site),
     items: posts.map((post) => ({
       title: post.data.title,

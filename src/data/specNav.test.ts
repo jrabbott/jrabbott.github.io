@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { buildSpecNav, type SpecNavItem } from './specNav';
-import { projectHref } from './projects';
+import { careerEngagements, projectHref } from './projects';
 
 type SpecDoc = Parameters<typeof buildSpecNav>[0][number];
 
@@ -52,5 +52,15 @@ describe('buildSpecNav', () => {
 describe('projectHref', () => {
   it('returns an in-page project anchor', () => {
     expect(projectHref('digital-assessment-service')).toBe('/projects/#digital-assessment-service');
+  });
+});
+
+describe('careerEngagements', () => {
+  it('returns only Hippo engagements in projects order', () => {
+    expect(careerEngagements('hippo').map((project) => project.id)).toEqual([
+      'digital-assessment-service',
+      'education-benchmarking-and-insights',
+      'accessing-childcare-entitlement-checker',
+    ]);
   });
 });

@@ -2,7 +2,7 @@
 import PageLayout from '../../layouts/PageLayout.astro';
 import { documentTitle } from '../../lib/documentTitle';
 import { formatDate } from '../../lib/formatDate';
-import { BLOG_DESCRIPTION, BLOG_INTRO } from '../../lib/blogMeta';
+import { BLOG_DESCRIPTION, BLOG_INTRO, blogPostPath } from '../../lib/blogMeta';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog')).sort(
@@ -18,7 +18,7 @@ const posts = (await getCollection('blog')).sort(
     <ul class="post-list">
       {posts.map((post) => (
         <li class="post-list__item">
-          <a class="post-list__title" href={`/blog/posts/${post.id}/`}>
+          <a class="post-list__title" href={blogPostPath(post.id)}>
             {post.data.title}
           </a>
           <p class="post-list__meta muted">

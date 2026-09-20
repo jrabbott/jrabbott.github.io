@@ -3,7 +3,7 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import { careerEngagements, projectHref } from '../../data/projects';
 import { documentTitle } from '../../lib/documentTitle';
 
-const hippoEngagements = careerEngagements().map((project) => ({
+const hippoEngagements = careerEngagements('hippo').map((project) => ({
   name: project.careerName,
   client: project.careerClient,
   dates: project.careerDates,

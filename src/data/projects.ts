@@ -8,6 +8,7 @@ export const projects = [
     careerName: 'Digital Assessment Service (RBA)',
     careerClient: 'DfE · Standards and Testing Agency',
     careerDates: '2020 – 2023',
+    careerEmployer: 'hippo',
     careerSummary:
       'Started as Senior Developer, later Technical Lead. IVT and TPT only — not live. IVT ~1,502 pupils / ~9.2GB. TPT ~300 schools (~3,000 pupils, two-week September window) / ~30GB. Live (~800,000 in Sept 2023) and ~5.2TB/year with IVT, TPT and Live in parallel were the programme scale those phases prepared for.',
     paragraphs: [
@@ -26,6 +27,7 @@ export const projects = [
     careerName: 'Financial Benchmarking and Insights Tool',
     careerClient: 'DfE',
     careerDates: '2023 – 2026',
+    careerEmployer: 'hippo',
     careerSummary:
       'I led the build of a data platform and portal so schools can manage financial data, compare with peers, and spot better ways to plan.',
     paragraphs: [
@@ -43,6 +45,7 @@ export const projects = [
     careerName: 'Accessing Childcare Entitlement Checker',
     careerClient: 'DfE',
     careerDates: '2026',
+    careerEmployer: 'hippo',
     careerSummary:
       'I led the architecture and delivery of a service that helps parents and carers check eligibility for funded childcare and Tax-Free Childcare.',
     paragraphs: [
@@ -67,10 +70,15 @@ export const projects = [
 
 export type ProjectId = (typeof projects)[number]['id'];
 
-export type CareerProject = Extract<(typeof projects)[number], { careerSummary: string }>;
+export type CareerEmployer = 'hippo';
 
-export function careerEngagements(): CareerProject[] {
-  return projects.filter((project): project is CareerProject => 'careerSummary' in project);
+export type CareerProject = Extract<(typeof projects)[number], { careerEmployer: CareerEmployer }>;
+
+export function careerEngagements(employer: CareerEmployer = 'hippo'): CareerProject[] {
+  return projects.filter(
+    (project): project is CareerProject =>
+      'careerEmployer' in project && project.careerEmployer === employer,
+  );
 }
 
 export function projectHref(id: ProjectId): string {
