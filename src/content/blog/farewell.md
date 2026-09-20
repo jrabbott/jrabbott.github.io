@@ -14,8 +14,7 @@ I’ve known this day was coming, but it still doesn’t quite feel real until y
 
 When I started, we were around **60 people**.
 I’m leaving with that number sitting somewhere around **900**.
-Same company on paper.
-Completely different place in reality.
+Watching that growth from the inside has been something else.
 What a journey it’s been.
 
 The projects have been awesome.
