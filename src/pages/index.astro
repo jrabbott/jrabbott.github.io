@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import { linkedinHref } from '../data/links';
 import { documentTitle } from '../lib/documentTitle';
 
 const sections = [
@@ -38,6 +39,9 @@ const personJsonLd = {
     <p class="home-hero__ctas">
       <a href="/blog/">Read the blog</a>
       <a href="/spec/">View my spec</a>
+      <a href={linkedinHref} target="_blank" rel="noopener noreferrer">
+        Connect on LinkedIn<span class="sr-only"> (opens in new tab)</span>
+      </a>
     </p>
   </section>
 

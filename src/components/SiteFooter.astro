@@ -1,4 +1,6 @@
 ---
+import { linkedinHref } from '../data/links';
+
 const year = new Date().getFullYear();
 ---
 
@@ -10,7 +12,12 @@ const year = new Date().getFullYear();
       {' · '}
       <a href="https://github.com/jrabbott">GitHub</a>
       {' · '}
-      <a href="https://www.linkedin.com/in/jonrabbott/">LinkedIn</a>
+      <a href={linkedinHref}>LinkedIn</a>
+    </p>
+    <p class="muted site-footer__privacy">
+      Site visits are counted with{' '}
+      <a href="https://www.goatcounter.com/help/privacy">GoatCounter</a> (no cookies, no personal
+      profiles).
     </p>
   </div>
 </footer>
@@ -33,5 +40,10 @@ const year = new Date().getFullYear();
 
   .site-footer a:hover {
     color: var(--color-accent);
+  }
+
+  .site-footer__privacy {
+    margin-top: var(--space-3);
+    font-size: 0.9rem;
   }
 </style>
