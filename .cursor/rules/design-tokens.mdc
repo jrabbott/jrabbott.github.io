@@ -1,0 +1,19 @@
+---
+description: Use existing CSS design tokens and fonts for Astro/CSS UI work
+globs: src/**/*.{astro,css}
+alwaysApply: false
+---
+
+# Design tokens
+
+When editing Astro components or CSS under `src/`:
+
+1. Use variables from `src/styles/tokens.css` for colour, type, space, and
+   radius (`--color-*`, `--font-*`, `--space-*`, `--radius`, widths).
+2. Keep the type stack: Barlow Condensed (display), Barlow (body),
+   IBM Plex Mono (mono).
+3. Preserve the dark ground + gold accent look already defined by the tokens.
+4. Do not introduce a new palette, Inter/Roboto/system-default font stacks,
+   or large radius / heavy card chrome that fights the existing UI.
+5. Prefer extending token usage over hard-coded one-off colours when a token
+   already exists.
