@@ -1,7 +1,10 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
-import { reading } from '../../data/reading';
+import { groupReadingByTopic, reading, topicAnchor } from '../../data/reading';
 import { documentTitle } from '../../lib/documentTitle';
+
+const startHere = reading.filter((book) => 'startHere' in book && book.startHere);
+const grouped = groupReadingByTopic();
 ---
 
 <PageLayout
@@ -12,12 +15,45 @@ import { documentTitle } from '../../lib/documentTitle';
     <h1>Reading</h1>
     <p class="muted">Books I’ve read and would recommend.</p>
 
-    {reading.map((book) => (
-      <article class="book" id={book.id}>
-        <h2>{book.title}</h2>
-        <p class="book__authors muted">{book.authors}</p>
-        <p>{book.summary}</p>
-      </article>
+    {startHere.length > 0 && (
+      <nav class="reading-start" aria-labelledby="reading-start-heading">
+        <h2 id="reading-start-heading">Start here</h2>
+        <ul class="reading-start__list">
+          {startHere.map((book) => (
+            <li>
+              <a href={`#${book.id}`}>{book.title}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )}
+
+    <nav class="reading-topics" aria-label="Reading topics">
+      {grouped.map(({ topic }, index) => (
+        <>
+          {index > 0 && (
+            <span class="reading-topics__sep muted" aria-hidden="true">
+              {' '}
+              ·{' '}
+            </span>
+          )}
+          <a href={`#${topicAnchor(topic)}`}>{topic}</a>
+        </>
+      ))}
+    </nav>
+
+    {grouped.map(({ topic, books }) => (
+      <section class="reading-group" aria-labelledby={topicAnchor(topic)}>
+        <h2 id={topicAnchor(topic)}>{topic}</h2>
+        {books.map((book) => (
+          <article class="book" id={book.topics[0] === topic ? book.id : undefined}>
+            <h3>{book.title}</h3>
+            <p class="book__authors muted">{book.authors}</p>
+            <p class="book__topics muted">{book.topics.join(' · ')}</p>
+            <p>{book.summary}</p>
+          </article>
+        ))}
+      </section>
     ))}
   </section>
 </PageLayout>
@@ -31,19 +67,72 @@ import { documentTitle } from '../../lib/documentTitle';
     margin-bottom: var(--space-3);
   }
 
+  .reading-start {
+    margin-top: var(--space-6);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .reading-start h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .reading-start__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-5);
+  }
+
+  .reading-start__list li {
+    margin-top: 0;
+  }
+
+  .reading-topics {
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-2);
+  }
+
+  .reading-topics a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .reading-topics a:hover {
+    color: var(--color-accent);
+  }
+
+  .reading-group {
+    margin-top: var(--space-7);
+  }
+
+  .reading-group > h2 {
+    margin-bottom: var(--space-2);
+    scroll-margin-top: var(--space-4);
+  }
+
   .book {
     padding-block: var(--space-6);
     border-top: 1px solid var(--color-border);
     scroll-margin-top: var(--space-4);
   }
 
-  .book h2 {
+  .book h3 {
     text-transform: none;
     font-size: 1.5rem;
     margin-bottom: var(--space-2);
   }
 
   .book__authors {
+    margin-bottom: var(--space-2);
+  }
+
+  .book__topics {
     margin-bottom: var(--space-4);
+    font-size: 0.95rem;
   }
 </style>

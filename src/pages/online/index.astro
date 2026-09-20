@@ -1,9 +1,10 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
+import { linkedinHref } from '../../data/links';
 import { documentTitle } from '../../lib/documentTitle';
 
 const links = [
-  { href: 'https://www.linkedin.com/in/jonrabbott/', label: 'LinkedIn' },
+  { href: linkedinHref, label: 'LinkedIn' },
   { href: 'https://learn.microsoft.com/en-us/users/jrabbott/', label: 'Microsoft Learn' },
   { href: 'https://app.pluralsight.com/profile/jrabbott1983', label: 'Pluralsight' },
   { href: 'https://cursor.com/@jrabbott', label: 'Cursor' },
@@ -17,6 +18,15 @@ const links = [
   <section class="prose">
     <h1>Find me online</h1>
     <p class="muted">Where to find me across the web.</p>
+
+    <p class="online-contact">
+      Want to get in touch?{' '}
+      <a href={linkedinHref} target="_blank" rel="noopener noreferrer">
+        Connect on LinkedIn<span class="sr-only"> (opens in new tab)</span>
+      </a>
+      .
+    </p>
+
     <ul class="online-list">
       {links.map((link) => (
         <li>
@@ -31,6 +41,11 @@ const links = [
 </PageLayout>
 
 <style>
+  .online-contact {
+    margin-top: var(--space-5);
+    max-width: 36rem;
+  }
+
   .online-list {
     list-style: none;
     padding: 0;

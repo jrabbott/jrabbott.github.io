@@ -14,6 +14,9 @@ const posts = (await getCollection('blog')).sort(
   <section class="blog-index">
     <h1>Blog</h1>
     <p class="muted">{BLOG_INTRO}</p>
+    <p class="blog-index__subscribe">
+      <a href="/blog/rss.xml">Subscribe via RSS</a>
+    </p>
 
     <ul class="post-list">
       {posts.map((post) => (
@@ -35,6 +38,10 @@ const posts = (await getCollection('blog')).sort(
 <style>
   .blog-index {
     max-width: var(--content-width);
+  }
+
+  .blog-index__subscribe {
+    margin-top: var(--space-3);
   }
 
   .post-list {
