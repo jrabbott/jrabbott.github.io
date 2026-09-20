@@ -107,6 +107,46 @@ export const reading = [
     summary:
       'McGarvey writes about the gap between people who make decisions and people who live with the consequences: poverty, policy, policing, and proximity. It’s uncomfortable in the right way. I recommend it because it challenges tidy assumptions about fairness and forces you to notice how distance shapes judgement.',
   },
+  {
+    id: 'surrounded-by-idiots',
+    title: 'Surrounded by Idiots',
+    authors: 'Thomas Erikson',
+    topics: ['Mindset', 'Leadership'] as const satisfies readonly ReadingTopic[],
+    summary:
+      'Erikson’s four-colour model (Red, Yellow, Green, Blue) is a blunt way to notice why some conversations feel effortless and others feel impossible. It is not deep personality science, but it is practical: adapt how you talk, decide, and push back instead of assuming everyone processes the world like you. Useful if you lead, collaborate, or keep bouncing off the same people.',
+  },
+  {
+    id: 'anthro-vision',
+    title: 'Anthro-Vision',
+    authors: 'Gillian Tett',
+    topics: ['Product', 'Systems'] as const satisfies readonly ReadingTopic[],
+    summary:
+      'Tett argues that anthropology’s habit of noticing unspoken rituals, tribes, and blind spots is a better lens for business than spreadsheets alone. The stories (Wall Street, warehouses, classrooms, consumers) make culture feel like something you can observe, not a soft afterthought. I recommend it when product or org decisions keep missing what people actually do.',
+  },
+  {
+    id: 'escape-from-freedom',
+    title: 'Escape from Freedom',
+    authors: 'Erich Fromm',
+    topics: ['Mindset', 'Systems'] as const satisfies readonly ReadingTopic[],
+    summary:
+      'Fromm’s classic on why freedom can feel unbearable: isolation and insecurity push people toward conformity, submission, or authoritarianism. It is old, dense in places, and still sharp about the psychology behind “just tell me what to do.” Worth reading if you care how culture, democracy, and personal agency hang together under pressure.',
+  },
+  {
+    id: 'measure-what-matters',
+    title: 'Measure What Matters',
+    authors: 'John Doerr',
+    topics: ['Delivery', 'Leadership'] as const satisfies readonly ReadingTopic[],
+    summary:
+      'Doerr’s case for OKRs is really a case for focus: a few clear objectives, measurable key results, and transparency so teams pull in the same direction. The Google and other company stories make the method concrete without pretending it is magic. Good reading if goals keep proliferating and nobody can say what “done” means.',
+  },
+  {
+    id: 'thinking-in-systems',
+    title: 'Thinking in Systems',
+    authors: 'Donella H. Meadows',
+    topics: ['Systems'] as const satisfies readonly ReadingTopic[],
+    summary:
+      'Meadows makes stocks, flows, feedback loops, and leverage points feel usable instead of academic. It trains you to look past local fixes that make the wider system worse, and to stay humble about what you can control. I recommend it as the clearest practical companion to systems thinking at work — especially alongside Senge.',
+  },
 ] as const;
 
 export type ReadingBook = {
