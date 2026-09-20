@@ -30,7 +30,7 @@ const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
 
 <style>
   .metric {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-4);
     font-family: var(--font-mono);
   }
 
@@ -38,7 +38,7 @@ const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
     display: flex;
     justify-content: space-between;
     font-size: 0.875rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: var(--space-1);
   }
 
   .metric__label {

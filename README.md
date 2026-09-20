@@ -4,7 +4,7 @@ Engineering leader’s personal site: blog, projects, working specs, and more.
 
 Engineering leader, powered by dyslexia.
 
-**Live:** https://jrabbott.github.io
+**Live:** [jrabbott.github.io](https://jrabbott.github.io)
 
 ## What’s here
 

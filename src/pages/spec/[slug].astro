@@ -1,5 +1,5 @@
 ---
-import SpecLayout from '../../layouts/SpecLayout.astro';
+import SpecPage from '../../components/SpecPage.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -14,8 +14,6 @@ const { doc } = Astro.props;
 const { Content } = await render(doc);
 ---
 
-<SpecLayout title={doc.data.title} description={doc.data.description} currentId={doc.data.navId}>
-  <h1>{doc.data.title}</h1>
-  <p class="muted">{doc.data.description}</p>
+<SpecPage doc={doc}>
   <Content />
-</SpecLayout>
+</SpecPage>

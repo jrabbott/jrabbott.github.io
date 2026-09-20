@@ -12,6 +12,6 @@ export default defineConfig({
     '/management/': '/spec/management/',
     '/comms/': '/spec/comms/',
     '/drivers/': '/spec/drivers/',
-    '/blog/posts/ai-accessibility-tool/': '/blog/posts/ai-accessibilty-tool/',
+    '/blog/posts/ai-accessibilty-tool/': '/blog/posts/ai-accessibility-tool/',
   },
 });
