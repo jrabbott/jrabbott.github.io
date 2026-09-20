@@ -8,16 +8,24 @@ const year = new Date().getFullYear();
   <div class="site-footer__inner">
     <p class="muted">
       &copy; {year} Jon Abbott{' · '}
-      <a href="https://github.com/jrabbott/jrabbott.github.io">Source</a>
+      <a href="https://github.com/jrabbott/jrabbott.github.io" target="_blank" rel="noopener noreferrer">
+        Source<span class="sr-only"> (opens in new tab)</span>
+      </a>
       {' · '}
-      <a href="https://github.com/jrabbott">GitHub</a>
+      <a href="https://github.com/jrabbott" target="_blank" rel="noopener noreferrer">
+        GitHub<span class="sr-only"> (opens in new tab)</span>
+      </a>
       {' · '}
-      <a href={linkedinHref}>LinkedIn</a>
+      <a href={linkedinHref} target="_blank" rel="noopener noreferrer">
+        LinkedIn<span class="sr-only"> (opens in new tab)</span>
+      </a>
     </p>
     <p class="muted site-footer__privacy">
       Site visits are counted with{' '}
-      <a href="https://www.goatcounter.com/help/privacy">GoatCounter</a> (no cookies, no personal
-      profiles).
+      <a href="https://www.goatcounter.com/help/privacy" target="_blank" rel="noopener noreferrer">
+        GoatCounter<span class="sr-only"> (opens in new tab)</span>
+      </a>{' '}
+      (no cookies, no personal profiles).
     </p>
   </div>
 </footer>
