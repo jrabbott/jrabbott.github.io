@@ -2,6 +2,7 @@
 import PageLayout from '../../layouts/PageLayout.astro';
 import { talks } from '../../data/talks';
 import { documentTitle } from '../../lib/documentTitle';
+import { formatDate } from '../../lib/formatDate';
 ---
 
 <PageLayout
@@ -17,6 +18,12 @@ import { documentTitle } from '../../lib/documentTitle';
         <h2>{talk.title}</h2>
         <p class="talk__meta muted">
           {talk.event}
+          {talk.date && (
+            <>
+              {' · '}
+              <time datetime={talk.date.toISOString()}>{formatDate(talk.date)}</time>
+            </>
+          )}
           {' · '}
           {talk.speakers}
         </p>
