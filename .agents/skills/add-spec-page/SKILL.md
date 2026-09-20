@@ -43,9 +43,7 @@ navId: example
 import Callout from '../../components/Callout.astro';
 import SpecMetric from '../../components/SpecMetric.astro';
 
-<Callout title="Executive summary">
-  Short highlighted summary.
-</Callout>
+<Callout title="Executive summary">Short highlighted summary.</Callout>
 ```
 
 5. Prefer `Callout` for highlighted summaries (required `title` prop) and
