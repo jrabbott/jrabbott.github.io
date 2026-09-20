@@ -1,0 +1,16 @@
+---
+import SpecLayout from '../layouts/SpecLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  doc: CollectionEntry<'spec'>;
+}
+
+const { doc } = Astro.props;
+---
+
+<SpecLayout title={doc.data.title} description={doc.data.description} currentId={doc.data.navId}>
+  <h1>{doc.data.title}</h1>
+  <p class="muted">{doc.data.description}</p>
+  <slot />
+</SpecLayout>

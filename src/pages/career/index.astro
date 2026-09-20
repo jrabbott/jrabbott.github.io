@@ -1,7 +1,15 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
-import { projectHref } from '../../data/projects';
+import { careerEngagements, projectHref } from '../../data/projects';
 import { documentTitle } from '../../lib/documentTitle';
+
+const hippoEngagements = careerEngagements('hippo').map((project) => ({
+  name: project.careerName,
+  client: project.careerClient,
+  dates: project.careerDates,
+  href: projectHref(project.id),
+  summary: project.careerSummary,
+}));
 
 const milestones = [
   {
@@ -14,32 +22,7 @@ const milestones = [
       'On DfE work I’ve set the technical direction for complex platforms, built shared patterns other teams could reuse, and stood up Azure environments with infrastructure as code. I’ve pushed for better CI/CD, observability, and automated testing — and I’ve brought AI-assisted tooling in where it actually helps people ship.',
       'I work closely with Product and Delivery. We shape the roadmap, challenge shaky assumptions, and keep the tech tied to something users actually need. Mentoring is a big part of it too. I want teams that still hold together after I’ve moved on.',
     ],
-    engagements: [
-      {
-        name: 'Digital Assessment Service (RBA)',
-        client: 'DfE · Standards and Testing Agency',
-        dates: '2020 – 2023',
-        href: projectHref('digital-assessment-service'),
-        summary:
-          'Started as Senior Developer, later Technical Lead. IVT and TPT only — not live. IVT ~1,502 pupils / ~9.2GB. TPT ~300 schools (~3,000 pupils, two-week September window) / ~30GB. Live (~800,000 in Sept 2023) and ~5.2TB/year with IVT, TPT and Live in parallel were the programme scale those phases prepared for.',
-      },
-      {
-        name: 'Financial Benchmarking and Insights Tool',
-        client: 'DfE',
-        dates: '2023 – 2026',
-        href: projectHref('education-benchmarking-and-insights'),
-        summary:
-          'I led the build of a data platform and portal so schools can manage financial data, compare with peers, and spot better ways to plan.',
-      },
-      {
-        name: 'Accessing Childcare Entitlement Checker',
-        client: 'DfE',
-        dates: '2026',
-        href: projectHref('accessing-childcare-entitlement-checker'),
-        summary:
-          'I led the architecture and delivery of a service that helps parents and carers check eligibility for funded childcare and Tax-Free Childcare.',
-      },
-    ],
+    engagements: hippoEngagements,
   },
   {
     title: 'Development Lead, Collision Management Systems',

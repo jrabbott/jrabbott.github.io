@@ -1,16 +1,10 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
-import { reading, readingTopics, topicAnchor } from '../../data/reading';
+import { groupReadingByTopic, reading, topicAnchor } from '../../data/reading';
 import { documentTitle } from '../../lib/documentTitle';
 
 const startHere = reading.filter((book) => 'startHere' in book && book.startHere);
-
-const grouped = readingTopics
-  .map((topic) => ({
-    topic,
-    books: reading.filter((book) => book.topics[0] === topic),
-  }))
-  .filter((group) => group.books.length > 0);
+const grouped = groupReadingByTopic();
 ---
 
 <PageLayout
@@ -35,7 +29,7 @@ const grouped = readingTopics
     )}
 
     <nav class="reading-topics" aria-label="Reading topics">
-      {readingTopics.map((topic, index) => (
+      {grouped.map(({ topic }, index) => (
         <>
           {index > 0 && (
             <span class="reading-topics__sep muted" aria-hidden="true">
@@ -52,7 +46,7 @@ const grouped = readingTopics
       <section class="reading-group" aria-labelledby={topicAnchor(topic)}>
         <h2 id={topicAnchor(topic)}>{topic}</h2>
         {books.map((book) => (
-          <article class="book" id={book.id}>
+          <article class="book" id={book.topics[0] === topic ? book.id : undefined}>
             <h3>{book.title}</h3>
             <p class="book__authors muted">{book.authors}</p>
             <p class="book__topics muted">{book.topics.join(' · ')}</p>
@@ -91,6 +85,10 @@ const grouped = readingTopics
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-2) var(--space-5);
+  }
+
+  .reading-start__list li {
+    margin-top: 0;
   }
 
   .reading-topics {

@@ -112,8 +112,39 @@ export const reading = [
   },
 ] as const;
 
-export type ReadingId = (typeof reading)[number]['id'];
+export type ReadingBook = {
+  id: string;
+  title: string;
+  authors: string;
+  topics: readonly ReadingTopic[];
+  summary: string;
+  startHere?: boolean;
+};
+
+export type ReadingTopicGroup = {
+  topic: ReadingTopic;
+  books: ReadingBook[];
+};
 
 export function topicAnchor(topic: ReadingTopic): string {
   return `topic-${topic.toLowerCase()}`;
+}
+
+/** Group books under every tagged topic. Throws if any book is missing from groups. */
+export function groupReadingByTopic(books: readonly ReadingBook[] = reading): ReadingTopicGroup[] {
+  const grouped = readingTopics
+    .map((topic) => ({
+      topic,
+      books: books.filter((book) => book.topics.includes(topic)),
+    }))
+    .filter((group) => group.books.length > 0);
+
+  const seen = new Set(grouped.flatMap((group) => group.books.map((book) => book.id)));
+  for (const book of books) {
+    if (!seen.has(book.id)) {
+      throw new Error(`Reading book "${book.id}" is missing from topic groups`);
+    }
+  }
+
+  return grouped;
 }

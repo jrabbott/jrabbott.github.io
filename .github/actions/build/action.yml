@@ -1,5 +1,5 @@
 name: Build
-description: Install dependencies, check formatting, and build the site
+description: Install dependencies, check formatting, lint, typecheck, test, and build
 inputs:
   node-version:
     description: Node.js version
@@ -8,7 +8,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+    # Callers must check out the repo first so `uses: ./.github/actions/build` resolves.
     - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
       with:
         node-version: ${{ inputs.node-version }}
@@ -16,6 +16,14 @@ runs:
     - run: npm ci
       shell: bash
     - run: npm run format:check
+      shell: bash
+    - run: npm run lint
+      shell: bash
+    - run: npm run lint:md
+      shell: bash
+    - run: npm run check
+      shell: bash
+    - run: npm run test
       shell: bash
     - run: npm run build
       shell: bash

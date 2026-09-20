@@ -5,6 +5,12 @@ export const projects = [
     href: 'https://www.gov.uk/government/collections/reception-baseline-assessment',
     serviceName: 'Reception Baseline Assessment (RBA) · Standards and Testing Agency',
     role: 'Senior Developer, later Technical Lead',
+    careerName: 'Digital Assessment Service (RBA)',
+    careerClient: 'DfE · Standards and Testing Agency',
+    careerDates: '2020 – 2023',
+    careerEmployer: 'hippo',
+    careerSummary:
+      'Started as Senior Developer, later Technical Lead. IVT and TPT only — not live. IVT ~1,502 pupils / ~9.2GB. TPT ~300 schools (~3,000 pupils, two-week September window) / ~30GB. Live (~800,000 in Sept 2023) and ~5.2TB/year with IVT, TPT and Live in parallel were the programme scale those phases prepared for.',
     paragraphs: [
       'I helped build the digital platform behind the Reception Baseline Assessment for the Standards and Testing Agency. I started as Senior Developer and later became Technical Lead. I worked through IVT and TPT — I wasn’t on the project for live national delivery. The RBA is an early maths and literacy assessment given in the first weeks of reception, and it’s the starting point for measuring progress through primary school.',
       'The service covers the full school journey: registering pupils, preparing devices, pairing practitioner and pupil sessions, running the assessment, and producing narrative statements. Reliability and accessibility mattered as much as features. Schools need something that works in a real classroom, not just in a demo.',
@@ -18,6 +24,12 @@ export const projects = [
     href: 'https://github.com/DFE-Digital/education-benchmarking-and-insights',
     serviceName: 'Financial Benchmarking and Insights Tool (FBIT)',
     role: 'Principal engineer, technical lead and technical architect',
+    careerName: 'Financial Benchmarking and Insights Tool',
+    careerClient: 'DfE',
+    careerDates: '2023 – 2026',
+    careerEmployer: 'hippo',
+    careerSummary:
+      'I led the build of a data platform and portal so schools can manage financial data, compare with peers, and spot better ways to plan.',
     paragraphs: [
       'I led the ground-up build of this service. I set the technical direction across data, platform, and presentation — architecture, hands-on engineering, and the coordination needed to turn a broad data product into something schools could actually use.',
       'It gives schools one place to manage and understand their financial data. Benchmarking lets them compare with similar schools. Insights help them dig into the numbers and spot better ways to plan. Practical evidence, not another spreadsheet pile.',
@@ -30,6 +42,12 @@ export const projects = [
     title: 'Accessing Childcare Entitlement Checker',
     href: 'https://github.com/DFE-Digital/accessing-childcare-entitlement-checker',
     role: 'Principal engineer, technical lead and technical architect',
+    careerName: 'Accessing Childcare Entitlement Checker',
+    careerClient: 'DfE',
+    careerDates: '2026',
+    careerEmployer: 'hippo',
+    careerSummary:
+      'I led the architecture and delivery of a service that helps parents and carers check eligibility for funded childcare and Tax-Free Childcare.',
     paragraphs: [
       'I led the ground-up build of this service — architecture and delivery from early design through to something production-ready. The aim was a solid foundation teams could extend without painting themselves into a corner.',
       'It helps parents and carers in England check eligibility for childcare support, including 15 and 30 hours of funded childcare and Tax-Free Childcare. Complex policy, turned into a journey people can actually follow.',
@@ -51,6 +69,17 @@ export const projects = [
 ] as const;
 
 export type ProjectId = (typeof projects)[number]['id'];
+
+export type CareerEmployer = 'hippo';
+
+export type CareerProject = Extract<(typeof projects)[number], { careerEmployer: CareerEmployer }>;
+
+export function careerEngagements(employer: CareerEmployer = 'hippo'): CareerProject[] {
+  return projects.filter(
+    (project): project is CareerProject =>
+      'careerEmployer' in project && project.careerEmployer === employer,
+  );
+}
 
 export function projectHref(id: ProjectId): string {
   return `/projects/#${id}`;

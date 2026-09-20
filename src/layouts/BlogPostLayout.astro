@@ -1,6 +1,8 @@
 ---
 import PageLayout from './PageLayout.astro';
 import { documentTitle } from '../lib/documentTitle';
+import { formatDate } from '../lib/formatDate';
+import { siteOrigin } from '../lib/siteOrigin';
 
 interface Props {
   title: string;
@@ -13,14 +15,9 @@ interface Props {
 
 const { title, description, pubDate, author = 'Jon Abbott', tags = [], image } = Astro.props;
 
-const dateLabel = pubDate.toLocaleDateString('en-GB', {
-  day: 'numeric',
-  month: 'short',
-  year: 'numeric',
-});
-
-const siteOrigin = Astro.site?.href ?? 'https://jrabbott.github.io/';
-const personId = new URL('#person', siteOrigin).href;
+const dateLabel = formatDate(pubDate);
+const origin = siteOrigin(Astro.site);
+const personId = new URL('#person', origin).href;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image ?? '/og-default.png', Astro.site);
 
@@ -34,7 +31,7 @@ const blogPostingJsonLd = {
     '@id': personId,
     '@type': 'Person',
     name: author,
-    url: siteOrigin,
+    url: origin,
   },
   image: ogImage.href,
   mainEntityOfPage: {
@@ -45,7 +42,13 @@ const blogPostingJsonLd = {
 };
 ---
 
-<PageLayout title={documentTitle(title)} description={description} ogType="article" image={image}>
+<PageLayout
+  title={documentTitle(title)}
+  description={description}
+  ogType="article"
+  image={image}
+  imageAlt={title}
+>
   <script
     slot="head"
     type="application/ld+json"
@@ -58,6 +61,8 @@ const blogPostingJsonLd = {
     <h1>{title}</h1>
     <p class="muted blog-post__meta">
       <time datetime={pubDate.toISOString()}>{dateLabel}</time>
+      {' · '}
+      <span>{author}</span>
       {tags.length > 0 && (
         <>
           {' · '}
