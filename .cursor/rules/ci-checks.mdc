@@ -1,0 +1,19 @@
+---
+description: Run the full CI npm script sequence before finishing so local work matches CI
+alwaysApply: true
+---
+
+# CI checks
+
+Before considering work complete, and before the final commit/push for a change, run the same npm scripts CI runs, in this order:
+
+1. Run `npm run format:check`. If it fails, run `npm run format` and include the reformatted files in the commit before pushing.
+2. Run `npm run lint`.
+3. Run `npm run lint:md`.
+4. Run `npm run check`.
+5. Run `npm run test`.
+6. Run `npm run build`.
+
+For steps 2–6, fix the reported issues — do not stop at format-only remediation.
+
+Do not treat `npm run build` alone as enough — CI runs the earlier checks first.
