@@ -12,7 +12,7 @@ export const projects = [
     paragraphs: [
       'I helped build the digital platform behind the Reception Baseline Assessment for the Standards and Testing Agency. I started as Senior Developer and later became Technical Lead. I worked through the Item Validation Trial (IVT) and Technical Pre-Test (TPT). The RBA is an early maths and literacy assessment given in the first weeks of reception, and it’s the starting point for measuring progress through primary school.',
       'The service covers the full school journey: registering pupils, preparing devices, pairing practitioner and pupil sessions, running the assessment, and producing narrative statements. Reliability and accessibility mattered as much as features. Schools need something that works in a real classroom, not just in a demo.',
-      'Scale showed up early. IVT covered about 1,500 pupils and around 9GB of event data. TPT covered about 3,000 pupils and generated about 30GB for item analysis. Both over a two-week September window. Those phases sat ahead of live national assessment (around 800,000 pupils).',
+      'Scale showed up early. IVT covered about 1,500 pupils and around 9GB of event data. TPT covered about 3,000 pupils and generated about 30GB for item analysis. Each ran over a two-week September window, in different years. Those phases sat ahead of live national assessment (around 800,000 pupils).',
       'We focused on secure Azure services, clear paths for schools and support staff, and engineering practices that could keep a national assessment moving as policy and tech changed.',
     ],
   },
