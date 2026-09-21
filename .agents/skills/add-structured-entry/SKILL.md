@@ -52,8 +52,7 @@ Blog and Spec stay in `src/content/{blog,spec}/`.
 - Always include: `id`, `title`, `href`, `role`, `paragraphs`
 - Optional service label: `serviceName`
 - For career page visibility, also set:
-  `careerName`, `careerClient`, `careerDates`, `careerEmployer: 'hippo'`,
-  `careerSummary`
+  `careerName`, `careerClient`, `careerDates`, `careerEmployer: 'hippo'`
 - Career listings filter on `careerEmployer` via `careerEngagements()`
 
 ### Links: `src/data/links.ts` and `/online/`
