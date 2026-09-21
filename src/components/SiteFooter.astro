@@ -1,5 +1,5 @@
 ---
-import { linkedinHref } from '../data/links';
+import { githubHref, linkedinHref } from '../data/links';
 
 const year = new Date().getFullYear();
 ---
@@ -16,7 +16,7 @@ const year = new Date().getFullYear();
         Source<span class="sr-only"> (opens in new tab)</span>
       </a>
       {' · '}
-      <a href="https://github.com/jrabbott" target="_blank" rel="noopener noreferrer">
+      <a href={githubHref} target="_blank" rel="noopener noreferrer">
         GitHub<span class="sr-only"> (opens in new tab)</span>
       </a>
       {' · '}

@@ -1,10 +1,11 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
-import { linkedinHref } from '../../data/links';
+import { githubHref, linkedinHref } from '../../data/links';
 import { documentTitle } from '../../lib/documentTitle';
 
 const links = [
   { href: linkedinHref, label: 'LinkedIn' },
+  { href: githubHref, label: 'GitHub' },
   { href: 'https://learn.microsoft.com/en-us/users/jrabbott/', label: 'Microsoft Learn' },
   { href: 'https://app.pluralsight.com/profile/jrabbott1983', label: 'Pluralsight' },
   { href: 'https://cursor.com/@jrabbott', label: 'Cursor' },
@@ -13,7 +14,7 @@ const links = [
 
 <PageLayout
   title={documentTitle('Online')}
-  description="Links to profiles across LinkedIn, Microsoft Learn, Pluralsight, and Cursor."
+  description="Links to profiles across LinkedIn, GitHub, Microsoft Learn, Pluralsight, and Cursor."
 >
   <section class="prose" data-pagefind-body>
     <h1>Find me online</h1>
