@@ -12,7 +12,7 @@ export type Talk = {
 export const talks: Talk[] = [
   {
     id: 'terraform-sandwich',
-    title: 'Terraform Sandwich',
+    title: 'Terraform sandwich',
     event: 'Hippo Learn & Lunch',
     speakers: 'Jonathan Abbott',
     summary:
