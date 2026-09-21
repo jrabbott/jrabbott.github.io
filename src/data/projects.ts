@@ -50,7 +50,7 @@ export const projects = [
   },
   {
     id: 'dfe-checkov-policies',
-    title: 'Department for Education Checkov Policies',
+    title: 'Custom Checkov Policies',
     href: 'https://github.com/DFE-Digital/dfe-checkov-policies',
     role: 'Technical lead for the infrastructure policy initiative',
     paragraphs: [
