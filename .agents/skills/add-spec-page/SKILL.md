@@ -49,6 +49,8 @@ import SpecMetric from '../../components/SpecMetric.astro';
 5. Prefer `Callout` for highlighted summaries (required `title` prop) and
    `SpecMetric` for labelled meters (`label`, `value`, optional `max`).
    Do not write `<Callout>` without `title`; `astro check` fails.
+   Use sentence case for Callout titles and MDX `###` headings.
+   Keep Spec page frontmatter titles route-style (`GET /example`).
 6. Do not rename or relocate the overview page casually:
    `index.mdx` uses `navId: index` and maps to `/spec/`.
    Other pages map to `/spec/<id>/`.
@@ -72,4 +74,5 @@ Incorrect:
 
 - Routes filter `index` specially in `src/pages/spec/[slug].astro`.
 - MDX allows HTML-like components; keep imports relative like existing pages.
-- Follow `voice-and-brand` for user-facing Spec copy.
+- Follow `voice-and-brand` for user-facing Spec copy, including sentence
+  case for Callout titles and body headings.

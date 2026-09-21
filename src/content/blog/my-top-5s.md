@@ -1,5 +1,5 @@
 ---
-title: 'My Top 5s'
+title: 'My top 5s'
 author: 'Jon Abbott'
 description: 'Five top fives: places to eat, theatre shows, watches, LEGO builds, and sports teams. A less awkward (and more fun) way of saying a bit about who I am outside of work.'
 pubDate: 2026-09-11T06:12:00Z

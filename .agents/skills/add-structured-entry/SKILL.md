@@ -38,6 +38,8 @@ Blog and Spec stay in `src/content/{blog,spec}/`.
 - Fields: `id`, `title`, `authors`, `topics`, `summary`
 - `topics` must use values from `readingTopics` with
   `as const satisfies readonly ReadingTopic[]`
+- Keep published book `title` casing as published; do not force sentence
+  case on book titles
 - Summaries: first person or clear recommendation voice; British English
 - If grouping/topic rules change, update `src/data/reading.test.ts`
 
@@ -46,11 +48,14 @@ Blog and Spec stay in `src/content/{blog,spec}/`.
 - Fields: `id`, `title`, `event`, `speakers`, `summary`, `href`
 - Optional: `date` as `Date` (UTC midnight for the talk day)
 - Match the existing `Talk` type
+- Talk `title` values are authored headings: use sentence case
 
 ### Projects: `src/data/projects.ts`
 
 - Always include: `id`, `title`, `href`, `role`, `paragraphs`
 - Optional service label: `serviceName`
+- Keep official product/service names in their established casing;
+  do not rewrite them into prose sentence case
 - For career page visibility, also set:
   `careerName`, `careerClient`, `careerDates`, `careerEmployer: 'hippo'`
 - Career listings filter on `careerEmployer` via `careerEngagements()`

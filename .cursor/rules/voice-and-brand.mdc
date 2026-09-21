@@ -21,3 +21,12 @@ When writing or editing user-facing copy (pages, content collections, and
    parentheses; restructure into shorter sentences when that reads more
    clearly. Do not substitute an en dash or spaced hyphen as a drop-in
    for the same pause.
+7. Use sentence case for all authored headings. Capitalise the first word
+   and proper nouns only. Do not use Title Case for section headings, page
+   headings (`h1`–`h6`), Callout titles, blog/spec body headings, or
+   frontmatter `title` values that render as headings or document titles.
+   Keep proper nouns and brands (`Jon Abbott`, `Hippo Digital`, `LEGO`,
+   `Azure`), acronyms (`AI`, `CI/CD`), published work titles (books), and
+   official product/service names capitalised. Leave Spec route-style
+   titles (`GET /overview`), single-word nav labels (`Blog`, `Career`),
+   and JSON-LD / schema fields that are not display headings unchanged.

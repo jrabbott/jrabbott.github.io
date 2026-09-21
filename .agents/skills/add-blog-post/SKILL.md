@@ -40,7 +40,9 @@ tags:
 
 3. Optional frontmatter: `author` (defaults to `Jon Abbott`).
 4. Write the body in first person, short paragraphs, British English.
-   Follow the `voice-and-brand` rule.
+   Follow the `voice-and-brand` rule. Use sentence case for the
+   frontmatter `title` and for `##` / `###` headings (first word and
+   proper nouns only; no Title Case).
 5. Do not edit `siteNav`, blog index pages, or RSS modules unless the task
    explicitly changes those surfaces.
 6. After writing, run the `ci-checks` sequence (especially `lint:md`,
@@ -64,4 +66,5 @@ Incorrect:
 - `pubDate` must parse as a date (ISO UTC recommended).
 - Filename/id must stay stable once published; renaming breaks URLs.
 - `lint:md` runs on `**/*.md`; keep headings and emphasis consistent with
-  existing posts.
+  existing posts. Prefer sentence case over Title Case for titles and
+  headings.
