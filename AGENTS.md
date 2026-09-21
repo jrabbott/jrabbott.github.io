@@ -17,9 +17,9 @@ When adding or substantially editing site content, use the matching skill:
 
 Follow these Cursor rules (in addition to `ci-checks`):
 
-- `voice-and-brand` — first-person British English, personal brand
-- `design-tokens` — CSS variables and fonts under `src/`
-- `a11y-and-pagefind` — accessibility and search indexing patterns
+- `voice-and-brand`: first-person British English, personal brand
+- `design-tokens`: CSS variables and fonts under `src/`
+- `a11y-and-pagefind`: accessibility and search indexing patterns
 
 ## CI workflows
 

@@ -16,7 +16,7 @@
   },
   "author": "Jon Abbott",
   "license": "MIT",
-  "description": "Personal site — home, blog, spec, projects.",
+  "description": "Personal site: home, blog, spec, projects.",
   "engines": {
     "node": ">=22.19.0"
   },

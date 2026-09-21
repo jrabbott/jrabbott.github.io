@@ -145,7 +145,7 @@ export const reading = [
     authors: 'Donella H. Meadows',
     topics: ['Systems'] as const satisfies readonly ReadingTopic[],
     summary:
-      'Meadows makes stocks, flows, feedback loops, and leverage points feel usable instead of academic. It trains you to look past local fixes that make the wider system worse, and to stay humble about what you can control. I recommend it as the clearest practical companion to systems thinking at work — especially alongside Senge.',
+      'Meadows makes stocks, flows, feedback loops, and leverage points feel usable instead of academic. It trains you to look past local fixes that make the wider system worse, and to stay humble about what you can control. I recommend it as the clearest practical companion to systems thinking at work, especially alongside Senge.',
   },
 ] as const;
 

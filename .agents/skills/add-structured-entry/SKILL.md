@@ -33,7 +33,7 @@ Blog and Spec stay in `src/content/{blog,spec}/`.
 4. If invariants or helpers change, update the matching Vitest file.
 5. Run the `ci-checks` sequence before finishing.
 
-### Reading — `src/data/reading.ts`
+### Reading: `src/data/reading.ts`
 
 - Fields: `id`, `title`, `authors`, `topics`, `summary`
 - `topics` must use values from `readingTopics` with
@@ -41,13 +41,13 @@ Blog and Spec stay in `src/content/{blog,spec}/`.
 - Summaries: first person or clear recommendation voice; British English
 - If grouping/topic rules change, update `src/data/reading.test.ts`
 
-### Talks — `src/data/talks.ts`
+### Talks: `src/data/talks.ts`
 
 - Fields: `id`, `title`, `event`, `speakers`, `summary`, `href`
 - Optional: `date` as `Date` (UTC midnight for the talk day)
 - Match the existing `Talk` type
 
-### Projects — `src/data/projects.ts`
+### Projects: `src/data/projects.ts`
 
 - Always include: `id`, `title`, `href`, `role`, `paragraphs`
 - Optional service label: `serviceName`
@@ -56,7 +56,7 @@ Blog and Spec stay in `src/content/{blog,spec}/`.
   `careerSummary`
 - Career listings filter on `careerEmployer` via `careerEngagements()`
 
-### Links — `src/data/links.ts` and `/online/`
+### Links: `src/data/links.ts` and `/online/`
 
 - `links.ts` has named exports only (for example `linkedinHref`).
   There are no entry objects or `id` fields.
@@ -92,6 +92,6 @@ Incorrect:
 
 - Keep `as const` / `satisfies` patterns so topic typing stays sound.
 - External links on pages use `target="_blank"`,
-  `rel="noopener noreferrer"`, and `sr-only` “(opens in new tab)” —
+  `rel="noopener noreferrer"`, and `sr-only` “(opens in new tab)”;
   preserve that pattern when touching templates.
 - Prefer extending existing exports over parallel duplicate data.

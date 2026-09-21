@@ -99,7 +99,7 @@ function isActive(href: string) {
 
   /* Keep primary nav visible on large screens even when details is closed.
      Modern engines hide closed details via ::details-content content-visibility,
-     not display:none on the child — display:flex alone is not enough. */
+     not display:none on the child; display:flex alone is not enough. */
   @media (min-width: 40.01rem) {
     .site-header__menu::details-content {
       content-visibility: visible;
@@ -116,7 +116,7 @@ function isActive(href: string) {
       grid-template-columns: 1fr auto;
       /* Keep row 1 at header height when the in-flow nav opens, or brand/MENU jump up. */
       grid-template-rows: var(--header-height) auto;
-      /* Stretch — centering the spanning details in leftover space shifts MENU on open. */
+      /* Stretch: centering the spanning details in leftover space shifts MENU on open. */
       align-items: stretch;
       /* Base `gap` would add a 16px row-gap and inflate the closed bar past --header-height. */
       column-gap: var(--space-4);
