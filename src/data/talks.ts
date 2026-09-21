@@ -11,6 +11,15 @@ export type Talk = {
 
 export const talks: Talk[] = [
   {
+    id: 'azure-terraform-backend',
+    title: 'Bootstrapping Azure Terraform state',
+    event: 'Hippo Learn & Lunch',
+    speakers: 'Jonathan Abbott',
+    summary:
+      'The Day 0 chicken-and-egg of Azure Terraform state: the main config cannot create its own backend, so I walk through Portal, CLI, ARM, and Bicep, then land on a small Bicep bootstrap that hardens storage by default (private endpoint, Entra ID only) and sits cleanly ahead of Terraform in CI/CD.',
+    href: 'https://jrabbott.github.io/talk-azure-terraform-backend/',
+  },
+  {
     id: 'terraform-sandwich',
     title: 'Terraform sandwich',
     event: 'Hippo Learn & Lunch',
