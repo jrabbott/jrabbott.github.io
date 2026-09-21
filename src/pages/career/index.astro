@@ -8,7 +8,6 @@ const hippoEngagements = careerEngagements('hippo').map((project) => ({
   client: project.careerClient,
   dates: project.careerDates,
   href: projectHref(project.id),
-  summary: project.careerSummary,
 }));
 
 const milestones = [
@@ -19,7 +18,7 @@ const milestones = [
     tech: 'C#, .NET Core, ASP.NET Core, Azure, SQL Server, Cosmos DB, React, Terraform/Bicep',
     paragraphs: [
       'I lead technical direction for teams building digital services for public-sector clients. Some days that’s architecture. Some days I’m in the code. A lot of the time it’s helping the team move quickly without making a mess.',
-      'On DfE work I’ve set the technical direction for complex platforms, built shared patterns other teams could reuse, and stood up Azure environments with infrastructure as code. I’ve pushed for better CI/CD, observability, and automated testing, and I’ve brought AI-assisted tooling in where it actually helps people ship.',
+      'On client work I’ve set the technical direction for complex platforms, built shared patterns other teams could reuse, and stood up Azure environments with infrastructure as code. I’ve pushed for better CI/CD, observability, and automated testing, and I’ve brought AI-assisted tooling in where it actually helps people ship.',
       'I work closely with Product and Delivery. We shape the roadmap, challenge shaky assumptions, and keep the tech tied to something users actually need. Mentoring is a big part of it too. I want teams that still hold together after I’ve moved on.',
     ],
     engagements: hippoEngagements,
@@ -99,7 +98,7 @@ const milestones = [
           ))}
           {milestone.engagements && (
             <div class="engagements">
-              <h4>Selected engagements</h4>
+              <h4>Engagements</h4>
               <ul class="engagements__list">
                 {milestone.engagements.map((engagement) => (
                   <li class="engagement">
@@ -109,7 +108,6 @@ const milestones = [
                     <p class="engagement__meta muted">
                       {engagement.client} · {engagement.dates}
                     </p>
-                    <p>{engagement.summary}</p>
                   </li>
                 ))}
               </ul>
@@ -132,21 +130,20 @@ const milestones = [
         gates, and coaching that raises the bar without taking ownership away.
       </p>
       <p>
-        In consultancy, your people and practices are the product. So capability building isn’t
-        optional. I’m practical about technology too. Cloud platforms, infrastructure as code,
-        observability, and shift-left quality are tools for predictable delivery, not fashion. Same
-        with AI-assisted engineering: useful when it speeds up real work, dangerous when it papers
-        over weak foundations.
+        People and practices are the product. So capability building isn’t optional. I’m practical
+        about technology too. Cloud platforms, infrastructure as code, observability, and shift-left
+        quality are tools for predictable delivery, not fashion. Same with AI-assisted engineering:
+        useful when it speeds up real work, dangerous when it papers over weak foundations.
       </p>
     </section>
 
     <section class="career-block" aria-labelledby="career-forward">
       <h2 id="career-forward">Looking Forward</h2>
       <p>
-        I want to keep leading public-sector platforms that make complex policy usable for real
-        people. And I want to keep investing in the engineering cultures around those services.
-        Platform thinking, modern quality practice, and thoughtful use of AI will stay central to
-        how I help teams move faster without losing the plot.
+        I want to keep leading platforms that make complex problems usable for real people. And I
+        want to keep investing in the engineering cultures around those services. Platform thinking,
+        modern quality practice, and thoughtful use of AI will stay central to how I help teams move
+        faster without losing the plot.
       </p>
     </section>
   </section>
@@ -201,6 +198,10 @@ const milestones = [
 
   .engagements {
     margin-top: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent);
+    background: var(--color-ground-elevated);
+    padding: var(--space-4);
   }
 
   .engagements h4 {
@@ -209,6 +210,7 @@ const milestones = [
     letter-spacing: 0.06em;
     font-size: 0.95rem;
     margin-bottom: var(--space-3);
+    color: var(--color-accent);
   }
 
   .engagements__list {
@@ -235,6 +237,6 @@ const milestones = [
   }
 
   .engagement__meta {
-    margin-bottom: var(--space-2);
+    margin-bottom: 0;
   }
 </style>
