@@ -15,7 +15,7 @@ metadata:
 Blog posts live in the Astro `blog` content collection.
 The schema is defined in `src/content.config.ts`.
 The index, RSS feeds, and Pagefind search discover posts via
-`getCollection('blog')` — no page or nav edits for a normal post.
+`getCollection('blog')`: no page or nav edits for a normal post.
 
 Prefer Markdown under `src/content/blog/`.
 Do not invent a parallel TypeScript data file for posts.
@@ -63,5 +63,5 @@ Incorrect:
 
 - `pubDate` must parse as a date (ISO UTC recommended).
 - Filename/id must stay stable once published; renaming breaks URLs.
-- `lint:md` runs on `**/*.md` — keep headings and emphasis consistent with
+- `lint:md` runs on `**/*.md`; keep headings and emphasis consistent with
   existing posts.
