@@ -11,6 +11,15 @@ export type Talk = {
 
 export const talks: Talk[] = [
   {
+    id: 'terraform-sandwich',
+    title: 'Terraform Sandwich',
+    event: 'Hippo Learn & Lunch',
+    speakers: 'Jonathan Abbott',
+    summary:
+      'A multi-stage Terraform pattern for when create-time dependencies need a live application: run Terraform for what is safe first, release the app, then run Terraform again for resources that need the endpoint alive. I used Azure Event Grid subscriptions as the concrete case, and when the sandwich is worth it versus redesigning the dependency.',
+    href: 'https://jrabbott.github.io/terraform-sandwich/',
+  },
+  {
     id: 'building-robust-data-pipelines',
     title: 'Building robust data pipelines',
     event: 'Yorkshire Azure User Group',
