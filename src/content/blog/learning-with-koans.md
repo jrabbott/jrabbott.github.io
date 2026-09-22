@@ -65,21 +65,21 @@ When I pick up a new language, or return to one I have not used in a while, koan
 
 These are the sets I keep recommending.
 
-### [Ruby Koans](https://github.com/edgecase/ruby_koans)
+### Ruby Koans
 
-The classic. If you have never tried programming koans, start here or at least look at the shape of them. Ruby’s expressiveness makes the lessons feel playful without being shallow.
+The classic. If you have never tried programming koans, start with the [Ruby Koans](https://github.com/edgecase/ruby_koans) or at least look at the shape of them. Ruby’s expressiveness makes the lessons feel playful without being shallow.
 
-### [Python Koans](https://github.com/gregmalcolm/python_koans)
+### Python Koans
 
-A strong TDD-flavoured path through Python. Clear, approachable, and a good reminder that “simple” languages still have plenty worth exploring carefully.
+A strong TDD-flavoured path through Python via [Python Koans](https://github.com/gregmalcolm/python_koans). Clear, approachable, and a good reminder that “simple” languages still have plenty worth exploring carefully.
 
-### [F# Koans](https://github.com/ChrisMarinos/FSharpKoans)
+### F# Koans
 
-One of my favourites when I want to think functionally without drowning in abstraction. The exercises nudge you toward F# idioms in a way that reading alone rarely does.
+One of my favourites when I want to think functionally without drowning in abstraction. The [F# Koans](https://github.com/ChrisMarinos/FSharpKoans) nudge you toward F# idioms in a way that reading alone rarely does.
 
-### [PSKoans](https://github.com/PowerShellOrg/PSKoans)
+### PSKoans
 
-PowerShell is easy to underestimate if you only use it for quick scripts. This set treats it like a real language, which is exactly the point. Pester keeps the feedback loop sharp.
+PowerShell is easy to underestimate if you only use it for quick scripts. [PSKoans](https://github.com/PowerShellOrg/PSKoans) treats it like a real language, which is exactly the point. Pester keeps the feedback loop sharp.
 
 ## Worth sitting with
 
