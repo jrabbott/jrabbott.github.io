@@ -52,15 +52,15 @@ What’s not to like?
 I’ve also got a bit of a thing for watches.
 I’m not sure I’d call myself a _watch collector_. That sounds far too organised. But I do enjoy watches that have a bit of a story, or something different about them.
 
-**Heuer - Carrera 510.523:** My grandad’s watch. I was fascinated by it as a child. The one that started it all.
+**Heuer – Carrera 510.523:** My grandad’s watch. I was fascinated by it as a child. The one that started it all.
 
 **Mr Jones Watches – &#!@?:** Definitely the odd one out. And that’s precisely why I like it. Mr Jones do some brilliantly unconventional designs.
 
 **Christopher Ward x seconde/seconde/ – C60 Pool Diver:** A proper dive watch with the slightly irreverent twist you’d expect from seconde/seconde/.
 
-**Seiko x Pink Panther - 5 Sports:** Because sometimes a watch doesn’t need to take itself seriously.
+**Seiko x Pink Panther – 5 Sports:** Because sometimes a watch doesn’t need to take itself seriously.
 
-**Bremont x Bamford - S500:** A very different beast again, and one of my favourites from the collection.
+**Bremont x Bamford – S500:** A very different beast again, and one of my favourites from the collection.
 
 ## 4. LEGO builds
 
