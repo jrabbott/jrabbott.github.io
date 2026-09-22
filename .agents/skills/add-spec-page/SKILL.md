@@ -50,6 +50,8 @@ import SpecMetric from '../../components/SpecMetric.astro';
    `SpecMetric` for labelled meters (`label`, `value`, optional `max`).
    Do not write `<Callout>` without `title`; `astro check` fails.
    Use sentence case for Callout titles and MDX `###` headings.
+   Spec MDX is linted with `.markdownlint.spec.json` (MD001 off) because
+   the layout renders the frontmatter title as h1 and body sections use `###`.
    Keep Spec page frontmatter titles route-style (`GET /example`).
 6. Do not rename or relocate the overview page casually:
    `index.mdx` uses `navId: index` and maps to `/spec/`.
