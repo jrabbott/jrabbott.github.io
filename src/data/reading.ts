@@ -147,6 +147,30 @@ export const reading = [
     summary:
       'Meadows makes stocks, flows, feedback loops, and leverage points feel usable instead of academic. It trains you to look past local fixes that make the wider system worse, and to stay humble about what you can control. I recommend it as the clearest practical companion to systems thinking at work, especially alongside Senge.',
   },
+  {
+    id: 'team-topologies',
+    title: 'Team Topologies',
+    authors: 'Matthew Skelton and Manuel Pais',
+    topics: ['Delivery', 'Systems'] as const satisfies readonly ReadingTopic[],
+    summary:
+      'Skelton and Pais give a clear model for how teams should be shaped and how they should talk to each other: stream-aligned, platform, enabling, and complicated-subsystem teams, plus a few interaction modes that keep cognitive load sane. It treats org design as something that should evolve with the architecture, not a one-off restructure. I recommend it when delivery feels stuck in handoffs and nobody can explain why the team boundaries look the way they do.',
+  },
+  {
+    id: 'the-five-dysfunctions-of-a-team',
+    title: 'The Five Dysfunctions of a Team',
+    authors: 'Patrick Lencioni',
+    topics: ['Leadership'] as const satisfies readonly ReadingTopic[],
+    summary:
+      'Lencioni’s leadership fable makes the five dysfunctions feel concrete: absence of trust, fear of conflict, lack of commitment, avoidance of accountability, and inattention to results. The story format is easy to follow, and the pyramid model sticks. Useful if your team is polite but stuck, or if healthy disagreement never quite happens.',
+  },
+  {
+    id: 'an-elegant-puzzle',
+    title: 'An Elegant Puzzle',
+    authors: 'Will Larson',
+    topics: ['Leadership', 'Systems'] as const satisfies readonly ReadingTopic[],
+    summary:
+      'Larson treats engineering management as a systems problem: team sizing, technical debt, succession, and the trade-offs that show up as you scale. It is practical without pretending every company is the same, drawing on Digg, Uber, and Stripe without turning into war stories. I recommend it when you want structured principles for people leadership, not just another set of vague culture tips.',
+  },
 ] as const;
 
 export type ReadingBook = {
