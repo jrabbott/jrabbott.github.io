@@ -35,14 +35,6 @@ The idea of a koan is old. The programming version is much newer.
 
 The best known starting point for many of us is the [Ruby Koans](https://github.com/edgecase/ruby_koans), associated with Jim Weirich and EdgeCase. The pitch was simple: learn Ruby by making tests pass, one failing assertion at a time.
 
-That pattern travelled well.
-
-[Python Koans](https://github.com/gregmalcolm/python_koans) took the same approach into Python through TDD-style exercises. [F# Koans](https://github.com/ChrisMarinos/FSharpKoans) did it for F#. [PSKoans](https://github.com/PowerShellOrg/PSKoans) brought it into PowerShell with Pester.
-
-Different languages. Same shape. Fail, think, fix, continue.
-
-Once you have done one set, the others feel familiar even when the syntax is new. That familiarity is part of the gift.
-
 ## Why I love them as a form of learning
 
 I learn best when I can poke at something.
