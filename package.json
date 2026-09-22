@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "check": "astro check",
     "lint": "eslint .",
-    "lint:md": "markdownlint \"**/*.md\" \"**/*.mdx\" --ignore node_modules --ignore dist --ignore .astro",
+    "lint:md": "markdownlint \"**/*.md\" \"**/*.mdx\" --ignore node_modules --ignore dist --ignore .astro --ignore \"src/content/spec/**\" && markdownlint \"src/content/spec/**/*.mdx\" --config .markdownlint.spec.json",
     "test": "vitest run",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
