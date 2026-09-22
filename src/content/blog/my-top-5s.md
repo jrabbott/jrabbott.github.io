@@ -52,27 +52,27 @@ What’s not to like?
 I’ve also got a bit of a thing for watches.
 I’m not sure I’d call myself a _watch collector_. That sounds far too organised. But I do enjoy watches that have a bit of a story, or something different about them.
 
-**TAG Heuer Carrera 510.523:** My grandad’s watch. I was fascinated by it as a child. The one that started it all.
+**Heuer – Carrera 510.523:** My grandad’s watch. I was fascinated by it as a child. The one that started it all.
 
 **Mr Jones Watches – &#!@?:** Definitely the odd one out. And that’s precisely why I like it. Mr Jones do some brilliantly unconventional designs.
 
 **Christopher Ward x seconde/seconde/ – C60 Pool Diver:** A proper dive watch with the slightly irreverent twist you’d expect from seconde/seconde/.
 
-**Seiko – Pink Panther:** Because sometimes a watch doesn’t need to take itself seriously.
+**Seiko x Pink Panther – 5 Sports:** Because sometimes a watch doesn’t need to take itself seriously.
 
-**Bremont x Bamford S500:** A very different beast again, and one of my favourites from the collection.
+**Bremont x Bamford – S500:** A very different beast again, and one of my favourites from the collection.
 
 ## 4. LEGO builds
 
-When I’m not working, I build LEGO versions of cars I’m unlikely to ever own in real life.
+When I’m not working, I build LEGO versions of supercars I’m unlikely to ever own in real life.
 
-**Ferrari Daytona SP3:** One of my favourites to build. And, unsurprisingly, one of the cars I’d love to have in the real world.
+**Ferrari Daytona SP3:** One of my favourites to build. And, unsurprisingly, one of the supercars I’d love to have in the real world.
 
-**Lamborghini Sián FKP 37:** A great-looking car and an equally impressive LEGO build. Lots of detail. Definitely one that takes a while.
+**Lamborghini Sián FKP 37:** A great-looking supercar and an equally impressive LEGO build. Lots of detail. Definitely one that takes a while.
 
 **McLaren P1:** Another supercar. Another LEGO build. Another car I’m unlikely to own outside of plastic bricks.
 
-**Porsche 911 GT3 RS:** A slightly different choice from the others, but probably one of the most satisfying builds in the collection.
+**Porsche 911 GT3 RS:** A proper supercar build, and probably one of the most satisfying in the collection.
 
 **Bugatti Chiron:** Big, complicated, and impressive. Pretty much everything you’d expect from a LEGO Bugatti.
 
@@ -91,7 +91,7 @@ And finally, if you ever want to know where my sporting loyalties lie, here are 
 
 **McLaren:** Motorsport has been around for a long time for me. Dad competing in Land Rover trials. Karting at school. Formula 1 followed, and McLaren are my team. British heritage, history, and the inevitable emotional rollercoaster.
 
-**Bradford Bulls:** A bit of a curveball to finish. Rugby league has always been part of my sporting interests, and the Bulls are the team I have the strongest connection with.
+**Bradford Bulls:** A bit of a curveball to finish. I’m a rugby union fan at heart, but I appreciate both codes. Bradford are my local team, so I try and attend matches when I can.
 
 ## So, that’s me…
 
@@ -106,8 +106,6 @@ Five watches.
 Five LEGO builds.
 
 Five sports teams.
-
-I’m not particularly good at talking about myself, so this seemed like a more interesting way of doing it.
 
 And looking back at the list, there does seem to be a bit of a theme:
 
