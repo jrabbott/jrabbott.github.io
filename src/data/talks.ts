@@ -11,6 +11,15 @@ export type Talk = {
 
 export const talks: Talk[] = [
   {
+    id: 'give-your-coding-agent-some-eyes',
+    title: 'D’oh! My coding agent has no eyes',
+    event: 'Upcoming',
+    speakers: 'Jonathan Abbott',
+    summary:
+      'I spent months trying to improve my coding agents, before realising the problem wasn’t that they couldn’t meet my quality bar. It was that I’d never given them a signal that the bar existed.',
+    href: 'https://jrabbott.github.io/talk-give-your-coding-agent-some-eyes/',
+  },
+  {
     id: 'azure-terraform-backend',
     title: 'Bootstrapping Azure Terraform state',
     event: 'Hippo Learn & Lunch',
