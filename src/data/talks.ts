@@ -13,7 +13,7 @@ export const talks: Talk[] = [
   {
     id: 'give-your-coding-agent-some-eyes',
     title: 'D’oh! My coding agent has no eyes',
-    event: 'TBC',
+    event: 'Upcoming',
     speakers: 'Jonathan Abbott',
     summary:
       'I spent months trying to improve my coding agents, before realising the problem wasn’t that they couldn’t meet my quality bar. It was that I’d never given them a signal that the bar existed.',
