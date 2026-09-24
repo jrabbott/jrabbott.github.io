@@ -7,6 +7,7 @@ blog:
           - src/layouts/BlogPostLayout.astro
           - src/lib/blogMeta.ts
           - src/lib/blogRss.ts
+          - src/content.config.ts
 
 spec:
   - changed-files:
@@ -21,11 +22,14 @@ spec:
           - src/components/SpecPage.astro
           - src/components/SpecSidebar.astro
           - .markdownlint.spec.json
+          - src/content.config.ts
 
 career:
   - changed-files:
       - any-glob-to-any-file:
           - src/pages/career/**
+          # Career engagements live in projects.ts (careerEngagements()).
+          - src/data/projects.ts
 
 projects:
   - changed-files:

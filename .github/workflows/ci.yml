@@ -40,8 +40,11 @@ jobs:
             chore
             revert
 
+  # Labelling is best-effort: do not fail the CI workflow on API flakes,
+  # racey creates, or fork PRs with a read-only GITHUB_TOKEN.
   label:
     runs-on: ubuntu-latest
+    continue-on-error: true
     permissions:
       contents: read
       issues: write
@@ -54,11 +57,14 @@ jobs:
         run: |
           create_label() {
             local name="$1" color="$2" desc="$3"
-            if gh label list --json name -q '.[].name' | grep -qx "$name"; then
+            if gh label list --limit 100 --json name -q '.[].name' | grep -qx "$name"; then
               echo "exists: $name"
-            else
-              gh label create "$name" --color "$color" --description "$desc"
+              return 0
+            fi
+            if gh label create "$name" --color "$color" --description "$desc"; then
               echo "created: $name"
+            else
+              echo "skip create for $name (may already exist or token cannot write labels)"
             fi
           }
           create_label blog 0e8a16 'Changes under /blog/'
