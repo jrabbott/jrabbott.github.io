@@ -40,6 +40,39 @@ jobs:
             chore
             revert
 
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Ensure section labels exist
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          create_label() {
+            local name="$1" color="$2" desc="$3"
+            if gh label list --json name -q '.[].name' | grep -qx "$name"; then
+              echo "exists: $name"
+            else
+              gh label create "$name" --color "$color" --description "$desc"
+              echo "created: $name"
+            fi
+          }
+          create_label blog 0e8a16 'Changes under /blog/'
+          create_label spec 1d76db 'Changes under /spec/'
+          create_label career 5319e7 'Changes under /career/'
+          create_label projects fbca04 'Changes under /projects/'
+          create_label talks d93f0b 'Changes under /talks/'
+          create_label reading 006b75 'Changes under /reading/'
+          create_label online c5def5 'Changes under /online/'
+          create_label search bfd4f2 'Changes under /search/'
+      - uses: actions/labeler@bf12e9b00b37c5c0ca2b87b79b2daf7891dbda13 # v7.0.0
+        with:
+          sync-labels: true
+
   build:
     runs-on: ubuntu-latest
     permissions:

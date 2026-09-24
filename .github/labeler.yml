@@ -1,0 +1,59 @@
+# Path-based PR labels for site sections (see src/data/siteNav.ts).
+blog:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/content/blog/**
+          - src/pages/blog/**
+          - src/layouts/BlogPostLayout.astro
+          - src/lib/blogMeta.ts
+          - src/lib/blogRss.ts
+
+spec:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/content/spec/**
+          - src/pages/spec/**
+          - src/layouts/SpecLayout.astro
+          - src/data/specNav.ts
+          - src/data/specNav.test.ts
+          - src/components/Callout.astro
+          - src/components/SpecMetric.astro
+          - src/components/SpecPage.astro
+          - src/components/SpecSidebar.astro
+          - .markdownlint.spec.json
+
+career:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/pages/career/**
+
+projects:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/pages/projects/**
+          - src/data/projects.ts
+
+talks:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/pages/talks/**
+          - src/data/talks.ts
+
+reading:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/pages/reading/**
+          - src/data/reading.ts
+          - src/data/reading.test.ts
+
+online:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/pages/online/**
+          - src/data/links.ts
+
+search:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/pages/search/**
+          - src/styles/pagefind.css
