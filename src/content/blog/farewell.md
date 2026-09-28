@@ -19,21 +19,18 @@ What a journey it’s been.
 
 The projects have been awesome.
 Hard days, good days, and plenty of the messy ones in between. The ones that actually teach you something.
-I’ve been lucky enough to work on things that mattered, with people who cared about getting them right.
-
-I’ll miss the people.
-I’ve had the absolute pleasure of working with some crazy talented humans along the way: engineers, delivery folk, designers, product people, the lot.
-The bit I’ll carry with me isn’t a stack or a release.
+I’ve been lucky enough to work on things that mattered.
+The bit I’ll carry with me isn’t a release or a project.
 It’s the conversations, the banter, and the way people show up for each other when it counts.
+I’ve had the absolute pleasure of working with some crazy talented humans along the way.
 
-It really is such an awesome family.
 I’m still not entirely sure how **nap time** became a thing… but if you know, you know.
-Had clients comment that we’re basically like **brother and sister**… and again, _iykyk_.
-Places like this collect their own little myths… especially if you were on a bus to or from Bristol.
+Clients commenting that we’re basically like **brother and sister**… and again, _iykyk_.
+Places like **Hippo** collect their own little myths… especially if you were on a bus to/from Bristol.
 
 Massive thank you to everyone I’ve worked with, laughed with, argued with, survived deadlines with, and shared far too many questionable moments with over the years.
 You made it what it was.
 
 It’s been one hell of a ride, and I’m genuinely grateful to have been part of it.
 
-**Thank you all. It’s been a pleasure.**
+Thank you all. It’s been a pleasure.
