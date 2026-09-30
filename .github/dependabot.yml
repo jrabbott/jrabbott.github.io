@@ -3,33 +3,24 @@ updates:
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
-      day: monday
-    open-pull-requests-limit: 10
+      interval: monthly
+    open-pull-requests-limit: 5
     labels:
       - dependencies
       - javascript
     groups:
-      astro:
+      npm-minor-and-patch:
         patterns:
-          - 'astro'
-          - '@astrojs/*'
+          - '*'
         update-types:
-          - 'minor'
-          - 'patch'
-      prettier:
-        patterns:
-          - 'prettier'
-          - 'prettier-*'
-        update-types:
-          - 'minor'
-          - 'patch'
+          - minor
+          - patch
 
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
-      day: monday
+      interval: monthly
+    open-pull-requests-limit: 3
     labels:
       - dependencies
       - github_actions
@@ -37,6 +28,3 @@ updates:
       actions:
         patterns:
           - '*'
-        update-types:
-          - 'minor'
-          - 'patch'
