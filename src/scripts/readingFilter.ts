@@ -80,5 +80,3 @@ export function initReadingFilter(root: ParentNode = document): void {
     filter.hidden = true;
   }
 }
-
-initReadingFilter();

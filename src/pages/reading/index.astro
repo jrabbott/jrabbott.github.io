@@ -13,7 +13,7 @@ import { documentTitle } from '../../lib/documentTitle';
     <p class="muted">Books I’ve read and would recommend.</p>
 
     <div class="reading-filter" hidden data-reading-filter data-pagefind-ignore>
-      <div class="reading-filter__controls" role="toolbar" aria-label="Filter by topic">
+      <div class="reading-filter__controls" role="group" aria-label="Filter by topic">
         <button type="button" class="reading-filter__button" data-topic="all" aria-pressed="true">
           All
         </button>
@@ -51,7 +51,9 @@ import { documentTitle } from '../../lib/documentTitle';
 </PageLayout>
 
 <script>
-  import '../../scripts/readingFilter';
+  import { initReadingFilter } from '../../scripts/readingFilter';
+
+  initReadingFilter();
 </script>
 
 <style>
@@ -86,6 +88,7 @@ import { documentTitle } from '../../lib/documentTitle';
     font-weight: 500;
     color: var(--color-text-muted);
     cursor: pointer;
+    text-decoration: none;
   }
 
   .reading-filter__button:hover {
@@ -94,6 +97,9 @@ import { documentTitle } from '../../lib/documentTitle';
 
   .reading-filter__button[aria-pressed='true'] {
     color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
   }
 
   .reading-filter__status {
