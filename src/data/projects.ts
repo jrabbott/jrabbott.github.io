@@ -24,7 +24,7 @@ export const projects = [
     role: 'Principal engineer, technical lead and technical architect',
     careerName: 'Financial Benchmarking and Insights Tool',
     careerClient: 'Department for Education',
-    careerDates: 'Nov 2023 – Present',
+    careerDates: 'Nov 2023 – Oct 2026',
     careerEmployer: 'hippo',
     paragraphs: [
       'I led the ground-up build of this service. I set the technical direction across data, platform, and presentation: architecture, hands-on engineering, and the coordination needed to turn a broad data product into something schools could actually use.',
@@ -40,7 +40,7 @@ export const projects = [
     role: 'Principal engineer, technical lead and technical architect',
     careerName: 'Accessing Childcare Entitlement Checker',
     careerClient: 'Department for Education',
-    careerDates: 'May 2026 – Present',
+    careerDates: 'May 2026 – Oct 2026',
     careerEmployer: 'hippo',
     paragraphs: [
       'I led the ground-up build of this service: architecture and delivery from early design through to something production-ready. The aim was a solid foundation teams could extend without painting themselves into a corner.',
